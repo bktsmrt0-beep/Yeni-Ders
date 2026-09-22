@@ -1,6 +1,7 @@
 const form = document.getElementById("task-form");
 const input = document.getElementById("task-input");
 const list = document.getElementById("task-list");
+const archiveList = document.getElementById("archive-list");
 
 let tasks = loadTasks();
 
@@ -15,6 +16,7 @@ function saveTasks() {
 
 function render() {
   list.innerHTML = "";
+  archiveList.innerHTML = "";
 
   for (const task of tasks) {
     const li = document.createElement("li");
@@ -39,7 +41,19 @@ function render() {
       render();
     });
     li.appendChild(deleteButton);
-    list.appendChild(li);
+    const archiveButton = document.createElement("button");
+    archiveButton.textContent = task.archived ? "Geri al" : "Arşivle";
+    archiveButton.addEventListener("click", () => {
+      task.archived = !task.archived;
+      saveTasks();
+      render();
+    });
+    li.appendChild(archiveButton);
+    if (task.archived) {
+      archiveList.appendChild(li);
+    } else {
+      list.appendChild(li);
+    }
   }
 }
 
