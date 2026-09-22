@@ -2,6 +2,7 @@ const form = document.getElementById("task-form");
 const input = document.getElementById("task-input");
 const list = document.getElementById("task-list");
 const archiveList = document.getElementById("archive-list");
+const counter = document.getElementById("counter");
 
 let tasks = loadTasks();
 
@@ -54,6 +55,12 @@ function render() {
     } else {
       list.appendChild(li);
     }
+  }
+  const remaining = tasks.filter((t) => !t.done && !t.archived).length;
+  if (remaining === 0) {
+    counter.textContent = "Hepsi bitti! 🎉";
+  } else {
+    counter.textContent = remaining + " görev kaldı";
   }
 }
 
