@@ -1,3 +1,7 @@
+## Ders ilerlemesi
+
+Bu repo bir öğrenme projesi. Oturum başında önce `DERSLER.md` dosyasını oku ve oradaki "Yeni oturum başlangıç kontrolü" adımlarını uygula. Kodu baştan tarama. Her ders bitince `DERSLER.md` dosyasını güncelle.
+
 ## Agent skills
 
 ### Issue tracker
