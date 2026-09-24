@@ -39,3 +39,12 @@ li {
   text-decoration: line-through;
   color: #999;
 }
+
+#filters {
+  margin-top: 12px;
+}
+
+.active-filter {
+  background: #333;
+  color: white;
+}

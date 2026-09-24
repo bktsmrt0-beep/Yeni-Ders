@@ -5,6 +5,7 @@ const archiveList = document.getElementById("archive-list");
 const counter = document.getElementById("counter");
 
 let tasks = loadTasks();
+let filter = "all";
 
 function loadTasks() {
   const saved = localStorage.getItem("tasks");
@@ -20,6 +21,8 @@ function render() {
   archiveList.innerHTML = "";
 
   for (const task of tasks) {
+    if (filter === "active" && task.done) continue;
+      if (filter === "done" && !task.done) continue;
     const li = document.createElement("li");
     li.textContent = task.text;
     const checkbox = document.createElement("input");
@@ -62,6 +65,9 @@ function render() {
   } else {
     counter.textContent = remaining + " görev kaldı";
   }
+  for (const button of document.querySelectorAll("#filters button")) {
+    button.classList.toggle("active-filter", button.id === "filter-" + filter);
+  }
 }
 
 form.addEventListener("submit", (event) => {
@@ -75,6 +81,19 @@ form.addEventListener("submit", (event) => {
   render();
 
   input.value = "";
+});
+
+document.getElementById("filter-all").addEventListener("click", () => {
+  filter = "all";
+  render();
+});
+document.getElementById("filter-active").addEventListener("click", () => {
+  filter = "active";
+  render();
+});
+document.getElementById("filter-done").addEventListener("click", () => {
+  filter = "done";
+  render();
 });
 
 render();
