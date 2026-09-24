@@ -2,26 +2,52 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>Yapılacaklar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kumbara · Yapılacaklar</title>
+  <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Yapılacaklar</h1>
-  <p id="counter"></p>
+  <div class="app">
+    <aside class="bank" aria-label="Kumbara">
+      <div id="bank-slot" class="bank-slot" aria-hidden="true"></div>
+      <p class="bank-total">
+        <span id="coin-total" class="bank-number">0</span>
+        <span class="bank-unit">altın</span>
+      </p>
+      <p id="level-name" class="bank-level"></p>
+      <div id="coin-stack" class="coin-stack" role="img"></div>
+      <p id="level-next" class="bank-next"></p>
+      <p id="bank-day" class="bank-day"></p>
+      <p id="bank-message" class="bank-message" aria-live="polite"></p>
+    </aside>
 
-  <form id="task-form">
-    <input id="task-input" type="text" placeholder="Yeni görev..." autocomplete="off">
-    <button type="submit">Ekle</button>
-  </form>
-  <div id="filters">
-      <button id="filter-all">Hepsi</button>
-      <button id="filter-active">Yapılacaklar</button>
-      <button id="filter-done">Tamamlananlar</button>
-    </div>
+    <main class="board">
+      <form id="task-form" class="entry">
+        <label for="task-input" class="visually-hidden">Yeni görev</label>
+        <input id="task-input" type="text" placeholder="Ne yapacaksın?" autocomplete="off" maxlength="200">
+        <button id="task-submit" type="submit">Kumbaraya at</button>
+      </form>
 
-  <ul id="task-list"></ul>
-  <h2>Arşiv</h2>
-  <ul id="archive-list"></ul>
+      <div class="board-head">
+        <h1>Yapılacaklar <span id="counter" class="count"></span></h1>
+        <div id="filters" class="filters" role="group" aria-label="Filtre">
+          <button id="filter-all" type="button">Hepsi</button>
+          <button id="filter-active" type="button">Yapılacaklar</button>
+          <button id="filter-done" type="button">Tamamlananlar</button>
+        </div>
+      </div>
+
+      <ul id="task-list" class="tasks"></ul>
+      <p id="empty" class="empty" hidden></p>
+
+      <details id="archive" class="archive" hidden>
+        <summary>Arşiv <span id="archive-count" class="count"></span></summary>
+        <ul id="archive-list" class="tasks tasks-archived"></ul>
+        <p id="archive-empty" class="empty" hidden>Bu filtrede arşivlenmiş görev yok.</p>
+      </details>
+    </main>
+  </div>
 
   <script src="app.js"></script>
 </body>
