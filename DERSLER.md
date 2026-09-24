@@ -3,7 +3,7 @@
 ## Kaldığımız yer
 
 - **Son biten ders:** Ders 4 (Filtreleme)
-- **Son commit:** `ebf1d87` Lesson 4: add all/active/done filter buttons with active highlight (henüz push'lanmadı)
+- **Son commit:** `ebf1d87` Lesson 4: add all/active/done filter buttons with active highlight (GitHub'a push'landı)
 - **Sıradaki ders:** Ders 5, kullanıcı seçecek:
   - **Görevi düzenleme:** göreve çift tıklayınca yazısını değiştirmek
   - Ya da kullanıcının kendi fikri
