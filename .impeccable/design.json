@@ -427,7 +427,7 @@
       "kind": "button",
       "refersTo": "button-action",
       "description": "Quiet text actions on a task row; delete hovers to danger.",
-      "html": "<div class=\"ds-actions\"><button class=\"ds-action\">Düzenle</button><button class=\"ds-action\">Arşivle</button><button class=\"ds-action ds-danger\">Sil</button></div>",
+      "html": "<div class=\"ds-actions\"><button class=\"ds-action\">Arşivle</button><button class=\"ds-action ds-danger\">Sil</button></div>",
       "css": ":host{--ground:#f2f5fa;--paper:#ffffff;--line:#dde3ee;--wash:#e6ebf4;--ink:#111c3a;--ink-soft:#4b5878;--ink-done:#5d667c;--placeholder:#66708a;--cobalt:#1e3aa6;--cobalt-deep:#142a7c;--cobalt-glaze:#3053d4;--on-cobalt:#eef2ff;--on-cobalt-soft:#bccaff;--gold-light:#ffe08a;--gold:#f4b92c;--gold-deep:#a8740c;--danger:#b42318;--danger-wash:#fdecea;--font-display:\"Bricolage Grotesque\",\"Segoe UI Variable Display\",\"Segoe UI\",system-ui,sans-serif;--font-ui:\"Segoe UI Variable Text\",\"Segoe UI\",system-ui,-apple-system,sans-serif;}.ds-actions{display:flex;gap:2px;font-family:var(--font-ui)}.ds-action{padding:6px 10px;border:0;border-radius:8px;background:transparent;color:var(--ink-soft);font:inherit;font-size:.875rem;cursor:pointer}.ds-action:hover{background:var(--wash);color:var(--ink)}.ds-action.ds-danger:hover{background:var(--danger-wash);color:var(--danger)}.ds-action:focus-visible{outline:2px solid var(--cobalt);outline-offset:2px}"
     },
     {
@@ -480,7 +480,7 @@
       "One display face (Bricolage Grotesque) for numerals and headings; system UI face for task text.",
       "Tabular numerals everywhere a count appears.",
       "Finished work drains to gray; open, done, and archived read as three distinct states.",
-      "One signature motion (coin flight), exponential ease-out, no bounce, under 700ms."
+      "One signature motion (coin flight), exponential ease-out, no bounce, under 700ms. One supporting motion: the porcelain tray that glides under the hovered or focused row."
     ],
     "rules": [
       {
@@ -510,7 +510,7 @@
       },
       {
         "name": "The One Floating Thing Rule",
-        "body": "On the porcelain side only the entry slot casts a shadow; list rows stay flat on hairlines.",
+        "body": "On the porcelain side at most one thing floats at a time besides the entry slot: the row under the pointer or keyboard focus, on its tray. Resting rows stay flat on hairlines. (Changed 2026-09-24 at the user's request: rows should come forward when hovered.)",
         "section": "elevation"
       }
     ],
@@ -519,7 +519,7 @@
       "Do fill checked checkboxes and finished text with Done Gray (ink-done), never cobalt or gold.",
       "Do use tabular numerals on every count.",
       "Do build ceramic depth from gradients and pooled radial light, darkening toward the foot.",
-      "Do keep motion to the coin flight and total settle: exponential ease-out, no bounce, under 700ms.",
+      "Do keep motion to the coin flight, total settle, and the gliding row tray: exponential ease-out, no bounce, under 700ms.",
       "Do collapse the bank into a compact cobalt band above the entry at 820px and below."
     ],
     "donts": [

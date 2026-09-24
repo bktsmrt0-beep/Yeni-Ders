@@ -41,12 +41,18 @@
         </div>
       </div>
 
-      <ul id="task-list" class="tasks"></ul>
+      <div class="list-wrap">
+        <span class="tray" aria-hidden="true"></span>
+        <ul id="task-list" class="tasks"></ul>
+      </div>
       <p id="empty" class="empty" hidden></p>
 
       <details id="archive" class="archive" hidden>
         <summary>Arşiv <span id="archive-count" class="count"></span></summary>
-        <ul id="archive-list" class="tasks tasks-archived"></ul>
+        <div class="list-wrap">
+          <span class="tray" aria-hidden="true"></span>
+          <ul id="archive-list" class="tasks tasks-archived"></ul>
+        </div>
         <p id="archive-empty" class="empty" hidden>Bu filtrede arşivlenmiş görev yok.</p>
       </details>
     </main>

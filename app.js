@@ -345,6 +345,70 @@ function renderBank() {
 function render() {
   renderLists();
   renderBank();
+  refreshTrays();
+}
+
+const canHover = window.matchMedia("(hover: hover)");
+const trays = [...document.querySelectorAll(".list-wrap")].map((wrap) => ({
+  wrap,
+  tray: wrap.querySelector(".tray"),
+  row: null,
+}));
+let pointer = null;
+
+function liftRow(slot, row) {
+  if (slot.row === row) return;
+  slot.row?.classList.remove("is-lifted");
+  slot.row = row;
+
+  const { tray } = slot;
+  if (!row) {
+    tray.classList.remove("is-visible");
+    return;
+  }
+
+  row.classList.add("is-lifted");
+  const place = () => {
+    tray.style.transform = `translateY(${row.offsetTop}px)`;
+    tray.style.height = `${row.offsetHeight}px`;
+  };
+
+  if (tray.classList.contains("is-visible")) {
+    place();
+    return;
+  }
+  // Appear in place instead of sliding in from wherever the tray was last hidden.
+  tray.classList.add("is-placing");
+  place();
+  tray.getBoundingClientRect();
+  tray.classList.remove("is-placing");
+  tray.classList.add("is-visible");
+}
+
+function refreshTrays() {
+  const hovered = pointer && document.elementFromPoint(pointer.x, pointer.y)?.closest(".task");
+  const focused = document.activeElement?.closest(".task");
+  for (const slot of trays) {
+    slot.row = null;
+    const row = [hovered, focused].find((r) => r && slot.wrap.contains(r)) || null;
+    liftRow(slot, row);
+  }
+}
+
+for (const slot of trays) {
+  slot.wrap.addEventListener("pointermove", (event) => {
+    if (event.pointerType !== "mouse" && !canHover.matches) return;
+    pointer = { x: event.clientX, y: event.clientY };
+    liftRow(slot, event.target.closest(".task"));
+  });
+  slot.wrap.addEventListener("pointerleave", () => {
+    pointer = null;
+    liftRow(slot, null);
+  });
+  slot.wrap.addEventListener("focusin", (event) => liftRow(slot, event.target.closest(".task")));
+  slot.wrap.addEventListener("focusout", (event) => {
+    if (!slot.wrap.contains(event.relatedTarget)) liftRow(slot, null);
+  });
 }
 
 form.addEventListener("submit", (event) => {

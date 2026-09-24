@@ -24,6 +24,7 @@
   --danger-wash: #fdecea;
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-glide: cubic-bezier(0.16, 1, 0.3, 1);
   --font-display: "Bricolage Grotesque", "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
   --font-ui: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, sans-serif;
 
@@ -325,7 +326,41 @@ h1 {
   box-shadow: 0 1px 3px rgb(17 28 58 / 0.18);
 }
 
+/* Porcelain tray: glides under the pointer (or keyboard focus) from row to row and lifts that row forward */
+
+.list-wrap {
+  position: relative;
+}
+
+.tray {
+  position: absolute;
+  top: 0;
+  left: -14px;
+  right: -14px;
+  height: 60px;
+  border-radius: 14px;
+  background: var(--paper);
+  box-shadow:
+    0 14px 28px -16px rgb(17 28 58 / 0.45),
+    0 3px 8px -3px rgb(17 28 58 / 0.14);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    transform 340ms var(--ease-glide),
+    height 340ms var(--ease-glide),
+    opacity 160ms ease-out;
+}
+
+.tray.is-visible {
+  opacity: 1;
+}
+
+.tray.is-placing {
+  transition: opacity 160ms ease-out;
+}
+
 .tasks {
+  position: relative;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -338,6 +373,23 @@ h1 {
   min-height: 60px;
   padding: 10px 4px;
   border-bottom: 1px solid var(--line);
+  transform-origin: 30% 50%;
+  transition:
+    transform 300ms var(--ease-glide),
+    border-color 200ms ease-out;
+}
+
+.task.is-lifted {
+  transform: scale(1.018);
+  border-bottom-color: transparent;
+}
+
+.task:has(+ .task.is-lifted) {
+  border-bottom-color: transparent;
+}
+
+.task.is-lifted .task-check:not(:checked) {
+  background: #eef2ff;
 }
 
 .task.is-new {
@@ -476,7 +528,7 @@ h1 {
   transform: rotate(45deg);
 }
 
-.archive .tasks {
+.archive .list-wrap {
   margin-top: 8px;
 }
 
@@ -600,5 +652,13 @@ h1 {
 
   * {
     transition: none !important;
+  }
+
+  .tray {
+    transition: opacity 160ms ease-out !important;
+  }
+
+  .task.is-lifted {
+    transform: none;
   }
 }

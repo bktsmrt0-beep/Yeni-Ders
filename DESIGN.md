@@ -149,7 +149,7 @@ The system rejects the category default of a white card list with a purple accen
 - One display face (Bricolage Grotesque) for numerals and headings; system UI face for task text.
 - Tabular numerals everywhere a count appears.
 - Finished work drains to gray; open, done, and archived read as three distinct states.
-- One signature motion (coin flight), exponential ease-out, no bounce, under 700ms.
+- One signature motion (coin flight), exponential ease-out, no bounce, under 700ms. One supporting motion: the porcelain tray that glides under the hovered or focused row.
 
 ## Colors
 
@@ -211,7 +211,7 @@ Rhythm is loose around the bank (28px between groups) and tighter in the list (r
 
 ## Elevation & Depth
 
-Depth is material, not layered UI chrome. The bank panel gets its depth from glaze: a cobalt gradient, pooled radial highlights on the upper shoulder, and a darkening at the foot. The coin slot is carved in with inset shadow and a lighter rim. Coins carry small physical shadows. On the porcelain side, only the entry slot floats; everything else is flat and separated by hairlines.
+Depth is material, not layered UI chrome. The bank panel gets its depth from glaze: a cobalt gradient, pooled radial highlights on the upper shoulder, and a darkening at the foot. The coin slot is carved in with inset shadow and a lighter rim. Coins carry small physical shadows. On the porcelain side, the entry slot floats at rest; everything else is flat and separated by hairlines until the pointer or keyboard focus rests on a row, which lifts onto a Paper tray.
 
 ### Shadow Vocabulary
 - **Entry float** (`box-shadow: 0 8px 22px -12px rgb(17 28 58 / 0.35)`): the entry slot at rest.
@@ -219,11 +219,12 @@ Depth is material, not layered UI chrome. The bank panel gets its depth from gla
 - **Active segment** (`box-shadow: 0 1px 3px rgb(17 28 58 / 0.18)`): the selected filter lifted off its wash track.
 - **Slot recess** (`box-shadow: inset 0 5px 7px rgb(0 0 0 / 0.7), 0 0 0 3px rgb(96 128 240 / 0.55), 0 3px 2px 3px rgb(200 214 255 / 0.28)`): the bank's coin mouth.
 - **Coin in flight** (`box-shadow: inset 0 0 0 2px rgb(168 116 12 / 0.7), 0 6px 12px rgb(90 61 0 / 0.35)`).
+- **Row tray** (`box-shadow: 0 14px 28px -16px rgb(17 28 58 / 0.45), 0 3px 8px -3px rgb(17 28 58 / 0.14)`): the Paper tray under the hovered or focused task row.
 
 ### Named Rules
 **The Glaze Not Texture Rule.** The bank's ceramic look comes from gradients and pooled light only: no noise, grain, or image texture.
 
-**The One Floating Thing Rule.** On the porcelain side only the entry slot casts a shadow; list rows stay flat on hairlines.
+**The One Floating Thing Rule.** On the porcelain side at most one thing floats at a time besides the entry slot: the row under the pointer or keyboard focus, on its tray. Resting rows stay flat on hairlines. (Changed 2026-09-24 at the user's request: rows should come forward when hovered.)
 
 ## Shapes
 
@@ -234,7 +235,7 @@ Soft rectangles for controls (8px for small buttons and filter segments, 10px fo
 ### Buttons
 - **Shape:** gently rounded (10px primary, 8px secondary).
 - **Primary ("Kumbaraya at"):** cobalt fill, porcelain text, display face 650, padding 0 22px (0 14px on mobile), sits inside the entry slot. Hover darkens to Deep Glaze Cobalt.
-- **Action (Düzenle, Arşivle, Sil):** transparent, Soft Ink, 0.875rem; hover fills Wash and goes Ink. Delete hovers to Danger on Danger Wash. Actions are hidden until row hover or focus, always visible on touch.
+- **Action (Arşivle / Geri al, Sil):** transparent, Soft Ink, 0.875rem; hover fills Wash and goes Ink. Delete hovers to Danger on Danger Wash. Actions are hidden until row hover or focus, always visible on touch.
 - **Focus:** 2px cobalt outline, 2px offset, everywhere.
 
 ### Chips (segmented filters)
@@ -249,6 +250,7 @@ Soft rectangles for controls (8px for small buttons and filter segments, 10px fo
 - Flex row: round checkbox, text, actions; min-height 60px, hairline bottom divider. New rows slide in from 10px above over 420ms ease-out.
 - **Checkbox:** 26px circle, 2px cobalt ring on Paper; hover tints to on-cobalt; checked fills Done Gray with a white SVG tick.
 - **Archived rows:** text in Soft Ink inside a collapsible "Arşiv" section with a rotating chevron drawn from two borders.
+- **Lifted row:** one Paper tray per list (14px radius, bleeding 14px past the row on both sides, Row tray shadow) glides to the row under the pointer or keyboard focus: transform and height over 340ms on cubic-bezier(0.16, 1, 0.3, 1). It fades in over 160ms where it first appears, never slides in from off-row. The lifted row scales to 1.018 from its left third, and its own and its upper neighbour's hairlines go transparent. The tray follows re-renders so a click never drops it. Touch-only devices get no tray; reduced motion keeps the tray but moves it instantly and drops the scale.
 
 ### Bank Panel (signature)
 Glazed cobalt column: recessed slot, display-scale total with "altın" unit, level name, coin stack, next-level line, today and streak (always shown), and one balanced encouraging line (aria-live). The coin stack is flipped so coins fill bottom-up, one slot per coin unit, arranged in whole columns.
@@ -263,7 +265,7 @@ A 28px gold coin (16px for the small "add" coin) travels a quadratic arc from th
 - **Do** fill checked checkboxes and finished text with Done Gray (ink-done), never cobalt or gold.
 - **Do** use tabular numerals on every count.
 - **Do** build ceramic depth from gradients and pooled radial light, darkening toward the foot.
-- **Do** keep motion to the coin flight and total settle: exponential ease-out, no bounce, under 700ms.
+- **Do** keep motion to the coin flight, total settle, and the gliding row tray: exponential ease-out, no bounce, under 700ms.
 - **Do** collapse the bank into a compact cobalt band above the entry at 820px and below.
 
 ### Don't:
