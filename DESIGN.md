@@ -23,6 +23,15 @@ colors:
   danger: "#b42318"
   danger-wash: "#fdecea"
   glaze-foot: "rgb(6 14 52 / 0.55)"
+  porcelain: "#f7f9ff"
+  blush: "#ff8fab"
+  mouth: "#e0527a"
+  tear: "#7cc4ff"
+  tint-cobalt: "#3053d4"
+  tint-rose: "#ff8fab"
+  tint-mint: "#37c59b"
+  tint-lilac: "#9a7bf0"
+  tint-sky: "#4aa8ff"
 typography:
   display:
     fontFamily: "Bricolage Grotesque, Segoe UI Variable Display, Segoe UI, system-ui, sans-serif"
@@ -91,6 +100,7 @@ rounded:
   lg: "14px"
   pill: "999px"
   round: "50%"
+  bubble: "18px"
 spacing:
   xs: "8px"
   sm: "14px"
@@ -167,7 +177,7 @@ components:
 
 The whole screen is a Turkish ceramic coin bank and the desk it sits on. A tall panel of glazed cobalt holds the savings: a recessed coin slot, the coin total at display scale, the current level, a stack of coin slots toward the next level, today's count and streak, and one short encouraging line. Beside it, a cool porcelain ground carries the working list in blue-black ink. The bank is the only rich surface; the list stays quiet so task text is always the clearest thing on the page.
 
-Reward is physical and small. Finishing a task launches one gold coin on an arc into the bank total, which settles with a slight scale; adding a task drops a smaller coin. Nothing else moves on its own. Gold means earned money and nothing else, so its appearance always carries meaning.
+Reward is physical and small. Finishing a task launches one gold coin on an arc into the slot on Kumbara-chan's head; the total settles with a slight scale and she reacts. Adding a task drops a smaller coin. Apart from her, nothing moves on its own. Gold means earned money and nothing else, so its appearance always carries meaning.
 
 The system rejects the category default of a white card list with a purple accent and checkbox confetti.
 
@@ -177,7 +187,7 @@ The system rejects the category default of a white card list with a purple accen
 - One display face (Bricolage Grotesque) for numerals and headings; system UI face for task text.
 - Tabular numerals everywhere a count appears.
 - Finished work drains to gray; open, done, and archived read as three distinct states.
-- One signature motion (coin flight), exponential ease-out, no bounce, under 700ms. One supporting motion: the porcelain tray that glides under the hovered or focused row.
+- One signature motion (coin flight), exponential ease-out, no bounce, under 700ms. One supporting motion: the porcelain tray that glides under the hovered or focused row. The bank is a character, Kumbara-chan, who reacts to every coin.
 
 ## Colors
 
@@ -292,8 +302,30 @@ Soft rectangles for controls (8px for small buttons and filter segments, 10px fo
 ### Bank Panel (signature)
 Glazed cobalt column: recessed slot, display-scale total with "altın" unit, level name, coin stack, next-level line, today and streak (always shown), and one balanced encouraging line (aria-live). The coin stack is flipped so coins fill bottom-up, one slot per coin unit, arranged in whole columns.
 
+### Kumbara-chan (the bank as a character)
+An anime-style ceramic coin bank drawn as inline SVG at the top of the bank panel (124px wide on desktop, 84px in the mobile band): Porcelain body and cat ears with a 3.5px Cobalt Well manga outline, Cobalt Glaze ear insides and glaze dip at the foot, two paws, Blush cheeks, and the coin slot (`#bank-slot`) on her head, which is where every coin lands.
+- **Moods** (`data-mood`): *idle* (big eyes with two white shines, cat mouth, blinks every ~5s), *happy* (`^ ^` eyes, open Mouth), *excited* (four-point star eyes, open mouth), *sleepy* (closed arcs plus floating z's in On Cobalt). Resting mood is sleepy until a task is finished today, idle after.
+- **Reactions:** finishing a task → happy for 1.8s, squash-and-stretch hop, white sparkles around her, and a manga sound word ("Tık!", "Süper!", "Oley!", "Harika!", "Bitti!"). Adding a task → happy for 1s, a nod, "Hop!" or "Tamam!". Level up → excited for 2.6s, hop, speed lines radiating from behind her, ten sparkles, and a big "Seviye atladın!".
+- **Speech bubble:** the encouraging line sits in a Paper manga bubble beside her (3px Cobalt Well outline, 18px radius, tail pointing at her, display face 650 at `--text-lg`, `--text-base` on mobile) and pops in whenever the line changes.
+- **Sound words:** display face 800, Paper fill with a 6px Cobalt Well stroke painted under the fill, tilted, placed just below her; `--text-2xl`, `--text-3xl` for level up.
+- **Sparkles:** four-point stars as SVG, white with a soft cobalt glow around her, Cobalt on the porcelain side where a checkbox is ticked.
+- Reduced motion keeps the mood changes and drops hop, nod, breathing, blink, sparkles, and sound words.
+
+### Task Sprites
+Every task row carries a small anime creature (46px, 38px on mobile) between the checkbox and the text: a Porcelain round body with a 2px Cobalt Well outline and cat, bunny, or bear ears in one of five tints (cobalt, rose, mint, lilac, sky), both picked from a hash of the task id so a task keeps its creature. Its face shows the task's state:
+- **sparkle** (added within 1 hour): big shining eyes, blush, open mouth, a twinkling star.
+- **normal** (1 hour to 1 day): dot eyes, small smile.
+- **worried** (1 to 3 days): slanted brows, wavy mouth, a Tear-blue sweat drop that drips.
+- **sad** (older than 3 days): downturned eyes and mouth, a falling tear.
+- **proud** (done): `^ ^` eyes and blush; the sprite desaturates with the row.
+- **sleep** (archived): closed eyes and a floating z.
+Sprites bob gently (3s, staggered per task), cheer with a small squash-and-stretch hop when their row lifts onto the tray, and jump with a tilt when their task is finished. A "Karakterler ne anlatıyor?" disclosure under the archive shows all six with their meaning and can add or remove six sample tasks (`demo: true`, one per state) that never earn or refund coins. The empty state shows a larger sprite beside its text.
+
+### Task Meta and Speed Bonus
+Under each task text: creation time ("Bugün 20:41", "Dün 09:15", "22 Eyl 14:00"), "· bitti HH:MM" when done, and "+N altın" earned, in `--text-xs` Soft Ink with tabular numerals. Finishing sooner pays more: +3 within 1 hour, +2 within 1 day, +1 within 3 days on top of the base 3. Open tasks show a speed chip ("+3 hız bonusu · 38 dk") with a drawn bolt: On Cobalt pill with Cobalt text, or a Cobalt pill with a slow glow in the first hour. Bonus coins trail the main coin as extra small coins, and Kumbara-chan's sound word names the tier ("Şimşek! +6"). Undo refunds exactly what was earned. Ages, chips, and moods refresh every 30 seconds.
+
 ### Coin Flight (signature motion)
-A 28px gold coin (16px for the small "add" coin) travels a quadratic arc from the checkbox or add button into the total, shrinking to 55%, over 680ms (520ms small) on cubic-bezier(0.16, 1, 0.3, 1). The total then settles from scale 1.08 to 1 over 380ms. Reduced-motion users get the state change without flight or transitions.
+A 28px gold coin (16px for the small "add" coin) travels a quadratic arc from the checkbox or add button into the coin slot on Kumbara-chan's head (the total if the slot is not rendered), shrinking to 55%, over 680ms (520ms small) on cubic-bezier(0.16, 1, 0.3, 1). The total then settles from scale 1.08 to 1 over 380ms and Kumbara-chan reacts. Reduced-motion users get the state change without flight or transitions.
 
 ## Do's and Don'ts
 
@@ -302,12 +334,12 @@ A 28px gold coin (16px for the small "add" coin) travels a quadratic arc from th
 - **Do** fill checked checkboxes and finished text with Done Gray (ink-done), never cobalt or gold.
 - **Do** use tabular numerals on every count.
 - **Do** build ceramic depth from gradients and pooled radial light, darkening toward the foot.
-- **Do** keep motion to the coin flight, total settle, and the gliding row tray: exponential ease-out, no bounce, under 700ms.
+- **Do** keep interface motion to the coin flight, total settle, and the gliding row tray: exponential ease-out, no bounce, under 700ms. Character motion belongs to Kumbara-chan alone.
 - **Do** collapse the bank into a compact cobalt band above the entry at 820px and below.
 
 ### Don't:
 - **Don't** use gold for buttons, badges, checkmarks, or highlights.
-- **Don't** add confetti, bouncing, or ambient animation.
+- **Don't** add confetti, or bouncing and ambient animation anywhere except the characters: Kumbara-chan (breathing, blink, z's, hop, bubble pop), the task sprites (bob, cheer, joy, twinkle, sweat, tear, z), and the first-hour speed chip glow.
 - **Don't** add grain, noise, or image textures to the bank glaze.
 - **Don't** set user-typed task text in the display face.
 - **Don't** place persistent reward elements over task text; only the coin in flight may cross the list.

@@ -8,28 +8,125 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app">
-    <aside class="bank" aria-label="Kumbara">
-      <div id="bank-slot" class="bank-slot" aria-hidden="true"></div>
-      <p class="bank-total">
-        <span id="coin-total" class="bank-number">0</span>
-        <span class="bank-unit">altın</span>
-      </p>
-      <p id="level-name" class="bank-level"></p>
-      <div id="coin-stack" class="coin-stack" role="img"></div>
-      <p id="level-next" class="bank-next"></p>
-      <div class="bank-record">
-        <p id="bank-day"></p>
-        <p id="bank-streak"></p>
+  <div class="sky" aria-hidden="true">
+    <svg class="hills" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path class="hill-back" d="M0 170 C 180 90 330 90 520 150 C 700 205 860 80 1060 110 C 1220 135 1330 190 1440 160 L1440 320 L0 320 Z"/>
+      <path class="hill-front" d="M0 240 C 160 190 300 200 460 235 C 640 275 800 180 1000 205 C 1180 228 1300 270 1440 245 L1440 320 L0 320 Z"/>
+    </svg>
+  </div>
+
+  <div class="game">
+    <header class="hud" aria-label="Oyun durumu">
+      <div class="hud-level">
+        <span id="level-badge" class="level-badge">1</span>
+        <div class="hud-level-text">
+          <p id="level-name" class="level-name"></p>
+          <p id="level-next" class="level-next"></p>
+        </div>
       </div>
-      <p id="bank-message" class="bank-message" aria-live="polite"></p>
-    </aside>
+
+      <div class="hud-score">
+        <p class="score">
+          <span class="hud-coin" aria-hidden="true"></span>
+          <span id="coin-total" class="score-number">0</span>
+          <span class="visually-hidden">altın</span>
+        </p>
+        <div id="star-bar" class="star-bar" role="img">
+          <span id="star-fill" class="star-fill"></span>
+          <span class="star-mark" style="--at: 33.33%"></span>
+          <span class="star-mark" style="--at: 66.66%"></span>
+          <span class="star-mark" style="--at: 100%"></span>
+        </div>
+      </div>
+
+      <div class="hud-side">
+        <div id="hearts" class="hearts" role="img"></div>
+        <button id="sound-toggle" class="sound-toggle" type="button" aria-pressed="true" aria-label="Ses efektleri">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path class="speaker" d="M4 9.5h3.2L12 5.5v13l-4.8-4H4z"/>
+            <path class="waves" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/>
+            <path class="mute" d="M16 9.5l5 5M21 9.5l-5 5"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <section class="stage" aria-label="Kumbara-chan">
+      <div class="mascot-row">
+        <div class="mascot-spot">
+          <div id="mascot" class="mascot" data-mood="idle" aria-hidden="true">
+            <svg class="mascot-svg" viewBox="0 0 160 150">
+              <defs>
+                <clipPath id="m-clip"><ellipse cx="80" cy="90" rx="62" ry="52"/></clipPath>
+              </defs>
+              <g class="m-burst">
+                <path d="M80 90 L80 -14 M80 90 L132 -2 M80 90 L170 38 M80 90 L178 92 M80 90 L168 146 M80 90 L-8 146 M80 90 L-18 92 M80 90 L-10 38 M80 90 L28 -2"/>
+              </g>
+              <g class="m-zz">
+                <path d="M132 34 h10 l-10 10 h10"/>
+                <path d="M146 16 h7 l-7 7 h7"/>
+              </g>
+              <path class="m-ear" d="M30 62 L36 20 Q39 12 47 16 L72 42 Z"/>
+              <path class="m-ear" d="M130 62 L124 20 Q121 12 113 16 L88 42 Z"/>
+              <path class="m-ear-in" d="M40 50 L43 26 L60 42 Z"/>
+              <path class="m-ear-in" d="M120 50 L117 26 L100 42 Z"/>
+              <ellipse class="m-shell" cx="80" cy="90" rx="62" ry="52"/>
+              <path class="m-glaze" clip-path="url(#m-clip)" d="M10 116 Q80 138 150 116 L150 150 L10 150 Z"/>
+              <path class="m-gloss" d="M34 70 Q40 52 58 46"/>
+              <ellipse class="m-outline" cx="80" cy="90" rx="62" ry="52"/>
+              <rect id="bank-slot" class="m-slot" x="60" y="39" width="40" height="9" rx="4.5"/>
+              <g class="m-eyes m-eyes-open">
+                <ellipse cx="56" cy="84" rx="9" ry="12"/>
+                <ellipse cx="104" cy="84" rx="9" ry="12"/>
+                <circle class="m-shine" cx="59.5" cy="79" r="3.4"/>
+                <circle class="m-shine" cx="107.5" cy="79" r="3.4"/>
+                <circle class="m-shine" cx="53" cy="89.5" r="1.6"/>
+                <circle class="m-shine" cx="101" cy="89.5" r="1.6"/>
+              </g>
+              <g class="m-eyes m-eyes-happy">
+                <path d="M46 88 Q56 72 66 88"/>
+                <path d="M94 88 Q104 72 114 88"/>
+              </g>
+              <g class="m-eyes m-eyes-sleepy">
+                <path d="M46 86 Q56 93 66 86"/>
+                <path d="M94 86 Q104 93 114 86"/>
+              </g>
+              <g class="m-eyes m-eyes-star">
+                <path d="M56 71 Q58 82 69 84 Q58 86 56 97 Q54 86 43 84 Q54 82 56 71 Z"/>
+                <path d="M104 71 Q106 82 117 84 Q106 86 104 97 Q102 86 91 84 Q102 82 104 71 Z"/>
+              </g>
+              <ellipse class="m-blush" cx="38" cy="101" rx="9" ry="5"/>
+              <ellipse class="m-blush" cx="122" cy="101" rx="9" ry="5"/>
+              <path class="m-mouth m-mouth-cat" d="M71 101 Q75.5 107 80 101 Q84.5 107 89 101"/>
+              <path class="m-mouth m-mouth-open" d="M72 100 L88 100 Q87 112 80 112 Q73 112 72 100 Z"/>
+              <ellipse class="m-paw" cx="60" cy="139" rx="12" ry="7"/>
+              <ellipse class="m-paw" cx="100" cy="139" rx="12" ry="7"/>
+            </svg>
+          </div>
+          <span class="pedestal" aria-hidden="true"></span>
+        </div>
+        <p id="bank-message" class="bubble" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="path-card" aria-labelledby="path-title">
+      <div class="path-head">
+        <h2 id="path-title">Bugünün yolu</h2>
+        <p class="path-stats">
+          <span id="bank-day"></span>
+          <span id="bank-streak"></span>
+        </p>
+      </div>
+      <div class="path-well">
+        <ol id="day-path" class="day-path"></ol>
+      </div>
+    </section>
 
     <main class="board">
       <form id="task-form" class="entry">
         <label for="task-input" class="visually-hidden">Yeni görev</label>
         <input id="task-input" type="text" placeholder="Ne yapacaksın?" autocomplete="off" maxlength="200">
-        <button id="task-submit" type="submit">Kumbaraya at</button>
+        <button id="task-submit" type="submit">Ekle!</button>
       </form>
 
       <div class="board-head">
@@ -47,7 +144,7 @@
       </div>
       <p id="empty" class="empty" hidden></p>
 
-      <details id="archive" class="archive" hidden>
+      <details id="archive" class="archive fold" hidden>
         <summary>Arşiv <span id="archive-count" class="count"></span></summary>
         <div class="list-wrap">
           <span class="tray" aria-hidden="true"></span>
@@ -55,7 +152,20 @@
         </div>
         <p id="archive-empty" class="empty" hidden>Bu filtrede arşivlenmiş görev yok.</p>
       </details>
+
+      <details class="legend fold">
+        <summary>Karakterler ne anlatıyor?</summary>
+        <ul id="legend-grid" class="legend-grid"></ul>
+        <button id="legend-demo" class="legend-demo" type="button">Örnek görevleri ekle</button>
+      </details>
     </main>
+  </div>
+
+  <div id="celebrate" class="celebrate" hidden>
+    <span class="celebrate-rays" aria-hidden="true"></span>
+    <p class="celebrate-title" data-text="Fikret Hocam, emeğinize sağlık!">Fikret Hocam, emeğinize sağlık!</p>
+    <p class="celebrate-thanks">Teşekkürler!</p>
+    <p id="celebrate-level" class="celebrate-level"></p>
   </div>
 
   <script src="app.js"></script>

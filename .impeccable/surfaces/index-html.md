@@ -9,34 +9,34 @@ related_targets: ["app.js","style.css"]
 
 ## Scope
 
-The whole single-screen app: task entry, open list, filters, archive, and the new motivation layer. Visitor mode: **Operate**. Code-led build (no image generation available).
+The whole single-screen app, redesigned from the cobalt kumbara world into a candy-puzzle-game world. Visitor mode: **Operate** (the user completes tasks), with game-grade feedback. Code-led build (no image generation available).
 
 ## Audience and job
 
-One user at their own desk, Windows, desktop browser, day and evening indoor light. Job: capture a task in seconds, finish it, and feel rewarded enough to keep coming back. User asked for: satisfying feel, visible progress, encouraging messages, and game-like points; completion celebration small and sweet, not loud. New look, all existing functions kept.
+One adult user at their own desk (and sometimes phone width) who wants their todo list to feel like a childlike, very fun casual game: "her bölüm bir oyun tadında", "candy crush gibi olmalı". They add and finish their own tasks. Every existing function stays: add, edit, delete, complete/undo, archive/restore, filters, coins, speed bonus, levels, streak, Kumbara-chan, task creatures, sample tasks, times.
 
 ## Constraints
 
-Fully offline at runtime: no CDN, no web fonts from the network (self-hosted files only). Keep `localStorage` key `"tasks"` and task shape readable; missing `archived` means false. Turkish UI copy. Reduced-motion users get the same state changes without flight.
+Fully offline at runtime: fonts self-hosted and inlined, sounds synthesized with Web Audio, no network. Keep `localStorage` keys `"tasks"` and `"kumbara"` readable. Turkish UI. Never use Candy Crush's name, logo, candy art, characters, or sounds: style reference only. Reduced motion keeps state changes and drops flight, bursts, and loops. Sound is opt-out with a visible toggle and only plays on user actions.
 
 ## Direction contract
 
-THESIS: A kumbara (Turkish coin bank). Every task you add drops a small coin in, every task you finish drops a gold one; the bank's weight is your progress. Refuses the category default of a white card list with a purple accent and checkbox confetti.
+THESIS: A glossy candy puzzle game where every task is a candy tile: finishing one pops it with a burst, a big centered callout, and stars. Refuses the flat productivity list and its pastel "cute app" cousin with timid feedback.
 
-OWN-WORLD: Glazed cobalt ceramic field owns the bank panel; cool porcelain white ground for the list; blue-black tinted ink. Coin gold is reserved by law for earned coins and nothing else (raise from the arcade challenger's power-up palette law). One self-hosted display face for numerals and headings, system UI face for task text, tabular numerals everywhere a count appears.
+OWN-WORLD: Sugar-sky ground (pink to lilac gradient with rolling candy hills), jelly surfaces everywhere: saturated candy fills with a white top gloss, a darker bottom lip, and a soft colored drop shadow. Six candy hues (cherry, orange, lemon, apple, blueberry, grape) plus plum ink for text. Chunky rounded display face (Lilita One) with white outline for headings and callouts; rounded UI face (Nunito) for tasks.
 
-STORY: The user sees how full the bank is, types a task into the slot, watches it land, ticks it off, and sees a coin fly into the bank with a short encouraging line.
+STORY: The user sees their level, score, stars, and hearts at a glance, types a task into the big candy slot, taps it done, and gets a pop, a "Leziz!" callout, flying coins, and a lit node on today's path.
 
-FIRST VIEWPORT: Desktop: cobalt bank panel on the left third holding the coin total at display scale, level name with a row of coin slots toward the next level, today's finished count and the streak in days, and one encouraging line. Right two thirds: the entry slot at the top (the primary action), filters, then the open list. Mobile: the bank collapses to a compact cobalt band above the entry slot.
+FIRST VIEWPORT: A centered game frame (max 680px). Top: sticky HUD bar with level badge, score with coin and a three-star progress bar, hearts for the streak, and a sound toggle. Under it: Kumbara-chan on a candy pedestal with her speech bubble, then "Bugünün yolu", a winding path of numbered nodes lit by today's finished tasks. Then the entry slot with a big apple-green jelly button as the primary action, candy pill filters, and the task tiles.
 
-FORM: Kumbara, candidate 6 of 7 on the grounded list (1 loyalty stamp card, 2 okey tiles on a rack, 3 tea glass filling, 4 aferin star sticker chart, 5 tavla bearing off, 6 kumbara, 7 transit card top-up). Seed key d92030c2. Declined challengers and raises: oscilloscope (every count is an exact readout, tabular and aligned), racing livery (finished tasks drain to unpainted gray), orienteering map (the reward layer never covers task text), drawcord cape (the entry slot is both the accent and the control), tensegrity column (open, done, archived are three unmistakable states). Arcade cabinet: competitive, kept its palette law.
+FORM: Pinned by the user ("candy crush gibi olmalı"); the brief-pinned direction beats the roll. Seed key da333642 was run and its assignment (candidate 5) was overridden by the pin, disclosed here. Carried from the previous world: Kumbara-chan, task creatures, coin flight, speed bonus.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 
 ## Signature interaction and motion
 
-Completing a task launches one gold coin from the checkbox along an arc into the bank total, which ticks up with a short settle. Adding a task drops a small coin. Exponential ease-out, under 700 ms, no bounce. Nothing else animates on its own.
+Finishing a task: the tile squashes and pops, candy shards burst from it in its hue, coins fly to the HUD score, the day path lights its next node with 1–3 stars (3 for a first-hour finish), and a big outlined callout ("Tatlı!", "Leziz!", "Nefis!", "Muhteşem!", "Şimşek!") lands center screen with a short synthesized chime. Level up: full-screen "Şeker Patlaması!" with rays and stars for about 1.8s.
 
 ## Open decisions
 
-Point values: add +1, finish +3, un-finish −3 (never below 0). Levels by coin total. Streak counts consecutive days with at least one finished task.
+None blocking. Sound defaults on with a toggle stored in localStorage.
