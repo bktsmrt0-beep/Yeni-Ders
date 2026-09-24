@@ -8,18 +8,12 @@
   - **Görevi düzenleme:** göreve çift tıklayınca yazısını değiştirmek
   - Ya da kullanıcının kendi fikri
 
-## Yarım kalan iş: Impeccable kurulumu
+## Impeccable
 
-Kullanıcı `pbakaus/impeccable` tasarım skill'ini **plugin olarak** kurmak istedi (tüm projelerde çalışsın diye).
-
-- ✅ `/plugin marketplace add pbakaus/impeccable` yapıldı (2026-09-24)
-- ⬜ Plugin'in kendisi henüz kurulmadı: `/plugin` → Discover/Marketplaces → **impeccable** → Install (kapsam: User). Bunu kullanıcı yapmalı, Claude `/plugin` komutunu çalıştıramaz.
-- ⬜ Kurulum sonrası Claude Code'u yeniden başlat, `/impeccable` komutunun göründüğünü kontrol et
-- ⬜ İsteğe bağlı: `/impeccable init` ile `PRODUCT.md` oluştur
-
-**"devam edelim" denince:** önce skill listesinde `impeccable` var mı bak. Yoksa kullanıcıya Install adımını hatırlat. Varsa bu bölümü `DERSLER.md`'den kaldır ve Ders 5 seçimine geç.
-
-Not: Impeccable'ın bazı kuralları (sistem fontu, düz gri renk yasağı) derslerin bilinçli sadeliğiyle çelişebilir. Bir impeccable komutu kodu değiştirmeden önce kullanıcıyla hangi değişikliğin ders için anlamlı olduğunu konuş.
+- ✅ Plugin kuruldu (`impeccable@impeccable`, v4.3.1, 2026-09-24)
+- ✅ `/impeccable init` yapıldı, `PRODUCT.md` yazıldı. Kullanıcının cevapları: yalnız kendisi kullanacak, **"sadece araç"** (ders projesi değil), tamamen çevrimdışı, düz HTML/CSS/JS
+- ⬜ Sıradaki olası adım: `/impeccable shape`. Kullanıcının başka bir projede yazdığı istek: *"animasyonlu, görevleri eklemem için motive olacağım bir todo uygulaması olsun"*
+- ⚠️ Açık soru: kullanıcı `PRODUCT.md` için "sadece araç" dedi. Adım adım ders akışı devam edecek mi, yoksa artık Claude mu yapacak? Bir sonraki işe başlamadan önce sor.
 
 ## Yeni oturum başlangıç kontrolü
 
