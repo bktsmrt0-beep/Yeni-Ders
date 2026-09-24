@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "style.css"
+        ],
+        "createdAt": "2026-09-24T17:50:30.528Z",
+        "reason": "Claude decided: the 3px inset on the 11px-tall .stack-coin ellipse is the coin's lower rim edge requested by the finish reviewer, not a side-tab accent on a card"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-24T17:50:30.897Z",
+        "reason": "Claude decided: the 3px inset on the 11px-tall .stack-coin ellipse is the coin's lower rim edge requested by the finish reviewer, not a side-tab accent on a card"
+      }
+    ]
+  }
+}

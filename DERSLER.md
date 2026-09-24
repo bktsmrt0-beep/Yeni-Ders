@@ -2,18 +2,15 @@
 
 ## Kaldığımız yer
 
-- **Son biten ders:** Ders 4 (Filtreleme)
-- **Son commit:** `ebf1d87` Lesson 4: add all/active/done filter buttons with active highlight (GitHub'a push'landı)
-- **Sıradaki ders:** Ders 5, kullanıcı seçecek:
-  - **Görevi düzenleme:** göreve çift tıklayınca yazısını değiştirmek
-  - Ya da kullanıcının kendi fikri
+- **Çalışma şekli değişti (2026-09-24):** Kullanıcı "ben yazmayacağım" dedi. Ders modu bitti; kodu artık Claude yazıyor ve ne değiştiğini Türkçe anlatıyor. Aşağıdaki "Ders anlatım kuralları" sadece kullanıcı tekrar kendisi yazmak isterse geçerli.
+- **Son büyük iş:** Uygulama Impeccable ile **kumbara** temasına yeniden tasarlandı (puan, seviye, seri, uçan altın animasyonu). Son değerlendirme kararı: ship. Tasarım sistemi `DESIGN.md`'de, yön sözleşmesi `.impeccable/surfaces/index-html.md`'de.
+- **Sıradaki iş:** kullanıcı seçecek. Önceden konuşulan fikir: **görevi düzenleme** (çift tıklayınca yazıyı değiştirmek).
 
 ## Impeccable
 
-- ✅ Plugin kuruldu (`impeccable@impeccable`, v4.3.1, 2026-09-24)
-- ✅ `/impeccable init` yapıldı, `PRODUCT.md` yazıldı. Kullanıcının cevapları: yalnız kendisi kullanacak, **"sadece araç"** (ders projesi değil), tamamen çevrimdışı, düz HTML/CSS/JS
-- ⬜ Sıradaki olası adım: `/impeccable shape`. Kullanıcının başka bir projede yazdığı istek: *"animasyonlu, görevleri eklemem için motive olacağım bir todo uygulaması olsun"*
-- ⚠️ Açık soru: kullanıcı `PRODUCT.md` için "sadece araç" dedi. Adım adım ders akışı devam edecek mi, yoksa artık Claude mu yapacak? Bir sonraki işe başlamadan önce sor.
+- ✅ Plugin kurulu (`impeccable@impeccable`, v4.3.1). `PRODUCT.md` ve `DESIGN.md` var.
+- Tasarım değişikliklerinde önce `impeccable context` çalışır; yeni işler kumbara dünyasını (DESIGN.md) miras alır.
+- `side-tab` denetim kuralı `style.css` ve `index.html` için susturuldu (yığındaki paranın alt kenarı yanlış alarm veriyordu), `.impeccable/config.json`'da.
 
 ## Yeni oturum başlangıç kontrolü
 
@@ -24,21 +21,23 @@ git status --short
 git log --oneline -1 -- app.js index.html style.css
 ```
 
-- `git status` çıktısı boşsa ve uygulama dosyalarının son commit'i yukarıdaki commit ise: durum bu dosyayla aynı, direkt sıradaki derse geç.
-- Değişiklik varsa ya da commit farklıysa: sadece `git diff` / `git log` ile farka bak, bu dosyayı güncelle.
-- Bir derse başlamadan önce yalnızca o dersin değişeceği dosyayı oku (satır numaralarını doğru vermek için).
+- `git status` çıktısı boşsa: durum bu dosyayla aynı, direkt sıradaki işe geç.
+- Değişiklik varsa: sadece `git diff` ile farka bak, bu dosyayı güncelle.
+- Bir işe başlamadan önce yalnızca o işin değişeceği dosyayı oku.
 
 ## Uygulamanın şu anki hâli
 
-- `index.html`: başlık, sayaç (`#counter`), form (`#task-form`, `#task-input`), filtre butonları (`#filters` içinde `#filter-all`, `#filter-active`, `#filter-done`), görev listesi (`#task-list`), Arşiv başlığı ve listesi (`#archive-list`)
-- `style.css`: sade düzen, `.done` sınıfı üstü çizili ve gri gösterir, `.active-filter` seçili filtre butonunu koyu gösterir
+Kumbara yeniden tasarımından sonra (ayrıntılı görsel kurallar `DESIGN.md`'de):
+
+- `index.html`: solda kumbara paneli (`.bank`: para ağzı, toplam altın, seviye, para yığını, bugün/seri, mesaj), sağda görev yazma kutusu (`#task-form`), "Görevler" başlığı + sayaç, filtreler, liste, açılır Arşiv (`<details>`)
+- `fonts/fonts.css`: Bricolage Grotesque gömülü (OFL), internet gerekmez
 - `app.js`:
-  - Görev nesnesi: `{ id, text, done, archived }` (eski görevlerde `archived` yok, `undefined` = arşivlenmemiş)
-  - `loadTasks()` / `saveTasks()`: localStorage, anahtar `"tasks"`
-  - `filter` değişkeni: `"all"` / `"active"` / `"done"`, kaydedilmez (F5'te "all"a döner)
-  - `render()`: iki listeyi temizler; filtreye uymayan görevi `continue` ile atlar (arşiv listesi de filtrelenir); her görev için kutucuk, yazı, Sil ve Arşivle/Geri al butonu çizer; görevi `archived` bilgisine göre listeye koyar; sayacı günceller (sayaç filtreden etkilenmez); seçili filtre butonuna `.active-filter` sınıfını verir
-  - Form submit: görev ekler; dosyanın sonunda üç filtre butonunun tıklama kodu var
-  - Bilinen görünüş kusurları (zararsız): `deleteButton.addEventListener` satırında ve filtre `continue` satırlarından ikincisinde fazladan girinti var; `index.html`'de `#filters` bloğunun girintisi kaymış. Kullanıcıya Shift+Alt+F ile düzeltebileceği söylendi.
+  - Görev nesnesi: `{ id, text, done, archived, doneOn? }`. Eski görevler aynen okunur
+  - Kumbara: localStorage `"kumbara"` = `{ coins, days: { "YYYY-MM-DD": bitenSayısı } }`. Yoksa eski görevlerden doldurulur (görev × 1 + biten × 3)
+  - Puan: ekle +1, bitir +3, bitirmeyi geri al −3, bitmemiş görevi sil −1
+  - Seviyeler `LEVELS` dizisinde (Bozuk para → Efsane); yığında her para 1/2/5/10 altın
+  - Uçan altın animasyonu `flyCoin()`, hareket azaltma tercihinde kapalı
+  - `tasks` okunamazsa veri silinmez, `tasks-backup-<zaman>` anahtarına yedeklenir
 
 ## Biten dersler
 

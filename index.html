@@ -18,7 +18,10 @@
       <p id="level-name" class="bank-level"></p>
       <div id="coin-stack" class="coin-stack" role="img"></div>
       <p id="level-next" class="bank-next"></p>
-      <p id="bank-day" class="bank-day"></p>
+      <div class="bank-record">
+        <p id="bank-day"></p>
+        <p id="bank-streak"></p>
+      </div>
       <p id="bank-message" class="bank-message" aria-live="polite"></p>
     </aside>
 
@@ -30,7 +33,7 @@
       </form>
 
       <div class="board-head">
-        <h1>Yapılacaklar <span id="counter" class="count"></span></h1>
+        <h1>Görevler <span id="counter" class="count"></span></h1>
         <div id="filters" class="filters" role="group" aria-label="Filtre">
           <button id="filter-all" type="button">Hepsi</button>
           <button id="filter-active" type="button">Yapılacaklar</button>

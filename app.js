@@ -2,7 +2,8 @@ const TASKS_KEY = "tasks";
 const BANK_KEY = "kumbara";
 const ADD_REWARD = 1;
 const DONE_REWARD = 3;
-const STACK_SLOTS = 40;
+const STACK_MAX = 40;
+const COIN_UNITS = [1, 2, 5, 10, 25];
 
 const LEVELS = [
   { at: 0, name: "Bozuk para" },
@@ -51,6 +52,7 @@ const levelName = document.getElementById("level-name");
 const coinStack = document.getElementById("coin-stack");
 const levelNext = document.getElementById("level-next");
 const bankDay = document.getElementById("bank-day");
+const bankStreak = document.getElementById("bank-streak");
 const bankMessage = document.getElementById("bank-message");
 
 let tasks = loadTasks();
@@ -153,14 +155,14 @@ function flyCoin(fromRect, small) {
   coin.className = small ? "flying-coin is-small" : "flying-coin";
   document.body.append(coin);
 
-  const flight = coin.animate(frames, { duration: small ? 520 : 680, easing: "cubic-bezier(0.33, 1, 0.68, 1)" });
+  const flight = coin.animate(frames, { duration: small ? 520 : 680, easing: "cubic-bezier(0.16, 1, 0.3, 1)" });
   flight.onfinish = () => {
     coin.remove();
     shownCoins = bank.coins;
     coinTotal.textContent = shownCoins;
     coinTotal.animate(
       [{ transform: "scale(1.08)" }, { transform: "scale(1)" }],
-      { duration: 380, easing: "cubic-bezier(0.22, 1, 0.36, 1)" },
+      { duration: 380, easing: "cubic-bezier(0.16, 1, 0.3, 1)" },
     );
   };
 }
@@ -202,6 +204,11 @@ function toggleArchive(task) {
 
 function deleteTask(task) {
   tasks = tasks.filter((t) => t.id !== task.id);
+  if (!task.done) {
+    bank.coins = Math.max(0, bank.coins - ADD_REWARD);
+    shownCoins = bank.coins;
+    message = "Silinen görevin altını kumbaradan çıktı.";
+  }
   newTaskId = null;
   save();
   render();
@@ -291,13 +298,29 @@ function renderLists() {
   }
 }
 
-function dayText(today, days) {
-  if (today > 0) {
-    const run = days > 1 ? ` ${days} gündür seri sürüyor.` : "";
-    return `Bugün ${today} görev bitirdin.${run}`;
-  }
-  if (days > 0) return `${days} günlük serin var. Bugün bir görev bitirirsen devam eder.`;
-  return "Bugün henüz görev bitirmedin.";
+function streakText(today, days) {
+  if (days === 0) return "Seri: 0 gün";
+  if (today === 0) return `Seri: ${days} gün, bugün bir görevle sürer`;
+  return `Seri: ${days} gün`;
+}
+
+function renderStack(level) {
+  const span = level.next ? level.next.at - level.at : STACK_MAX;
+  const unit = COIN_UNITS.find((u) => span / u <= STACK_MAX);
+  const slots = Math.ceil(span / unit);
+  const filled = level.next ? Math.floor((bank.coins - level.at) / unit) : slots;
+  const rows = [8, 10, 6, 9, 5].find((r) => slots % r === 0 && slots / r <= 5) || 8;
+  coinStack.style.gridTemplateRows = `repeat(${rows}, 11px)`;
+  coinStack.style.gridTemplateColumns = `repeat(${Math.ceil(slots / rows)}, 46px)`;
+
+  coinStack.replaceChildren(
+    ...Array.from({ length: slots }, (_, i) => {
+      const coin = document.createElement("span");
+      coin.className = i < filled ? "stack-coin is-filled" : "stack-coin";
+      return coin;
+    }),
+  );
+  return unit;
 }
 
 function renderBank() {
@@ -305,23 +328,17 @@ function renderBank() {
   coinTotal.textContent = shownCoins;
   levelName.textContent = level.name;
 
-  const filled = level.next
-    ? Math.floor(((bank.coins - level.at) / (level.next.at - level.at)) * STACK_SLOTS)
-    : STACK_SLOTS;
-  coinStack.replaceChildren(
-    ...Array.from({ length: STACK_SLOTS }, (_, i) => {
-      const coin = document.createElement("span");
-      coin.className = i < filled ? "stack-coin is-filled" : "stack-coin";
-      return coin;
-    }),
-  );
-
+  const unit = renderStack(level);
   const toNext = level.next ? level.next.at - bank.coins : 0;
-  levelNext.textContent = level.next ? `${level.next.name} için ${toNext} altın daha` : "En yüksek seviye. Efsanesin.";
+  const unitNote = unit > 1 ? `Her para ${unit} altın. ` : "";
+  levelNext.textContent = level.next
+    ? `${unitNote}${level.next.name} için ${toNext} altın daha`
+    : "En yüksek seviye. Efsanesin.";
   coinStack.setAttribute("aria-label", level.next ? `Sonraki seviyeye ${toNext} altın kaldı` : "Kumbara tamamen dolu");
 
   const today = bank.days[dayKey()] || 0;
-  bankDay.textContent = dayText(today, streak());
+  bankDay.textContent = `Bugün ${today} görev bitirdin`;
+  bankStreak.textContent = streakText(today, streak());
   bankMessage.textContent = message || "Görev eklemek 1, bitirmek 3 altın.";
 }
 
