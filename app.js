@@ -214,6 +214,45 @@ function deleteTask(task) {
   render();
 }
 
+function startEdit(task, li, text) {
+  const field = document.createElement("input");
+  field.type = "text";
+  field.className = "task-edit";
+  field.value = task.text;
+  field.maxLength = 200;
+  field.setAttribute("aria-label", "Görevi düzenle");
+
+  li.classList.add("is-editing");
+  text.replaceWith(field);
+  field.focus();
+  field.select();
+
+  let finished = false;
+  const finish = (keep) => {
+    if (finished) return;
+    finished = true;
+    const value = field.value.trim();
+    if (keep && value !== "" && value !== task.text) {
+      task.text = value;
+      message = "Görev güncellendi.";
+      save();
+    }
+    newTaskId = null;
+    render();
+  };
+
+  field.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      finish(true);
+    } else if (event.key === "Escape") {
+      event.preventDefault();
+      finish(false);
+    }
+  });
+  field.addEventListener("blur", () => finish(true));
+}
+
 function actionButton(label, onClick, extraClass) {
   const button = document.createElement("button");
   button.type = "button";
@@ -239,10 +278,13 @@ function taskItem(task) {
   const text = document.createElement("span");
   text.className = "task-text";
   text.textContent = task.text;
+  text.title = "Düzenlemek için çift tıkla";
+  text.addEventListener("dblclick", () => startEdit(task, li, text));
 
   const actions = document.createElement("div");
   actions.className = "task-actions";
   actions.append(
+    actionButton("Düzenle", () => startEdit(task, li, text)),
     actionButton(task.archived ? "Geri al" : "Arşivle", () => toggleArchive(task)),
     actionButton("Sil", () => deleteTask(task), "danger"),
   );

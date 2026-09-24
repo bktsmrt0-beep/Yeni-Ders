@@ -336,7 +336,7 @@
       },
       "title": {
         "displayName": "Level Name",
-        "purpose": "Bank level name; the archive summary uses the display face at 1.15rem/650."
+        "purpose": "Bank level name; the archive summary uses the display face at 1.125rem (--text-lg)/650."
       },
       "message": {
         "displayName": "Encouraging Line",
@@ -348,14 +348,34 @@
       },
       "label": {
         "displayName": "Label",
-        "purpose": "Filters, actions, counts, next-level and record lines (0.875-0.95rem)."
+        "purpose": "Filters, counts, next-level and record lines at 0.9375rem (--text-sm); row actions at 0.875rem (--text-xs)."
+      },
+      "display-compact": {
+        "displayName": "Coin Total (compact)",
+        "purpose": "The coin total in the mobile bank band (--text-display-compact)."
+      },
+      "subtitle": {
+        "displayName": "Subtitle",
+        "purpose": "Archive summary; level name and message in the mobile band (--text-lg, display face)."
+      },
+      "entry": {
+        "displayName": "Entry Input",
+        "purpose": "The task entry input (--text-lg, system face)."
+      },
+      "ui": {
+        "displayName": "UI Base",
+        "purpose": "Page base, primary button label, today/streak record (--text-base)."
+      },
+      "label-small": {
+        "displayName": "Small Label",
+        "purpose": "Row actions; next-level line on mobile (--text-xs)."
       }
     },
     "shadows": [
       {
         "name": "entry-float",
         "value": "0 8px 22px -12px rgb(17 28 58 / 0.35)",
-        "purpose": "The entry slot at rest; the only floating element on the porcelain side."
+        "purpose": "The entry slot at rest; the only element floating on the porcelain side while no row is lifted."
       },
       {
         "name": "entry-focus",
@@ -381,6 +401,11 @@
         "name": "coin-flight",
         "value": "inset 0 0 0 2px rgb(168 116 12 / 0.7), 0 6px 12px rgb(90 61 0 / 0.35)",
         "purpose": "The coin in flight."
+      },
+      {
+        "name": "row-tray",
+        "value": "0 14px 28px -16px rgb(17 28 58 / 0.45), 0 3px 8px -3px rgb(17 28 58 / 0.14)",
+        "purpose": "The Paper tray under the hovered or focused task row."
       }
     ],
     "motion": [
@@ -427,7 +452,7 @@
       "kind": "button",
       "refersTo": "button-action",
       "description": "Quiet text actions on a task row; delete hovers to danger.",
-      "html": "<div class=\"ds-actions\"><button class=\"ds-action\">Arşivle</button><button class=\"ds-action ds-danger\">Sil</button></div>",
+      "html": "<div class=\"ds-actions\"><button class=\"ds-action\">Düzenle</button><button class=\"ds-action\">Arşivle</button><button class=\"ds-action ds-danger\">Sil</button></div>",
       "css": ":host{--ground:#f2f5fa;--paper:#ffffff;--line:#dde3ee;--wash:#e6ebf4;--ink:#111c3a;--ink-soft:#4b5878;--ink-done:#5d667c;--placeholder:#66708a;--cobalt:#1e3aa6;--cobalt-deep:#142a7c;--cobalt-glaze:#3053d4;--on-cobalt:#eef2ff;--on-cobalt-soft:#bccaff;--gold-light:#ffe08a;--gold:#f4b92c;--gold-deep:#a8740c;--danger:#b42318;--danger-wash:#fdecea;--font-display:\"Bricolage Grotesque\",\"Segoe UI Variable Display\",\"Segoe UI\",system-ui,sans-serif;--font-ui:\"Segoe UI Variable Text\",\"Segoe UI\",system-ui,-apple-system,sans-serif;}.ds-actions{display:flex;gap:2px;font-family:var(--font-ui)}.ds-action{padding:6px 10px;border:0;border-radius:8px;background:transparent;color:var(--ink-soft);font:inherit;font-size:.875rem;cursor:pointer}.ds-action:hover{background:var(--wash);color:var(--ink)}.ds-action.ds-danger:hover{background:var(--danger-wash);color:var(--danger)}.ds-action:focus-visible{outline:2px solid var(--cobalt);outline-offset:2px}"
     },
     {
@@ -444,7 +469,7 @@
       "refersTo": "chip-filter",
       "description": "Wash track with a paper-lifted active segment.",
       "html": "<div class=\"ds-filters\" role=\"group\" aria-label=\"Filtre\"><button class=\"ds-seg ds-active\">Hepsi</button><button class=\"ds-seg\">Yapılacaklar</button><button class=\"ds-seg\">Tamamlananlar</button></div>",
-      "css": ":host{--ground:#f2f5fa;--paper:#ffffff;--line:#dde3ee;--wash:#e6ebf4;--ink:#111c3a;--ink-soft:#4b5878;--ink-done:#5d667c;--placeholder:#66708a;--cobalt:#1e3aa6;--cobalt-deep:#142a7c;--cobalt-glaze:#3053d4;--on-cobalt:#eef2ff;--on-cobalt-soft:#bccaff;--gold-light:#ffe08a;--gold:#f4b92c;--gold-deep:#a8740c;--danger:#b42318;--danger-wash:#fdecea;--font-display:\"Bricolage Grotesque\",\"Segoe UI Variable Display\",\"Segoe UI\",system-ui,sans-serif;--font-ui:\"Segoe UI Variable Text\",\"Segoe UI\",system-ui,-apple-system,sans-serif;}.ds-filters{display:inline-flex;gap:2px;padding:3px;border-radius:10px;background:var(--wash);font-family:var(--font-ui)}.ds-seg{padding:6px 12px;border:0;border-radius:8px;background:transparent;color:var(--ink-soft);font:inherit;font-size:.9rem;cursor:pointer}.ds-seg:hover{color:var(--ink)}.ds-seg.ds-active{background:var(--paper);color:var(--ink);font-weight:600;box-shadow:0 1px 3px rgb(17 28 58 / .18)}.ds-seg:focus-visible{outline:2px solid var(--cobalt);outline-offset:2px}"
+      "css": ":host{--ground:#f2f5fa;--paper:#ffffff;--line:#dde3ee;--wash:#e6ebf4;--ink:#111c3a;--ink-soft:#4b5878;--ink-done:#5d667c;--placeholder:#66708a;--cobalt:#1e3aa6;--cobalt-deep:#142a7c;--cobalt-glaze:#3053d4;--on-cobalt:#eef2ff;--on-cobalt-soft:#bccaff;--gold-light:#ffe08a;--gold:#f4b92c;--gold-deep:#a8740c;--danger:#b42318;--danger-wash:#fdecea;--font-display:\"Bricolage Grotesque\",\"Segoe UI Variable Display\",\"Segoe UI\",system-ui,sans-serif;--font-ui:\"Segoe UI Variable Text\",\"Segoe UI\",system-ui,-apple-system,sans-serif;}.ds-filters{display:inline-flex;gap:2px;padding:3px;border-radius:10px;background:var(--wash);font-family:var(--font-ui)}.ds-seg{padding:6px 12px;border:0;border-radius:8px;background:transparent;color:var(--ink-soft);font:inherit;font-size:.9375rem;cursor:pointer}.ds-seg:hover{color:var(--ink)}.ds-seg.ds-active{background:var(--paper);color:var(--ink);font-weight:600;box-shadow:0 1px 3px rgb(17 28 58 / .18)}.ds-seg:focus-visible{outline:2px solid var(--cobalt);outline-offset:2px}"
     },
     {
       "name": "Task Row",
@@ -460,7 +485,7 @@
       "refersTo": "bank-panel",
       "description": "Signature glazed cobalt kumbara: recessed slot, display total, level, gold coin stack, readouts, message.",
       "html": "<aside class=\"ds-bank\"><div class=\"ds-slot\"></div><p class=\"ds-total\"><span class=\"ds-num\">42</span><span class=\"ds-unit\">altın</span></p><p class=\"ds-level\">Çırak</p><div class=\"ds-stack\"><i class=\"ds-coin ds-filled\"></i><i class=\"ds-coin ds-filled\"></i><i class=\"ds-coin ds-filled\"></i><i class=\"ds-coin ds-filled\"></i><i class=\"ds-coin ds-filled\"></i><i class=\"ds-coin\"></i><i class=\"ds-coin\"></i><i class=\"ds-coin\"></i></div><p class=\"ds-next\">Sonraki seviyeye 8 altın</p><p class=\"ds-msg\">Harika gidiyorsun!</p></aside>",
-      "css": ":host{--ground:#f2f5fa;--paper:#ffffff;--line:#dde3ee;--wash:#e6ebf4;--ink:#111c3a;--ink-soft:#4b5878;--ink-done:#5d667c;--placeholder:#66708a;--cobalt:#1e3aa6;--cobalt-deep:#142a7c;--cobalt-glaze:#3053d4;--on-cobalt:#eef2ff;--on-cobalt-soft:#bccaff;--gold-light:#ffe08a;--gold:#f4b92c;--gold-deep:#a8740c;--danger:#b42318;--danger-wash:#fdecea;--font-display:\"Bricolage Grotesque\",\"Segoe UI Variable Display\",\"Segoe UI\",system-ui,sans-serif;--font-ui:\"Segoe UI Variable Text\",\"Segoe UI\",system-ui,-apple-system,sans-serif;}.ds-bank{position:relative;isolation:isolate;overflow:hidden;width:300px;padding:44px 36px 40px;color:var(--on-cobalt);font-family:var(--font-ui);background:radial-gradient(130% 60% at 18% 0%,var(--cobalt-glaze) 0%,transparent 60%),linear-gradient(180deg,var(--cobalt) 0%,var(--cobalt-deep) 100%)}.ds-bank::before{content:\"\";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(55% 22% at 30% 9%,rgb(255 255 255 / .2) 0%,rgb(255 255 255 / .06) 55%,transparent 100%),radial-gradient(40% 14% at 78% 30%,rgb(255 255 255 / .07) 0%,transparent 100%),radial-gradient(120% 28% at 50% 104%,rgb(6 14 52 / .55) 0%,transparent 100%)}.ds-slot{width:120px;height:20px;margin-bottom:36px;border-radius:999px;background:linear-gradient(180deg,#030a2b 0%,#0a1850 100%);box-shadow:inset 0 5px 7px rgb(0 0 0 / .7),0 0 0 3px rgb(96 128 240 / .55),0 3px 2px 3px rgb(200 214 255 / .28)}.ds-total{display:flex;align-items:baseline;gap:10px;margin:0}.ds-num{font-family:var(--font-display);font-size:5rem;font-weight:700;line-height:.95;letter-spacing:-.035em;font-variant-numeric:tabular-nums}.ds-unit{font-family:var(--font-display);font-size:1.25rem;font-weight:500;color:var(--on-cobalt-soft)}.ds-level{margin:28px 0 14px;font-family:var(--font-display);font-size:1.5rem;font-weight:650;line-height:1.2}.ds-stack{display:grid;grid-template-columns:repeat(2,46px);grid-template-rows:repeat(4,11px);grid-auto-flow:column;gap:4px 10px;transform:scaleY(-1);width:max-content}.ds-coin{border-radius:50%;border:1.5px dashed rgb(188 202 255 / .35)}.ds-coin.ds-filled{border:0;background:linear-gradient(0deg,var(--gold-light) 0%,var(--gold) 55%,var(--gold) 100%);box-shadow:inset 0 3px 0 var(--gold-deep),inset 0 -1px 0 rgb(255 255 255 / .55),0 -2px 3px rgb(5 12 40 / .35)}.ds-next{margin:14px 0 0;font-size:.95rem;color:var(--on-cobalt-soft);font-variant-numeric:tabular-nums}.ds-msg{margin:12px 0 0;font-family:var(--font-display);font-size:1.3rem;font-weight:600;line-height:1.3;text-wrap:balance}"
+      "css": ":host{--ground:#f2f5fa;--paper:#ffffff;--line:#dde3ee;--wash:#e6ebf4;--ink:#111c3a;--ink-soft:#4b5878;--ink-done:#5d667c;--placeholder:#66708a;--cobalt:#1e3aa6;--cobalt-deep:#142a7c;--cobalt-glaze:#3053d4;--on-cobalt:#eef2ff;--on-cobalt-soft:#bccaff;--gold-light:#ffe08a;--gold:#f4b92c;--gold-deep:#a8740c;--danger:#b42318;--danger-wash:#fdecea;--font-display:\"Bricolage Grotesque\",\"Segoe UI Variable Display\",\"Segoe UI\",system-ui,sans-serif;--font-ui:\"Segoe UI Variable Text\",\"Segoe UI\",system-ui,-apple-system,sans-serif;}.ds-bank{position:relative;isolation:isolate;overflow:hidden;width:300px;padding:44px 36px 40px;color:var(--on-cobalt);font-family:var(--font-ui);background:radial-gradient(130% 60% at 18% 0%,var(--cobalt-glaze) 0%,transparent 60%),linear-gradient(180deg,var(--cobalt) 0%,var(--cobalt-deep) 100%)}.ds-bank::before{content:\"\";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(55% 22% at 30% 9%,rgb(255 255 255 / .2) 0%,rgb(255 255 255 / .06) 55%,transparent 100%),radial-gradient(40% 14% at 78% 30%,rgb(255 255 255 / .07) 0%,transparent 100%),radial-gradient(120% 28% at 50% 104%,rgb(6 14 52 / .55) 0%,transparent 100%)}.ds-slot{width:120px;height:20px;margin-bottom:36px;border-radius:999px;background:linear-gradient(180deg,#030a2b 0%,#0a1850 100%);box-shadow:inset 0 5px 7px rgb(0 0 0 / .7),0 0 0 3px rgb(96 128 240 / .55),0 3px 2px 3px rgb(200 214 255 / .28)}.ds-total{display:flex;align-items:baseline;gap:10px;margin:0}.ds-num{font-family:var(--font-display);font-size:5rem;font-weight:700;line-height:.95;letter-spacing:-.035em;font-variant-numeric:tabular-nums}.ds-unit{font-family:var(--font-display);font-size:1.25rem;font-weight:500;color:var(--on-cobalt-soft)}.ds-level{margin:28px 0 14px;font-family:var(--font-display);font-size:1.5rem;font-weight:650;line-height:1.2}.ds-stack{display:grid;grid-template-columns:repeat(2,46px);grid-template-rows:repeat(4,11px);grid-auto-flow:column;gap:4px 10px;transform:scaleY(-1);width:max-content}.ds-coin{border-radius:50%;border:1.5px dashed rgb(188 202 255 / .35)}.ds-coin.ds-filled{border:0;background:linear-gradient(0deg,var(--gold-light) 0%,var(--gold) 55%,var(--gold) 100%);box-shadow:inset 0 3px 0 var(--gold-deep),inset 0 -1px 0 rgb(255 255 255 / .55),0 -2px 3px rgb(5 12 40 / .35)}.ds-next{margin:14px 0 0;font-size:.9375rem;color:var(--on-cobalt-soft);font-variant-numeric:tabular-nums}.ds-msg{margin:12px 0 0;font-family:var(--font-display);font-size:1.25rem;font-weight:600;line-height:1.3;text-wrap:balance}"
     },
     {
       "name": "Flying Coin",

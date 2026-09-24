@@ -22,10 +22,18 @@ colors:
   placeholder: "#66708a"
   danger: "#b42318"
   danger-wash: "#fdecea"
+  glaze-foot: "rgb(6 14 52 / 0.55)"
 typography:
   display:
     fontFamily: "Bricolage Grotesque, Segoe UI Variable Display, Segoe UI, system-ui, sans-serif"
     fontSize: "clamp(4rem, 6.5vw, 5.75rem)"
+    fontWeight: 700
+    lineHeight: 0.95
+    letterSpacing: "-0.035em"
+    fontFeature: "tnum"
+  display-compact:
+    fontFamily: "Bricolage Grotesque, Segoe UI Variable Display, Segoe UI, system-ui, sans-serif"
+    fontSize: "3.25rem"
     fontWeight: 700
     lineHeight: 0.95
     letterSpacing: "-0.035em"
@@ -44,17 +52,37 @@ typography:
     letterSpacing: "-0.01em"
   message:
     fontFamily: "Bricolage Grotesque, Segoe UI Variable Display, Segoe UI, system-ui, sans-serif"
-    fontSize: "1.3rem"
+    fontSize: "1.25rem"
     fontWeight: 600
     lineHeight: 1.3
+  subtitle:
+    fontFamily: "Bricolage Grotesque, Segoe UI Variable Display, Segoe UI, system-ui, sans-serif"
+    fontSize: "1.125rem"
+    fontWeight: 650
+    lineHeight: 1.2
+  entry:
+    fontFamily: "Segoe UI Variable Text, Segoe UI, system-ui, -apple-system, sans-serif"
+    fontSize: "1.125rem"
+    fontWeight: 400
+    lineHeight: 1.5
   body:
     fontFamily: "Segoe UI Variable Text, Segoe UI, system-ui, -apple-system, sans-serif"
     fontSize: "1.0625rem"
     fontWeight: 400
     lineHeight: 1.5
+  ui:
+    fontFamily: "Segoe UI Variable Text, Segoe UI, system-ui, -apple-system, sans-serif"
+    fontSize: "1rem"
+    fontWeight: 400
+    lineHeight: 1.5
   label:
     fontFamily: "Segoe UI Variable Text, Segoe UI, system-ui, -apple-system, sans-serif"
-    fontSize: "0.9rem"
+    fontSize: "0.9375rem"
+    fontWeight: 400
+    lineHeight: 1.5
+  label-small:
+    fontFamily: "Segoe UI Variable Text, Segoe UI, system-ui, -apple-system, sans-serif"
+    fontSize: "0.875rem"
     fontWeight: 400
     lineHeight: 1.5
 rounded:
@@ -189,12 +217,20 @@ A cool, high-contrast palette: saturated cobalt ceramic, cool porcelain neutrals
 **Character:** A chunky, slightly quirky grotesque for coin numerals and headings against a plain system face for the tasks themselves, so the reward layer has a voice and the working text stays neutral.
 
 ### Hierarchy
-- **Display** (700, clamp(4rem, 6.5vw, 5.75rem), 0.95): the coin total only; 3.25rem on mobile. Unit label "altın" sits beside it in display face at 1.25rem, 500.
-- **Headline** (700, 1.85rem, 1.15): the page h1 "Görevler"; 1.5rem on mobile.
-- **Title** (650, 1.5rem, 1.2): the bank level name. The archive summary uses the display face at 1.15rem, 650.
-- **Message** (600, 1.3rem, 1.3, balanced wrap): the encouraging line in the bank.
-- **Body** (400, 1.0625rem, 1.5): task text; entry input at 1.125rem.
-- **Label** (400, 0.875-0.95rem): filters, action buttons, counts, next-level and record lines. Active filter goes 600. Primary button label uses the display face at 1rem, 650.
+One ramp, exposed as `--text-*` custom properties in style.css; every font-size uses a step, never a literal.
+
+| Step | Size | Use |
+|---|---|---|
+| `--text-display` | clamp(4rem, 6.5vw, 5.75rem) | Display (700, 0.95): the coin total only |
+| `--text-display-compact` | 3.25rem | the coin total in the mobile band |
+| `--text-3xl` | 1.85rem | Headline (700, 1.15): the page h1 "Görevler" |
+| `--text-2xl` | 1.5rem | Title (650, 1.2): the bank level name; the h1 on mobile |
+| `--text-xl` | 1.25rem | Message (600, 1.3, balanced wrap): the encouraging line; the "altın" unit (500) |
+| `--text-lg` | 1.125rem | entry input; archive summary (display, 650); level name and message in the mobile band |
+| `--text-body` | 1.0625rem | Body (400, 1.5): task text and the inline edit field |
+| `--text-base` | 1rem | page base; primary button label (display, 650); today/streak record; the unit on mobile |
+| `--text-sm` | 0.9375rem | Label: filters, counts, next-level line, the record on mobile. Active filter goes 600 |
+| `--text-xs` | 0.875rem | row actions; next-level line on mobile |
 
 ### Named Rules
 **The Readout Rule.** Every count (coin total, next level, today, streak, task counters) uses tabular numerals.
@@ -205,7 +241,7 @@ A cool, high-contrast palette: saturated cobalt ceramic, cool porcelain neutrals
 
 Desktop is a two-column grid: the bank panel is a sticky, full-height left column (minmax(300px, 380px)); the board fills the rest with a centered column capped at 760px and padding 56px clamp(20px, 5vw, 72px) 80px. Order in the board: entry slot, then heading row (h1 with count left, segmented filters right, wrapping), then the open list, then the collapsible archive 48px below.
 
-At 820px and below the grid collapses to one column. The bank becomes a compact cobalt band above the entry: total spanning two rows on the left, level and next-level beside it, record and message full width beneath. The coin slot and coin stack are hidden on mobile. Filters stretch to full width with equal segments; task actions are always visible on touch (hover: none).
+At 820px and below the grid collapses to one column. The bank becomes a compact cobalt band above the entry: total spanning two rows on the left, level and next-level beside it, record and message full width beneath. The coin slot and coin stack are hidden on mobile. Filters stretch to full width with equal segments; task actions wrap to their own line under the task text (always visible on touch, shown on hover or focus otherwise). The grid column is `minmax(0, 1fr)` so nothing can widen the page past the viewport.
 
 Rhythm is loose around the bank (28px between groups) and tighter in the list (rows min 60px, 14px internal gap, 1px hairline dividers).
 
@@ -235,7 +271,7 @@ Soft rectangles for controls (8px for small buttons and filter segments, 10px fo
 ### Buttons
 - **Shape:** gently rounded (10px primary, 8px secondary).
 - **Primary ("Kumbaraya at"):** cobalt fill, porcelain text, display face 650, padding 0 22px (0 14px on mobile), sits inside the entry slot. Hover darkens to Deep Glaze Cobalt.
-- **Action (Arşivle / Geri al, Sil):** transparent, Soft Ink, 0.875rem; hover fills Wash and goes Ink. Delete hovers to Danger on Danger Wash. Actions are hidden until row hover or focus, always visible on touch.
+- **Action (Düzenle, Arşivle / Geri al, Sil):** transparent, Soft Ink, 0.875rem; hover fills Wash and goes Ink. Delete hovers to Danger on Danger Wash. Actions are hidden until row hover or focus, always visible on touch.
 - **Focus:** 2px cobalt outline, 2px offset, everywhere.
 
 ### Chips (segmented filters)
@@ -250,6 +286,7 @@ Soft rectangles for controls (8px for small buttons and filter segments, 10px fo
 - Flex row: round checkbox, text, actions; min-height 60px, hairline bottom divider. New rows slide in from 10px above over 420ms ease-out.
 - **Checkbox:** 26px circle, 2px cobalt ring on Paper; hover tints to on-cobalt; checked fills Done Gray with a white SVG tick.
 - **Archived rows:** text in Soft Ink inside a collapsible "Arşiv" section with a rotating chevron drawn from two borders.
+- **Editing:** double-click on the text or the Düzenle action swaps the text for an inline Paper field with a 2px cobalt ring, same size as the task text, actions hidden. Enter or blur saves, Escape cancels, an empty value keeps the old text. Editing earns no coins.
 - **Lifted row:** one Paper tray per list (14px radius, bleeding 14px past the row on both sides, Row tray shadow) glides to the row under the pointer or keyboard focus: transform and height over 340ms on cubic-bezier(0.16, 1, 0.3, 1). It fades in over 160ms where it first appears, never slides in from off-row. The lifted row scales to 1.018 from its left third, and its own and its upper neighbour's hairlines go transparent. The tray follows re-renders so a click never drops it. Touch-only devices get no tray; reduced motion keeps the tray but moves it instantly and drops the scale.
 
 ### Bank Panel (signature)

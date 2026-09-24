@@ -5,7 +5,8 @@
 - **Çalışma şekli değişti (2026-09-24):** Kullanıcı "ben yazmayacağım" dedi. Ders modu bitti; kodu artık Claude yazıyor ve ne değiştiğini Türkçe anlatıyor. Aşağıdaki "Ders anlatım kuralları" sadece kullanıcı tekrar kendisi yazmak isterse geçerli.
 - **Son büyük iş:** Uygulama Impeccable ile **kumbara** temasına yeniden tasarlandı (puan, seviye, seri, uçan altın animasyonu). Son değerlendirme kararı: ship. Tasarım sistemi `DESIGN.md`'de, yön sözleşmesi `.impeccable/surfaces/index-html.md`'de.
 - **Ardından (2026-09-24):** görevlerin üzerinde gezinirken altta kayan porselen tepsi ve öne çıkan satır eklendi (kullanıcı "ölü, akışkanlık yok" dedi). `DESIGN.md`'deki One Floating Thing kuralı buna göre güncellendi.
-- **Açık not:** Impeccable denetimi `style.css`'te `DESIGN.md` yazı boyutu listesinde olmayan ~13 boyut ve 1 renk buluyor (önceden vardı). İstenirse `/impeccable document` ya da `extract` ile toparlanabilir.
+- **Ardından:** tasarım kuralları toparlandı. 16 dağınık yazı boyutu, `--text-xs` … `--text-display` adlı 10 basamaklı tek ölçeğe indirildi, sır rengi `--glaze-foot` oldu. `DESIGN.md` ve `design.json` güncellendi, Impeccable denetimi 0 bulgu. Telefonda sayfanın 12px yana taşması ve Düzenle butonuyla sıkışan satırlar da düzeltildi (butonlar dar ekranda yazının altına iner).
+- **Ardından:** görevi düzenleme eklendi (çift tık ya da Düzenle butonu; Enter/dışarı tıklama kaydeder, Esc iptal, boş bırakınca eski yazı kalır, altın kazandırmaz).
 - **Sıradaki iş:** kullanıcı seçecek. Önceden konuşulan fikir: **görevi düzenleme** (çift tıklayınca yazıyı değiştirmek).
 
 ## Impeccable
