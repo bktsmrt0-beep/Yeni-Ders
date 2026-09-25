@@ -1,8 +1,8 @@
 ## Ders ilerlemesi
 
-Bu repo derslerle başladı; artık kodu Claude yazıyor (bkz. `DERSLER.md`). Oturum başında önce `DERSLER.md` dosyasını oku ve oradaki "Yeni oturum başlangıç kontrolü" adımlarını uygula. Kodu baştan tarama. Her iş bitince `DERSLER.md` dosyasını güncelle.
+Bu repo derslerle başladı; artık kodu Claude yazıyor (bkz. `DERSLER.md`). Oturum başında önce `DERSLER.md` dosyasını oku ve oradaki "Yeni oturum başlangıç kontrolü" adımlarını uygula. Kodu baştan tarama. Her iş bitince `DERSLER.md` dosyasını güncelle. Tasarım işlerinde önce `PRODUCT.md` ve `DESIGN.md`'yi oku, işten sonra Impeccable denetimini çalıştır (komut `DERSLER.md`'de).
 
-Kullanıcı **"devam edelim"** yazınca: başlangıç kontrolünü çalıştır, durumu tek cümleyle söyle ("Kumbara tasarımında kalmıştık, her şey yerinde"), sonra `DERSLER.md`'deki "Sıradaki iş" ile devam et. Seçim bekleniyorsa seçenekleri sor; değilse işe direkt başla.
+Kullanıcı **"devam edelim"** yazınca: başlangıç kontrolünü çalıştır, durumu tek cümleyle söyle ("Şeker oyunu tasarımında kalmıştık, her şey yerinde"), sonra `DERSLER.md`'deki "Sıradaki iş" ile devam et. Seçim bekleniyorsa seçenekleri sor; değilse işe direkt başla.
 
 ## Agent skills
 

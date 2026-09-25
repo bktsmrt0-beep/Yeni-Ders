@@ -1,25 +1,33 @@
 # Ders Kaydı: Todo Uygulaması
 
-## Kaldığımız yer
+## Kaldığımız yer (son güncelleme: 2026-09-25)
 
-- **Çalışma şekli değişti (2026-09-24):** Kullanıcı "ben yazmayacağım" dedi. Ders modu bitti; kodu artık Claude yazıyor ve ne değiştiğini Türkçe anlatıyor. Aşağıdaki "Ders anlatım kuralları" sadece kullanıcı tekrar kendisi yazmak isterse geçerli.
-- **Son büyük iş:** Uygulama Impeccable ile **kumbara** temasına yeniden tasarlandı (puan, seviye, seri, uçan altın animasyonu). Son değerlendirme kararı: ship. Tasarım sistemi `DESIGN.md`'de, yön sözleşmesi `.impeccable/surfaces/index-html.md`'de.
-- **Ardından (2026-09-24):** görevlerin üzerinde gezinirken altta kayan porselen tepsi ve öne çıkan satır eklendi (kullanıcı "ölü, akışkanlık yok" dedi). `DESIGN.md`'deki One Floating Thing kuralı buna göre güncellendi.
-- **Ardından:** tasarım kuralları toparlandı. 16 dağınık yazı boyutu, `--text-xs` … `--text-display` adlı 10 basamaklı tek ölçeğe indirildi, sır rengi `--glaze-foot` oldu. `DESIGN.md` ve `design.json` güncellendi, Impeccable denetimi 0 bulgu. Telefonda sayfanın 12px yana taşması ve Düzenle butonuyla sıkışan satırlar da düzeltildi (butonlar dar ekranda yazının altına iner).
-- **Ardından:** görevi düzenleme eklendi (çift tık ya da Düzenle butonu; Enter/dışarı tıklama kaydeder, Esc iptal, boş bırakınca eski yazı kalır, altın kazandırmaz).
-- **Ardından:** kullanıcı "daha anime, eğlenceli" istedi (anime/manga tarzı, kumbaraya karakter). Kumbara **Kumbara-chan** adlı kedi kulaklı anime karaktere dönüştü: ruh hâlleri (uykulu/normal/mutlu/heyecanlı), zıplama, parıltılar, manga ses yazıları, konuşma balonu. `DESIGN.md`'de Kumbara-chan bölümü var. `design.json` yan dosyası karakter için güncellenmedi, gerekirse `/impeccable document` ile yenilenebilir.
-- **Ardından:** görevlere tarih/saat, hız bonusu (1 saat +3, 1 gün +2, 3 gün +1; geri alınca kazanılan kadar düşer) ve her göreve anime karakter (yaşına göre parlak/normal/endişeli/ağlayan, biten gururlu, arşivdeki uyuyor) eklendi. "Karakterler ne anlatıyor?" kutusu + altın vermeyen örnek görevler butonu var. Görev nesnesine `createdAt`, `doneAt`, `earned`, `demo` alanları eklendi; eski görevlerin eklenme zamanı `id`'den çıkarılıyor.
-- **Ardından (2026-09-24, büyük iş):** Kullanıcı "çocuklar için eğlenceli, her bölüm oyun gibi, Candy Crush gibi" istedi (kullanan yine kendisi). Uygulama şeker oyunu dünyasına yeniden tasarlandı: mor jöle üst gösterge (seviye yıldızı, altın, 3 yıldızlı çubuk, seri kalpleri, ses düğmesi), Kumbara-chan şeker kaidede, kıvrılan "Bugünün yolu" (bugün bitenler durak yakar, hız = 1–3 yıldız), renkli jöle görev kartları + krem oyuk, renkli çerçeveli paneller, şeker patlaması parçacıkları, ortada "Leziz!/Şimşek!" yazıları, Web Audio sesleri. Seviye atlayınca tam ekran kutlama: kullanıcı isteğiyle yazı **"Fikret Hocam, emeğinize sağlık!" + "Teşekkürler!"**. Yazı tipleri: Lilita One (başlık) + Nunito, `fonts/fonts.css` içine gömülü. `PRODUCT.md` güncellendi (Candy Crush sadece stil referansı, adı/logosu kullanılmaz).
-- **Değerlendirme durumu (2026-09-25): tamamlandı, karar "ship".** Üç açık iş bitti: başlık yazı tipi Lilita One yerine **Baloo 2 ExtraBold ("Candy Display")** oldu (ğ/ş/İ eksikti; `fonts/fonts.css` yeniden üretildi), kutlama arkası opak koyu üzüm diski oldu, `DESIGN.md` + `.impeccable/design.json` şeker dünyasına göre baştan yazıldı. Parıltı/patlama animasyonları `fill: "forwards"` aldı.
-- **Temizlik tamamlandı (2026-09-25):** Impeccable denetimi **0 bulgu** veriyor. 7 küçük sapma giderildi (siyah gölge tonları belgelenmiş değerlere eşitlendi, `--candy-cream` ve 5px `shard` köşesi `DESIGN.md`'ye eklendi). Açılır kutu okları artık SVG (eski `side-tab` istisnası gerekmedi ve silindi). Rozet rakamı ve "Teşekkürler!/Yeni seviye" satırları gerçekten okunaklı yapıldı (beyaz + kontur, koyu hap). Kalan istisnalar `.impeccable/config.json` ve `DESIGN.md`'de gerekçeleriyle duruyor (gradient-text, repeating-stripes, ai-color-palette, bounce-easing yeniden kapsamlandı, nested-cards).
-- **Bilinen küçük not:** yer tutucu rengi (`#8a6fa0` krem üstünde 4.1:1) ve aksiyon hapı hover'ı (beyaz/üzüm 4.37:1) AA sınırının hafif altında; denetim bunları yakalamıyor.
-- **Sıradaki iş:** kullanıcı seçecek (küçük açık notlar isteğe bağlı). Önceden konuşulan fikir: **görevi düzenleme** (çift tıklayınca yazıyı değiştirmek).
+**Durum:** Her şey commit'li ve GitHub'a gönderildi (son commit `f5e2ab8`). Bekleyen iş yok.
 
-## Impeccable
+- **Uygulama:** Candy Crush havasında şeker oyunu gibi bir todo (yalnız kullanıcı kullanıyor, tamamen çevrimdışı, düz HTML/CSS/JS). Kod artık **Claude yazıyor**, ne değiştiğini Türkçe anlatıyor. (Kullanıcı Ders 0–4'ü kendisi yazdı, sonra "ben yazmayacağım" dedi.)
+- **Kalite:** Impeccable tasarım denetimi **0 bulgu**. Bağımsız değerlendirici karar: "ship".
+- **Sıradaki iş:** kullanıcı belirleyecek. Bilinen küçük not: yer tutucu rengi (`#8a6fa0` krem üstünde 4.1:1) ve aksiyon hapı hover'ı (beyaz/üzüm 4.37:1) AA sınırının hafif altında, denetim yakalamıyor.
 
-- ✅ Plugin kurulu (`impeccable@impeccable`, v4.3.1). `PRODUCT.md` ve `DESIGN.md` var.
-- Tasarım değişikliklerinde önce `impeccable context` çalışır; yeni işler kumbara dünyasını (DESIGN.md) miras alır.
-- `side-tab` denetim kuralı `style.css` ve `index.html` için susturuldu (yığındaki paranın alt kenarı yanlış alarm veriyordu), `.impeccable/config.json`'da.
+### Neler var (özet)
+
+- **Görev işlemleri:** ekle, düzenle (çift tık ya da Düzenle butonu; Enter/dışarı tık kaydeder, Esc iptal), sil, bitir/geri al, arşivle/geri al, filtreler (Hepsi/Yapılacaklar/Tamamlananlar), örnek görevler (altın vermez).
+- **Puan:** görev eklemek +1, bitirmek +3 + **hız bonusu** (1 saat +3, 1 gün +2, 3 gün +1). Geri almak kazanılan kadar düşer; bitmemiş görevi silmek 1 altın geri alır. Seviyeler, günlük sayaç, seri (5 kalp).
+- **Oyun ekranı:** mor jöle üst gösterge (seviye yıldızı, altın, 3 yıldızlı çubuk, kalpler, ses düğmesi), Kumbara-chan (kedi kulaklı anime kumbara, ruh hâlleri), kıvrılan **"Bugünün yolu"** (bitirilen her görev bir durak yakar, hız = yıldız), her görev bir **jöle şeker kartı** + görev başına bir anime karakter (yaşına göre yüzü değişir), şeker patlaması parçacıkları, ortada "Leziz!/Şimşek!" yazıları, Web Audio sesleri.
+- **Seviye atlayınca:** tam ekran kutlama, kullanıcı isteğiyle yazı **"Fikret Hocam, emeğinize sağlık!" + "Teşekkürler!"** (sabit metin, değiştirme).
+- **Yazı tipleri:** başlık "Candy Display" = **Baloo 2 ExtraBold** (Lilita One'da ğ/ş/İ yoktu), metin Nunito. İkisi `fonts/fonts.css` içine gömülü, internet gerekmez.
+
+### Dosyalar
+
+- `index.html`, `style.css`, `app.js`, `fonts/` — uygulama. `PRODUCT.md` (ürün bilgisi, Candy Crush sadece stil referansı: adı/logosu/görselleri/sesleri kullanılmaz), `DESIGN.md` + `.impeccable/design.json` (görsel sistem), `.impeccable/surfaces/index-html.md` (yön sözleşmesi), `.impeccable/config.json` (denetim istisnaları, gerekçeleriyle).
+- **Veri (localStorage):** `"tasks"` = `[{ id, text, done, archived, createdAt?, doneOn?, doneAt?, earned?, demo? }]` (eski görevler aynen okunur, `createdAt` yoksa `id`'den), `"kumbara"` = `{ coins, days: { "YYYY-MM-DD": bitenSayısı } }`, `"sound"` = `"on"|"off"`. Okunamayan `tasks` silinmez, `tasks-backup-<zaman>` anahtarına yedeklenir.
+
+### Çalışma kuralları (bu proje için)
+
+- Tasarım değişikliği yapmadan önce `PRODUCT.md` ve `DESIGN.md`'yi oku, `impeccable context` çalıştır. Değişiklikten sonra denetimi çalıştır: `"<skill-klasörü>/scripts/impeccable" detect --json index.html style.css app.js` (0 bulgu hedeflenir). Yeni bir yanlış alarm çıkarsa önce gerçekten düzelt, ancak sonra en dar kapsamla `hooks ignore-value` ile gerekçeli kaydet.
+- Büyük tasarım işlerinde bitmiş işi `impeccable:impeccable-finish-reviewer` alt ajanına inceletip, sonra `impeccable:impeccable-documenter` ile `DESIGN.md`'yi güncelle.
+- Test için: `python -m http.server 8765` (klasörde) ve Playwright; `file://` çalışmaz. Ekran görüntüleri `.impeccable/review/` altında (git dışı). Görüntü alırken kaydırma çubuğunu gizle, ekran boyutu = görüntü genişliği olsun.
+- Kullanıcı Türkçe konuşur; kısa, net, sonuç odaklı yanıt ver. Kodu kullanıcı yazmıyor, uzun soru turlarından hoşlanmıyor ("soru bitsin, yap").
+- "commit push" = commit et ve GitHub'a gönder. Push'u sadece kullanıcı isterse yap.
 
 ## Yeni oturum başlangıç kontrolü
 
@@ -27,26 +35,12 @@ Tüm kodu baştan taramak yerine sadece şunu çalıştır:
 
 ```
 git status --short
-git log --oneline -1 -- app.js index.html style.css
+git log --oneline -1
 ```
 
-- `git status` çıktısı boşsa: durum bu dosyayla aynı, direkt sıradaki işe geç.
+- Çıktı boşsa ve son commit yukarıdakiyle aynıysa: durum bu dosyayla aynı, direkt sıradaki işe geç.
 - Değişiklik varsa: sadece `git diff` ile farka bak, bu dosyayı güncelle.
 - Bir işe başlamadan önce yalnızca o işin değişeceği dosyayı oku.
-
-## Uygulamanın şu anki hâli
-
-Kumbara yeniden tasarımından sonra (ayrıntılı görsel kurallar `DESIGN.md`'de):
-
-- `index.html`: solda kumbara paneli (`.bank`: para ağzı, toplam altın, seviye, para yığını, bugün/seri, mesaj), sağda görev yazma kutusu (`#task-form`), "Görevler" başlığı + sayaç, filtreler, liste, açılır Arşiv (`<details>`)
-- `fonts/fonts.css`: Bricolage Grotesque gömülü (OFL), internet gerekmez
-- `app.js`:
-  - Görev nesnesi: `{ id, text, done, archived, doneOn? }`. Eski görevler aynen okunur
-  - Kumbara: localStorage `"kumbara"` = `{ coins, days: { "YYYY-MM-DD": bitenSayısı } }`. Yoksa eski görevlerden doldurulur (görev × 1 + biten × 3)
-  - Puan: ekle +1, bitir +3, bitirmeyi geri al −3, bitmemiş görevi sil −1
-  - Seviyeler `LEVELS` dizisinde (Bozuk para → Efsane); yığında her para 1/2/5/10 altın
-  - Uçan altın animasyonu `flyCoin()`, hareket azaltma tercihinde kapalı
-  - `tasks` okunamazsa veri silinmez, `tasks-backup-<zaman>` anahtarına yedeklenir
 
 ## Biten dersler
 
