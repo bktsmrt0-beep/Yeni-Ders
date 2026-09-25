@@ -619,6 +619,22 @@
           "oklch(85% 0.111 244.6)",
           "oklch(95% 0.111 244.6)"
         ]
+      },
+      "candy-cream": {
+        "role": "accent",
+        "displayName": "Candy Cream",
+        "canonical": "#fffbd1",
+        "oklch": "oklch(98.4% 0.05 105)",
+        "tonalRamp": [
+          "oklch(15% 0.05 105)",
+          "oklch(25% 0.05 105)",
+          "oklch(35% 0.05 105)",
+          "oklch(45% 0.05 105)",
+          "oklch(55% 0.05 105)",
+          "oklch(65% 0.05 105)",
+          "oklch(80% 0.05 105)",
+          "oklch(95% 0.05 105)"
+        ]
       }
     },
     "typographyMeta": {

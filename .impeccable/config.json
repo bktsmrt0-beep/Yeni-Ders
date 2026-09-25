@@ -4,31 +4,13 @@
     "ignoreFiles": [],
     "ignoreValues": [
       {
-        "rule": "side-tab",
-        "value": "*",
-        "files": [
-          "style.css"
-        ],
-        "createdAt": "2026-09-24T17:50:30.528Z",
-        "reason": "Claude decided: the 3px inset on the 11px-tall .stack-coin ellipse is the coin's lower rim edge requested by the finish reviewer, not a side-tab accent on a card"
-      },
-      {
-        "rule": "side-tab",
-        "value": "*",
-        "files": [
-          "index.html"
-        ],
-        "createdAt": "2026-09-24T17:50:30.897Z",
-        "reason": "Claude decided: the 3px inset on the 11px-tall .stack-coin ellipse is the coin's lower rim edge requested by the finish reviewer, not a side-tab accent on a card"
-      },
-      {
         "rule": "bounce-easing",
         "value": "cubic-bezier(0.3, 1.4, 0.5, 1)",
         "files": [
           "style.css"
         ],
         "createdAt": "2026-09-24T18:28:21.380Z",
-        "reason": "Claude decided: squash-and-stretch hop for the anime mascot (Kumbara-chan) the user asked for on 2026-09-24 (anime/manga style, make it fun); limited to .mascot.is-hop"
+        "reason": "Claude decided: user pinned a Candy Crush-like game feel on 2026-09-24 and asked for a very fun, game-like app (PRODUCT.md Brand Commitments, principle 3): squash-and-stretch overshoot is the game's jelly motion; used by tile drop/pop, creature cheer/joy, path node pop, star lighting, the mascot hop, the speech-bubble pop and the level-up title slam; motion is disabled under prefers-reduced-motion"
       },
       {
         "rule": "bounce-easing",
@@ -37,7 +19,7 @@
           "style.css"
         ],
         "createdAt": "2026-09-24T18:28:22.135Z",
-        "reason": "Claude decided: manga speech-bubble pop for the anime mascot the user asked for on 2026-09-24; limited to .bubble.is-pop"
+        "reason": "Claude decided: user pinned a Candy Crush-like game feel on 2026-09-24 and asked for a very fun, game-like app (PRODUCT.md Brand Commitments, principle 3): squash-and-stretch overshoot is the game's jelly motion; used by tile drop/pop, creature cheer/joy, path node pop, star lighting, the mascot hop, the speech-bubble pop and the level-up title slam; motion is disabled under prefers-reduced-motion"
       },
       {
         "rule": "gradient-text",
@@ -74,6 +56,15 @@
         ],
         "createdAt": "2026-09-24T18:56:40.793Z",
         "reason": "user pinned a Candy Crush-like candy world on 2026-09-24; plum ink (#3a1450) is the world's text color chosen for contrast on candy fills"
+      },
+      {
+        "rule": "nested-cards",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-25T12:02:09.613Z",
+        "reason": "Claude decided: candy frame around a cream well is the pinned candy-game panel structure (DESIGN.md Surface rules: Jelly + Cream Well); the flagged p is the archive empty-state text inside the archive fold's well, intentionally not flattened"
       }
     ]
   }

@@ -43,6 +43,7 @@ colors:
   blush: "#ff8fb4"
   mouth: "#ff3d7a"
   tear: "#7cc4ff"
+  candy-cream: "#fffbd1"
 typography:
   callout:
     fontFamily: "Candy Display, Nunito, system-ui, sans-serif"
@@ -115,6 +116,7 @@ rounded:
   frame: "28px"
   pill: "999px"
   round: "50%"
+  shard: "5px"
 spacing:
   xs: "4px"
   sm: "10px"
@@ -254,6 +256,7 @@ A saturated six-candy palette on a pastel sugar sky, anchored by plum ink and cr
 - **Wash** (wash): resting action pills and the calm speed chip.
 - **Sugar Sky** (sky-top → sky-mid → sky-low, hill-back, hill-front): the fixed page ground, a vertical gradient with two white radial glows and two SVG hills.
 - **Path neutrals** (track-casing, locked-node, star-unlit): the path's pale casing, locked nodes, and unlit stars in the HUD. Unlit stars on the path use a paler lilac (#d9c4e6).
+- **Candy cream** (candy-cream, #fffbd1): the top stop of every callout and level-up title fill, before it turns lemon.
 - **Character tones** (porcelain, blush, mouth, tear): the bodies, cheeks, open mouths, and teardrops of Kumbara-chan and the task creatures. Creature ears take their task's candy hue.
 - **Danger** (danger): the hover fill of the delete action only.
 
@@ -276,7 +279,7 @@ A saturated six-candy palette on a pastel sugar sky, anchored by plum ink and cr
 ### Hierarchy
 - **Callout** (clamp(2.6rem, 9vw, 4.25rem), 1.25, 0.02em): the centered combo words ("Tatlı!", "Leziz!", "Nefis!", "Enfes!", and the speed words "Şimşek!", "Muhteşem!", "Hızlı!") and the level-up title.
 - **Headline** (1.85rem, 1.5rem under 640px, 1.1): "Görevler" in plum ink with an 8px white sticker stroke and a grape lip.
-- **Score** (1.85rem, 1.5rem under 640px, 1): the HUD coin total and "Teşekkürler!". Tabular.
+- **Score** (1.85rem, 1.5rem under 640px, 1): the HUD coin total and "Teşekkürler!" on the level-up screen. Tabular.
 - **Reward** (1.5rem): the "+N" and "Hop!" pow words by Kumbara-chan and the "Yeni seviye" line.
 - **Title** (1.25rem, 1rem in the bubble under 640px): frame headings, the "Ekle!" button, and Kumbara-chan's bubble.
 - **Title small** (1.125rem): the level name, the badge number, fold summaries, and path node numbers.
@@ -365,7 +368,7 @@ A horizontal winding row of 46px numbered nodes in a cream well, joined by the c
 - **Callouts:** one centered word per finish that slams in tilted −4° and floats away (1300ms). It is built from two layers: the element carries a 12px ink outline and a plum drop, and a `::after` holding `data-text` carries the lemon-to-orange gradient fill with no stroke.
 
 ### Level-Up Overlay
-A full-screen, opaque candy burst (a radial gradient from lemon-light through lemon, orange, cherry, and grape to grape-dark) with white conic rays turning every 6s. A grape-dark elliptical disc (44% × 22%) sits behind the words so they always read against the burst. The title "Fikret Hocam, emeğinize sağlık!" is callout-size, two-layer, and fills lemon to cherry. It slams in and rests at −3°. Below it are "Teşekkürler!" in white with a 9px ink stroke, then "Yeni seviye: <name>". It fires with two shard bursts, sparkles, and the level chime, closes on its own after 2.2s, and closes on click. This copy is user-requested and fixed.
+A full-screen, opaque candy burst (a radial gradient from lemon-light through lemon, orange, cherry, and grape to grape-dark) with white conic rays turning every 6s. A grape-dark elliptical disc (44% × 22%) sits behind the words so they always read against the burst. The title "Fikret Hocam, emeğinize sağlık!" is callout-size, two-layer, and fills lemon to cherry. It slams in and rests at −3°. Below it are "Teşekkürler!" and then "Yeni seviye: <name>", each in white on a solid grape-dark pill with a 3px white rim. It fires with two shard bursts, sparkles, and the level chime, closes on its own after 2.2s, and closes on click. This copy is user-requested and fixed.
 
 ### Sound and Reduced Motion
 Sounds are Web Audio tones synthesized on the spot: a two-note add blip, a four-note rising done arpeggio with a sparkle, a six-note level fanfare, and a falling undo. They are on by default, play only in response to user actions, and are behind the HUD toggle. Under `prefers-reduced-motion: reduce`, CSS switches off every animation and transition except the tray's opacity fade, and the script skips coin flight, shards, sparkles, pow words, and callouts. State still changes: the score updates immediately, nodes and stars light, and the level-up overlay still appears, without motion.
@@ -396,9 +399,9 @@ Sounds are Web Audio tones synthesized on the spot: a two-note add blip, a four-
 - **Don't** load fonts, images, or sounds from the network.
 
 ### Sanctioned detector exceptions
-These are recorded in `.impeccable/config.json`:
+These are recorded in `.impeccable/config.json`. Everything else the detector reports is either fixed or absent; the current run reports zero findings.
 - **gradient-text** (style.css, index.html): outlined, gradient-filled callout words are native to the pinned candy-puzzle world, limited to the `.fx-callout` and `.celebrate-title` `::after` fill layers.
 - **repeating-stripes-gradient** (index.html): the day path's candy-cane track is a functional path, not decoration.
 - **ai-color-palette** (index.html): plum ink (#3a1450) is the world's text color, chosen for contrast on candy fills.
-- **bounce-easing** `cubic-bezier(0.3, 1.4, 0.5, 1)` and `cubic-bezier(0.3, 1.5, 0.5, 1)` (style.css): squash-and-stretch overshoot. The recorded reasons scope these to Kumbara-chan's hop and the bubble pop. In the build the first curve is `--ease-jelly` and also drives tile drop and pop, creature cheer and joy, node pop, star lighting, and the level-up title slam. Those reasons need re-scoping to the candy world.
-- **side-tab** (style.css, index.html): recorded for the previous world's `.stack-coin` rim, which no longer exists. This exception is stale.
+- **bounce-easing** `cubic-bezier(0.3, 1.4, 0.5, 1)` (`--ease-jelly`) and `cubic-bezier(0.3, 1.5, 0.5, 1)` (style.css): squash-and-stretch overshoot is the game's jelly motion. It drives tile drop and pop, creature cheer and joy, node pop, star lighting, the mascot hop, the speech-bubble pop, and the level-up title slam. All of it is disabled under `prefers-reduced-motion`.
+- **nested-cards** (index.html): a candy frame around a cream well is the panel structure of this world (Jelly + Cream Well); the flagged `p` is the archive empty-state text inside the archive fold's well.
