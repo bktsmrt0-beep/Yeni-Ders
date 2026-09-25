@@ -13,6 +13,7 @@ const SPEED_TIERS = [
 const CANDY_HUES = ["cherry", "orange", "lemon", "apple", "blueberry", "grape"];
 const CALLOUTS = ["Tatlı!", "Leziz!", "Nefis!", "Enfes!"];
 const PATH_MIN_NODES = 6;
+const COMBO_GAP = 10 * MINUTE;
 
 const LEVELS = [
   { at: 0, name: "Bozuk para" },
@@ -288,19 +289,22 @@ function sparkle(x, y, count, spread, ink) {
 }
 
 function pow(text, big) {
-  if (reduceMotion.matches) return;
-  const word = document.createElement("span");
-  word.className = big ? "fx-pow is-big" : "fx-pow";
-  word.textContent = text;
-  document.body.append(word);
-
   const r = mascot.getBoundingClientRect();
-  const half = word.offsetWidth / 2;
-  const x = Math.min(window.innerWidth - half - 8, Math.max(half + 8, r.left + r.width * (big ? 0.95 : 0.85)));
-  const y = r.bottom + 4;
-  const tilt = big ? -6 : -12 + Math.random() * 8;
+  word(text, r.left + r.width * (big ? 0.95 : 0.85), r.bottom + 4, big ? -6 : -12 + Math.random() * 8, big);
+}
+
+// A manga sound word that pops up around (px, y) and drifts away.
+function word(text, px, y, tilt, big) {
+  if (reduceMotion.matches) return;
+  const element = document.createElement("span");
+  element.className = big ? "fx-pow is-big" : "fx-pow";
+  element.textContent = text;
+  document.body.append(element);
+
+  const half = element.offsetWidth / 2;
+  const x = Math.min(window.innerWidth - half - 8, Math.max(half + 8, px));
   const at = (py, scale) => `translate(${x}px, ${py}px) translate(-50%, -50%) rotate(${tilt}deg) scale(${scale})`;
-  word.animate(
+  element.animate(
     [
       { transform: at(y, 0.3), opacity: 0 },
       { transform: at(y, 1.15), opacity: 1, offset: 0.18 },
@@ -309,7 +313,7 @@ function pow(text, big) {
       { transform: at(y - 26, 1), opacity: 0 },
     ],
     { duration: big ? 1900 : 1400, easing: "ease-out", fill: "forwards" },
-  ).onfinish = () => word.remove();
+  ).onfinish = () => element.remove();
 }
 
 // Candy shards burst out of a finished tile in its hue.
@@ -388,11 +392,12 @@ try {
   // keep sound on
 }
 
-function tone(freq, at, length, type, volume) {
+function tone(freq, at, length, type, volume, glideTo) {
   const osc = audio.createOscillator();
   const gain = audio.createGain();
   osc.type = type;
   osc.frequency.setValueAtTime(freq, at);
+  if (glideTo) osc.frequency.exponentialRampToValueAtTime(glideTo, at + length);
   gain.gain.setValueAtTime(0.0001, at);
   gain.gain.exponentialRampToValueAtTime(volume, at + 0.01);
   gain.gain.exponentialRampToValueAtTime(0.0001, at + length);
@@ -417,6 +422,25 @@ function playSound(kind) {
   } else if (kind === "undo") {
     tone(440, t, 0.12, "sine", 0.1);
     tone(330, t + 0.1, 0.16, "sine", 0.08);
+  } else if (kind === "whoosh") {
+    tone(300, t, 0.6, "triangle", 0.06, 1200);
+  } else if (kind === "drop") {
+    tone(900, t, 0.25, "sine", 0.09, 250);
+  } else if (kind === "pop") {
+    tone(600, t, 0.12, "triangle", 0.13, 150);
+  } else if (kind === "puff") {
+    tone(420, t, 0.22, "sine", 0.09, 80);
+  } else if (kind === "chime") {
+    tone(1047, t, 0.16, "sine", 0.08);
+    tone(1568, t + 0.09, 0.22, "sine", 0.07);
+  } else if (kind === "gift") {
+    [784, 988, 1319, 1568].forEach((f, i) => tone(f, t + i * 0.07, 0.22, "triangle", 0.1));
+  } else if (kind === "rewind") {
+    tone(1000, t, 0.35, "triangle", 0.07, 220);
+    tone(700, t + 0.08, 0.3, "sine", 0.05, 180);
+  } else if (kind === "meow") {
+    tone(620, t, 0.14, "triangle", 0.08, 900);
+    tone(900, t + 0.14, 0.2, "triangle", 0.07, 520);
   }
 }
 
@@ -466,12 +490,25 @@ function react(kind, bonus = 0) {
   }
 }
 
+// Tasks finished within 10 minutes of each other chain into a combo; nothing is saved for it.
+function comboCount() {
+  const times = tasks.filter((t) => t.done && !t.demo && t.doneAt).map((t) => t.doneAt).sort((a, b) => b - a);
+  let n = times.length > 0 ? 1 : 0;
+  while (n < times.length && times[n - 1] - times[n] <= COMBO_GAP) n++;
+  return n;
+}
+
+function comboWord(n) {
+  return ["", "", "Kombo x2!", "Süper x3!", "Şeker x4!"][n] ?? `Efsane x${n}!`;
+}
+
 function addTask(text) {
   const now = Date.now();
   const task = { id: now, text, done: false, archived: false, createdAt: now };
   tasks.push(task);
   newTaskId = task.id;
   playSound("add");
+  Scenes.play("add");
   earn(ADD_REWARD, pick(ADD_LINES), submitButton.getBoundingClientRect(), true);
   save();
   render();
@@ -484,6 +521,8 @@ function toggleDone(task, box) {
     burst(tile.left + tile.width / 2, tile.top + tile.height / 2, hueFor(task.id), 16);
     playSound("done");
   };
+  const hue = hueFor(task.id);
+  let streakBefore = 0;
   task.done = !task.done;
   if (task.demo) {
     if (task.done) {
@@ -491,8 +530,10 @@ function toggleDone(task, box) {
       justDoneId = task.id;
       popTile();
       callout(pick(CALLOUTS));
+      Scenes.play("done", { from: tile, hue, bonus: 0, combo: 0 });
     } else {
       delete task.doneAt;
+      Scenes.play("undo", { from: tile, hue, refund: 0 });
     }
     message = "Örnek görev, altın vermez.";
     save();
@@ -502,6 +543,7 @@ function toggleDone(task, box) {
   }
   if (task.done) {
     const { bonus } = speedBonus(task);
+    streakBefore = streak();
     task.doneOn = dayKey();
     task.doneAt = Date.now();
     task.earned = DONE_REWARD + bonus;
@@ -509,6 +551,8 @@ function toggleDone(task, box) {
     justDoneId = task.id;
     pathNewNode = true;
     popTile();
+    const combo = comboCount();
+    Scenes.play("done", { from: tile, hue, bonus, combo, comboWord: comboWord(combo) });
     const line = bonus > 0 ? `Hız bonusu! ${task.earned} altın kazandın.` : pick(DONE_LINES);
     earn(task.earned, line, fromRect, false, bonus);
   } else {
@@ -520,22 +564,27 @@ function toggleDone(task, box) {
     bank.coins = Math.max(0, bank.coins - refund);
     shownCoins = bank.coins;
     playSound("undo");
+    Scenes.play("undo", { from: tile, hue, refund });
     message = `Geri aldın, ${refund} altın kumbaradan çıktı.`;
   }
   newTaskId = null;
   save();
   render();
   justDoneId = null;
+  const days = streak();
+  if (task.done && days > streakBefore) Scenes.heart(hearts.children[Math.min(days, hearts.children.length) - 1]);
 }
 
-function toggleArchive(task) {
+function toggleArchive(task, li) {
   task.archived = !task.archived;
+  Scenes.play(task.archived ? "archive" : "unarchive", { from: li.getBoundingClientRect(), hue: hueFor(task.id) });
   newTaskId = null;
   save();
   render();
 }
 
-function deleteTask(task) {
+function deleteTask(task, li) {
+  Scenes.play("delete", { from: li.getBoundingClientRect(), hue: hueFor(task.id) });
   tasks = tasks.filter((t) => t.id !== task.id);
   if (!task.done && !task.demo) {
     bank.coins = Math.max(0, bank.coins - ADD_REWARD);
@@ -566,6 +615,7 @@ function startEdit(task, li, text) {
     finished = true;
     const value = field.value.trim();
     if (keep && value !== "" && value !== task.text) {
+      Scenes.play("edit", { from: field.getBoundingClientRect() });
       task.text = value;
       message = "Görev güncellendi.";
       save();
@@ -731,8 +781,8 @@ function taskItem(task) {
   actions.className = "task-actions";
   actions.append(
     actionButton("Düzenle", () => startEdit(task, li, text)),
-    actionButton(task.archived ? "Geri al" : "Arşivle", () => toggleArchive(task)),
-    actionButton("Sil", () => deleteTask(task), "danger"),
+    actionButton(task.archived ? "Geri al" : "Arşivle", (event) => toggleArchive(task, event.currentTarget.closest(".task"))),
+    actionButton("Sil", (event) => deleteTask(task, event.currentTarget.closest(".task")), "danger"),
   );
 
   const body = document.createElement("div");
@@ -772,7 +822,8 @@ legendGrid.replaceChildren(
 );
 
 function toggleDemoTasks() {
-  if (tasks.some((t) => t.demo)) {
+  const adding = !tasks.some((t) => t.demo);
+  if (!adding) {
     tasks = tasks.filter((t) => !t.demo);
     message = "Örnek görevler kaldırıldı.";
   } else {
@@ -791,8 +842,10 @@ function toggleDemoTasks() {
     message = "Örnek görevler eklendi. Altın vermezler.";
   }
   newTaskId = null;
+  const listRect = list.getBoundingClientRect();
   save();
   render();
+  Scenes.play(adding ? "demoOn" : "demoOff", { from: listRect });
 }
 
 legendDemo.addEventListener("click", toggleDemoTasks);
@@ -1087,11 +1140,31 @@ setInterval(() => {
 
 for (const button of filterButtons) {
   button.addEventListener("click", () => {
-    filter = button.id.replace("filter-", "");
+    const next = button.id.replace("filter-", "");
+    const changed = next !== filter;
+    filter = next;
     newTaskId = null;
     render();
+    if (changed) Scenes.wave([...list.children, ...archiveList.children]);
   });
 }
+
+Scenes.init({
+  reduced: () => reduceMotion.matches,
+  sound: playSound,
+  sparkle,
+  burst,
+  word,
+  cheer: () => {
+    setMood("happy", 1100);
+    if (!reduceMotion.matches) replay(mascot, "is-nod");
+  },
+  coinPoint: () => {
+    const r = coinTotal.getBoundingClientRect();
+    return { x: r.left + r.width / 2, y: r.top + r.height / 2 };
+  },
+  listRect: () => list.getBoundingClientRect(),
+});
 
 if (!localStorage.getItem(BANK_KEY)) save();
 render();

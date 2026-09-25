@@ -1,12 +1,12 @@
 # Ders Kaydı: Todo Uygulaması
 
-## Kaldığımız yer (son güncelleme: 2026-09-25)
+## Kaldığımız yer (son güncelleme: 2026-09-25, akşam)
 
-**Durum:** Her şey commit'li ve GitHub'a gönderildi (son commit `f5e2ab8`). Bekleyen iş yok.
+**Durum:** Animasyon sistemi (`scenes.js`) eklendi, denetim 0 bulgu, Playwright'ta tüm sahneler hatasız oynadı. Commit'lendi, push'lanmadı.
 
 - **Uygulama:** Candy Crush havasında şeker oyunu gibi bir todo (yalnız kullanıcı kullanıyor, tamamen çevrimdışı, düz HTML/CSS/JS). Kod artık **Claude yazıyor**, ne değiştiğini Türkçe anlatıyor. (Kullanıcı Ders 0–4'ü kendisi yazdı, sonra "ben yazmayacağım" dedi.)
 - **Kalite:** Impeccable tasarım denetimi **0 bulgu**. Bağımsız değerlendirici karar: "ship".
-- **Sıradaki iş:** kullanıcı belirleyecek. Bilinen küçük not: yer tutucu rengi (`#8a6fa0` krem üstünde 4.1:1) ve aksiyon hapı hover'ı (beyaz/üzüm 4.37:1) AA sınırının hafif altında, denetim yakalamıyor.
+- **Sıradaki iş:** kullanıcı animasyonları gözle görüp beğenmediğini çıkarır/ekler (bkz. "Animasyon sistemi"). `DESIGN.md`'ye hareket bölümü henüz eklenmedi (documenter ile yapılacak). Bilinen küçük not: yer tutucu rengi (`#8a6fa0` krem üstünde 4.1:1) ve aksiyon hapı hover'ı (beyaz/üzüm 4.37:1) AA sınırının hafif altında, denetim yakalamıyor.
 
 ### Neler var (özet)
 
@@ -16,9 +16,21 @@
 - **Seviye atlayınca:** tam ekran kutlama, kullanıcı isteğiyle yazı **"Fikret Hocam, emeğinize sağlık!" + "Teşekkürler!"** (sabit metin, değiştirme).
 - **Yazı tipleri:** başlık "Candy Display" = **Baloo 2 ExtraBold** (Lilita One'da ğ/ş/İ yoktu), metin Nunito. İkisi `fonts/fonts.css` içine gömülü, internet gerekmez.
 
+### Animasyon sistemi (2026-09-25)
+
+Kullanıcı isteği: her eylemde oyun hissi, çeşitli sahneler. `scenes.js` her eylemin sahne havuzundan rastgele birini oynatır; `app.js` sadece `Scenes.play("olay", {from, hue, ...})` der. Sahneler süstür, görev/altın verisine dokunmaz. Aynı anda en çok 3 sahne, "hareketi azalt" ayarında hiç oynamaz.
+
+- **Ekle (teslimat):** uçak, kedi tırmanışı, balon, roket, yunus, paraşüt. %10 "Altın paket" (yalnız görsel).
+- **Bitir:** havai fişek, yıldız yağmuru, dans eden kedi, kalpler. Hız bonusuna göre hediye: 3 = altın kutu, 2 = balon patlar yıldız çıkar, 1 = çikolata yağmuru. **Kombo:** 10 dk içinde art arda biten görevler "Kombo x2!/Süper x3!/Şeker x4!/Efsane" + ekran kenarı parlar (`doneAt`'tan hesaplanır, veri eklenmedi, altın etkilenmez).
+- **Geri al:** geri sarma spirali, altınlar kumbaradan geri uçar, kedi geri getirir.
+- **Sil:** erime, patlama, hırsız kedi, kara delik. **Arşivle:** sandık ya da kedi taşır; geri alınca sandıktan çıkar.
+- **Düzenle:** kalem yazar. **Örnek görevler:** şeker yağmuru / puf. **Filtre:** kartlar dalga gibi kayar. **Seri:** yeni kalp atar.
+- Yeni sesler `playSound` içinde (whoosh, drop, pop, puff, chime, gift, rewind, meow). Zıplama eğrisi (bounce-easing) JS'te kullanılmadı, denetim istisnası gerekmedi.
+- **Tuzak:** Playwright'ta `app.js` eski önbellekten gelebilir; `fetch(f,{cache:"reload"})` ile yenileyip sayfayı yeniden yükle.
+
 ### Dosyalar
 
-- `index.html`, `style.css`, `app.js`, `fonts/` — uygulama. `PRODUCT.md` (ürün bilgisi, Candy Crush sadece stil referansı: adı/logosu/görselleri/sesleri kullanılmaz), `DESIGN.md` + `.impeccable/design.json` (görsel sistem), `.impeccable/surfaces/index-html.md` (yön sözleşmesi), `.impeccable/config.json` (denetim istisnaları, gerekçeleriyle).
+- `index.html`, `style.css`, `app.js`, `scenes.js` (animasyon sahneleri), `fonts/` — uygulama. `PRODUCT.md` (ürün bilgisi, Candy Crush sadece stil referansı: adı/logosu/görselleri/sesleri kullanılmaz), `DESIGN.md` + `.impeccable/design.json` (görsel sistem), `.impeccable/surfaces/index-html.md` (yön sözleşmesi), `.impeccable/config.json` (denetim istisnaları, gerekçeleriyle).
 - **Veri (localStorage):** `"tasks"` = `[{ id, text, done, archived, createdAt?, doneOn?, doneAt?, earned?, demo? }]` (eski görevler aynen okunur, `createdAt` yoksa `id`'den), `"kumbara"` = `{ coins, days: { "YYYY-MM-DD": bitenSayısı } }`, `"sound"` = `"on"|"off"`. Okunamayan `tasks` silinmez, `tasks-backup-<zaman>` anahtarına yedeklenir.
 
 ### Çalışma kuralları (bu proje için)

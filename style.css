@@ -1724,6 +1724,43 @@ h1 {
   height: 18px;
 }
 
+/* Scene actors: planes, cats, balloons and other things that fly across the screen. */
+.actor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 21;
+  pointer-events: none;
+}
+
+.actor svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.fx-glow {
+  position: fixed;
+  inset: 0;
+  z-index: 19;
+  pointer-events: none;
+  box-shadow: inset 0 0 90px 24px var(--glow);
+}
+
+.fx-orb {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 21;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, var(--ink) 0 34%, var(--grape-dark) 62%, var(--grape) 82%, transparent 100%);
+  box-shadow: 0 8px 18px rgb(58 20 80 / 0.35);
+}
+
 .fx-spark {
   position: fixed;
   left: 0;
