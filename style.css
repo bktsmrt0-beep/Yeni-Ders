@@ -63,7 +63,7 @@
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-glide: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-jelly: cubic-bezier(0.3, 1.4, 0.5, 1);
-  --font-display: "Lilita One", "Nunito", system-ui, sans-serif;
+  --font-display: "Candy Display", "Nunito", system-ui, sans-serif;
   --font-ui: "Nunito", "Segoe UI", system-ui, sans-serif;
 
   color-scheme: light;
@@ -1815,7 +1815,7 @@ h1 {
   justify-items: center;
   overflow: hidden;
   background:
-    radial-gradient(ellipse 46% 24% at 50% 47%, rgb(58 20 80 / 0.55) 0%, rgb(58 20 80 / 0.25) 55%, transparent 100%),
+    radial-gradient(ellipse 44% 22% at 50% 47%, var(--grape-dark) 0%, var(--grape-dark) 60%, transparent 74%),
     radial-gradient(circle at 50% 46%, var(--lemon-light) 0%, var(--lemon) 16%, var(--orange) 34%, var(--cherry) 58%, var(--grape) 86%, var(--grape-dark) 100%);
   text-align: center;
   cursor: pointer;

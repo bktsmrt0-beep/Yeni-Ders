@@ -1,345 +1,404 @@
 ---
 name: Kumbara
-description: A single-screen Turkish todo app where every task drops a coin into a glazed cobalt coin bank.
+description: A single-screen Turkish todo app played as a glossy candy puzzle game, where every task is a jelly tile that pops into coins, stars, and a lit node on today's path.
 colors:
-  cobalt: "#1e3aa6"
-  cobalt-deep: "#142a7c"
-  cobalt-glaze: "#3053d4"
-  cobalt-well: "#0b1a52"
-  on-cobalt: "#eef2ff"
-  on-cobalt-soft: "#bccaff"
-  gold-light: "#ffe08a"
-  gold: "#f4b92c"
-  gold-deep: "#a8740c"
-  gold-ink: "#5a3d00"
-  ground: "#f2f5fa"
+  cherry: "#ff3d7a"
+  cherry-light: "#ff8fb4"
+  cherry-dark: "#c8134f"
+  orange: "#ff8a1f"
+  orange-light: "#ffb866"
+  orange-dark: "#b34c00"
+  lemon: "#ffcf1f"
+  lemon-light: "#ffe680"
+  lemon-dark: "#c99a00"
+  apple: "#34c759"
+  apple-light: "#7fe39a"
+  apple-dark: "#17823a"
+  blueberry: "#2f8cff"
+  blueberry-light: "#82bbff"
+  blueberry-dark: "#1a5fcc"
+  grape: "#a14cf0"
+  grape-light: "#cf9bff"
+  grape-dark: "#7424c4"
+  gold-light: "#fff0a0"
+  gold: "#ffc21f"
+  gold-deep: "#d18a00"
+  sky-top: "#ffd6ea"
+  sky-mid: "#f1d9ff"
+  sky-low: "#d6c6ff"
+  hill-back: "#ffb8d6"
+  hill-front: "#b8efd6"
+  ink: "#3a1450"
+  ink-soft: "#6a4585"
+  ink-done: "#7a6a8c"
+  placeholder: "#8a6fa0"
   paper: "#ffffff"
-  line: "#dde3ee"
-  wash: "#e6ebf4"
-  ink: "#111c3a"
-  ink-soft: "#4b5878"
-  ink-done: "#5d667c"
-  placeholder: "#66708a"
-  danger: "#b42318"
-  danger-wash: "#fdecea"
-  glaze-foot: "rgb(6 14 52 / 0.55)"
-  porcelain: "#f7f9ff"
-  blush: "#ff8fab"
-  mouth: "#e0527a"
+  cream-card: "#fff7fd"
+  wash: "#f6ecfb"
+  track-casing: "#f3e2f7"
+  locked-node: "#eadcf3"
+  star-unlit: "#b89acb"
+  danger: "#c8134f"
+  porcelain: "#fffafd"
+  blush: "#ff8fb4"
+  mouth: "#ff3d7a"
   tear: "#7cc4ff"
-  tint-cobalt: "#3053d4"
-  tint-rose: "#ff8fab"
-  tint-mint: "#37c59b"
-  tint-lilac: "#9a7bf0"
-  tint-sky: "#4aa8ff"
 typography:
-  display:
-    fontFamily: "Bricolage Grotesque, Segoe UI Variable Display, Segoe UI, system-ui, sans-serif"
-    fontSize: "clamp(4rem, 6.5vw, 5.75rem)"
-    fontWeight: 700
-    lineHeight: 0.95
-    letterSpacing: "-0.035em"
-    fontFeature: "tnum"
-  display-compact:
-    fontFamily: "Bricolage Grotesque, Segoe UI Variable Display, Segoe UI, system-ui, sans-serif"
-    fontSize: "3.25rem"
-    fontWeight: 700
-    lineHeight: 0.95
-    letterSpacing: "-0.035em"
-    fontFeature: "tnum"
+  callout:
+    fontFamily: "Candy Display, Nunito, system-ui, sans-serif"
+    fontSize: "clamp(2.6rem, 9vw, 4.25rem)"
+    fontWeight: 800
+    lineHeight: 1.25
+    letterSpacing: "0.02em"
   headline:
-    fontFamily: "Bricolage Grotesque, Segoe UI Variable Display, Segoe UI, system-ui, sans-serif"
+    fontFamily: "Candy Display, Nunito, system-ui, sans-serif"
     fontSize: "1.85rem"
-    fontWeight: 700
-    lineHeight: 1.15
-    letterSpacing: "-0.02em"
-  title:
-    fontFamily: "Bricolage Grotesque, Segoe UI Variable Display, Segoe UI, system-ui, sans-serif"
+    fontWeight: 800
+    lineHeight: 1.1
+    letterSpacing: "0.01em"
+  score:
+    fontFamily: "Candy Display, Nunito, system-ui, sans-serif"
+    fontSize: "1.85rem"
+    fontWeight: 800
+    lineHeight: 1
+    fontFeature: "tnum"
+  reward:
+    fontFamily: "Candy Display, Nunito, system-ui, sans-serif"
     fontSize: "1.5rem"
-    fontWeight: 650
+    fontWeight: 800
     lineHeight: 1.2
-    letterSpacing: "-0.01em"
-  message:
-    fontFamily: "Bricolage Grotesque, Segoe UI Variable Display, Segoe UI, system-ui, sans-serif"
+    letterSpacing: "0.02em"
+  title:
+    fontFamily: "Candy Display, Nunito, system-ui, sans-serif"
     fontSize: "1.25rem"
-    fontWeight: 600
-    lineHeight: 1.3
-  subtitle:
-    fontFamily: "Bricolage Grotesque, Segoe UI Variable Display, Segoe UI, system-ui, sans-serif"
-    fontSize: "1.125rem"
-    fontWeight: 650
+    fontWeight: 800
     lineHeight: 1.2
-  entry:
-    fontFamily: "Segoe UI Variable Text, Segoe UI, system-ui, -apple-system, sans-serif"
+    letterSpacing: "0.01em"
+  title-sm:
+    fontFamily: "Candy Display, Nunito, system-ui, sans-serif"
     fontSize: "1.125rem"
-    fontWeight: 400
-    lineHeight: 1.5
-  body:
-    fontFamily: "Segoe UI Variable Text, Segoe UI, system-ui, -apple-system, sans-serif"
+    fontWeight: 800
+    lineHeight: 1.1
+    letterSpacing: "0.01em"
+  input:
+    fontFamily: "Nunito, Segoe UI, system-ui, sans-serif"
+    fontSize: "1.125rem"
+    fontWeight: 700
+    lineHeight: 1.45
+  task:
+    fontFamily: "Nunito, Segoe UI, system-ui, sans-serif"
     fontSize: "1.0625rem"
-    fontWeight: 400
-    lineHeight: 1.5
-  ui:
-    fontFamily: "Segoe UI Variable Text, Segoe UI, system-ui, -apple-system, sans-serif"
+    fontWeight: 800
+    lineHeight: 1.45
+  body:
+    fontFamily: "Nunito, Segoe UI, system-ui, sans-serif"
     fontSize: "1rem"
-    fontWeight: 400
-    lineHeight: 1.5
+    fontWeight: 600
+    lineHeight: 1.45
   label:
-    fontFamily: "Segoe UI Variable Text, Segoe UI, system-ui, -apple-system, sans-serif"
+    fontFamily: "Nunito, Segoe UI, system-ui, sans-serif"
     fontSize: "0.9375rem"
-    fontWeight: 400
-    lineHeight: 1.5
-  label-small:
-    fontFamily: "Segoe UI Variable Text, Segoe UI, system-ui, -apple-system, sans-serif"
+    fontWeight: 800
+    lineHeight: 1.45
+    fontFeature: "tnum"
+  meta:
+    fontFamily: "Nunito, Segoe UI, system-ui, sans-serif"
     fontSize: "0.875rem"
-    fontWeight: 400
-    lineHeight: 1.5
+    fontWeight: 700
+    lineHeight: 1.45
+    fontFeature: "tnum"
 rounded:
-  sm: "8px"
-  md: "10px"
-  lg: "14px"
+  edit: "10px"
+  well: "18px"
+  bubble: "22px"
+  tile: "26px"
+  frame: "28px"
   pill: "999px"
   round: "50%"
-  bubble: "18px"
 spacing:
-  xs: "8px"
-  sm: "14px"
-  md: "28px"
-  lg: "48px"
-  xl: "56px"
+  xs: "4px"
+  sm: "10px"
+  md: "12px"
+  lg: "22px"
+  xl: "30px"
+  game-max: "700px"
 components:
   button-primary:
-    backgroundColor: "{colors.cobalt}"
-    textColor: "{colors.on-cobalt}"
-    rounded: "{rounded.md}"
-    padding: "0 22px"
-  button-primary-hover:
-    backgroundColor: "{colors.cobalt-deep}"
-  button-action:
+    backgroundColor: "{colors.apple}"
+    textColor: "{colors.paper}"
+    typography: "{typography.title}"
+    rounded: "{rounded.well}"
+    padding: "0 26px"
+  filter-pill:
     backgroundColor: "transparent"
     textColor: "{colors.ink-soft}"
-    rounded: "{rounded.sm}"
-    padding: "6px 10px"
-  button-action-hover:
-    backgroundColor: "{colors.wash}"
-    textColor: "{colors.ink}"
-  button-action-danger-hover:
-    backgroundColor: "{colors.danger-wash}"
-    textColor: "{colors.danger}"
-  input-entry:
-    backgroundColor: "{colors.paper}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.lg}"
-    padding: "8px"
-  chip-filter:
-    backgroundColor: "transparent"
-    textColor: "{colors.ink-soft}"
-    rounded: "{rounded.sm}"
-    padding: "6px 12px"
-  chip-filter-active:
-    backgroundColor: "{colors.paper}"
-    textColor: "{colors.ink}"
-  filter-track:
-    backgroundColor: "{colors.wash}"
-    rounded: "{rounded.md}"
-    padding: "3px"
-  checkbox:
-    backgroundColor: "{colors.paper}"
-    rounded: "{rounded.round}"
-    size: "26px"
-  checkbox-checked:
-    backgroundColor: "{colors.ink-done}"
-  bank-panel:
-    backgroundColor: "{colors.cobalt}"
-    textColor: "{colors.on-cobalt}"
-    padding: "44px 36px 40px"
-  bank-slot:
-    backgroundColor: "{colors.cobalt-well}"
+    typography: "{typography.label}"
     rounded: "{rounded.pill}"
-    width: "120px"
-    height: "20px"
-  stack-coin-filled:
-    backgroundColor: "{colors.gold}"
+    padding: "7px 14px"
+  filter-pill-active:
+    backgroundColor: "{colors.cherry}"
+    textColor: "{colors.paper}"
+    rounded: "{rounded.pill}"
+  button-secondary:
+    backgroundColor: "{colors.blueberry}"
+    textColor: "{colors.paper}"
+    typography: "{typography.label}"
+    rounded: "{rounded.pill}"
+    padding: "10px 18px"
+  action-pill:
+    backgroundColor: "{colors.wash}"
+    textColor: "{colors.ink-soft}"
+    typography: "{typography.meta}"
+    rounded: "{rounded.pill}"
+    padding: "6px 12px"
+  action-pill-hover:
+    backgroundColor: "{colors.grape}"
+    textColor: "{colors.paper}"
+  action-pill-danger-hover:
+    backgroundColor: "{colors.danger}"
+    textColor: "{colors.paper}"
+  entry-input:
+    backgroundColor: "{colors.cream-card}"
+    textColor: "{colors.ink}"
+    typography: "{typography.input}"
+    rounded: "{rounded.well}"
+    padding: "12px 16px"
+  candy-frame:
+    backgroundColor: "{colors.blueberry}"
+    rounded: "{rounded.frame}"
+    padding: "12px"
+  cream-well:
+    backgroundColor: "{colors.cream-card}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.well}"
+    padding: "9px 14px"
+  task-tile:
+    backgroundColor: "{colors.grape}"
+    textColor: "{colors.ink}"
+    typography: "{typography.task}"
+    rounded: "{rounded.tile}"
+    padding: "8px 10px 10px"
+  hud:
+    backgroundColor: "{colors.grape}"
+    textColor: "{colors.paper}"
+    rounded: "{rounded.bubble}"
+    padding: "10px 14px"
+  speech-bubble:
+    backgroundColor: "{colors.paper}"
+    textColor: "{colors.ink}"
+    typography: "{typography.title}"
+    rounded: "{rounded.bubble}"
+    padding: "12px 16px"
+  speed-chip:
+    backgroundColor: "{colors.wash}"
+    textColor: "{colors.grape-dark}"
+    typography: "{typography.meta}"
+    rounded: "{rounded.pill}"
+    padding: "2px 10px 2px 7px"
+  path-node:
+    textColor: "{colors.paper}"
+    typography: "{typography.title-sm}"
     rounded: "{rounded.round}"
-    width: "46px"
-    height: "11px"
-  flying-coin:
-    backgroundColor: "{colors.gold}"
-    rounded: "{rounded.round}"
-    size: "28px"
+    size: "46px"
+  inline-edit:
+    backgroundColor: "{colors.paper}"
+    textColor: "{colors.ink}"
+    typography: "{typography.task}"
+    rounded: "{rounded.edit}"
+    padding: "5px 8px"
 ---
 
 # Design System: Kumbara
 
 ## Overview
 
-**Creative North Star: "The Glazed Kumbara"**
+**Creative North Star: "The Sugar-Sky Puzzle Board"**
 
-The whole screen is a Turkish ceramic coin bank and the desk it sits on. A tall panel of glazed cobalt holds the savings: a recessed coin slot, the coin total at display scale, the current level, a stack of coin slots toward the next level, today's count and streak, and one short encouraging line. Beside it, a cool porcelain ground carries the working list in blue-black ink. The bank is the only rich surface; the list stays quiet so task text is always the clearest thing on the page.
+Kumbara is a personal todo list played as a casual candy puzzle game. The page is a single centered game column under a pink-to-lilac sugar sky with two rolling candy hills. Everything the user touches is jelly: a saturated candy fill with a white gloss on top, a darker lip underneath, a 3px white rim, and a soft drop shadow tinted in its own dark tone. Every task is a candy tile in one of six hues. Finishing one squashes and pops it, sprays candy shards in its hue, flies coins to the score, lights a node on today's winding path, and drops a big outlined callout in the middle of the screen. The feedback is the product (PRODUCT.md principle 3), so it is loud on purpose.
 
-Reward is physical and small. Finishing a task launches one gold coin on an arc into the slot on Kumbara-chan's head; the total settles with a slight scale and she reacts. Adding a task drops a smaller coin. Apart from her, nothing moves on its own. Gold means earned money and nothing else, so its appearance always carries meaning.
+The world is dense and bright but never at the expense of reading. Content sits in recessed cream wells set inside the candy frames, set in plum ink, so task text on any tile reads the same whatever the hue (PRODUCT.md principle 4). Two anime characters carry the personality: Kumbara-chan, the porcelain coin-bank cat on a cherry pedestal who talks in a speech bubble, and one small gummy creature per task whose face shows the task's age and state. They stay from the previous world. The candy-puzzle look is a style reference pinned by the user ("candy crush gibi olmalı"); the product never uses that game's name, logo, candy art, characters, or sounds.
 
-The system rejects the category default of a white card list with a purple accent and checkbox confetti.
+The app runs fully offline. Both faces are inlined as data URIs, sounds are synthesized with Web Audio, and every ornament (stars, hearts, badge, checkmark, bolt, sparkles) is inline SVG or CSS. The level-up screen is fixed, user-requested copy: "Fikret Hocam, emeğinize sağlık!" / "Teşekkürler!".
 
 **Key Characteristics:**
-- Two-field composition: glazed cobalt bank panel plus porcelain work surface.
-- Gold reserved exclusively for earned coins.
-- One display face (Bricolage Grotesque) for numerals and headings; system UI face for task text.
-- Tabular numerals everywhere a count appears.
-- Finished work drains to gray; open, done, and archived read as three distinct states.
-- One signature motion (coin flight), exponential ease-out, no bounce, under 700ms. One supporting motion: the porcelain tray that glides under the hovered or focused row. The bank is a character, Kumbara-chan, who reacts to every coin.
+- Six candy hues, each a fill / light / dark triple; plum ink for every word on cream or white.
+- Jelly material on every raised surface, and a 3px white rim on every candy edge.
+- Candy frames in fixed hues around cream wells: path blueberry, entry cherry, archive orange, legend apple, HUD grape.
+- Chunky rounded display face with sticker strokes for headings, numbers, and rewards; rounded Nunito for everything the user typed.
+- Squash-and-stretch motion with overshoot, synthesized chimes, and a quiet static version under reduced motion.
 
 ## Colors
 
-A cool, high-contrast palette: saturated cobalt ceramic, cool porcelain neutrals with blue-black ink, and a single warm gold held back for reward.
+A saturated six-candy palette on a pastel sugar sky, anchored by plum ink and cream wells.
 
 ### Primary
-- **Kumbara Cobalt** (cobalt): the bank panel field, the primary "Kumbaraya at" button, unchecked checkbox rings, focus outlines, caret, and selection. The one interactive accent.
-- **Deep Glaze Cobalt** (cobalt-deep): the bottom of the bank panel's vertical gradient and the primary button hover.
-- **Glaze Highlight** (cobalt-glaze): the radial light at the top-left shoulder of the bank panel.
-- **Slot Well** (cobalt-well): the darkest cobalt, for the inside of the recessed coin slot.
-- **Porcelain on Cobalt** (on-cobalt) and **Pale Cobalt Text** (on-cobalt-soft): primary and secondary text on the bank panel and on cobalt buttons.
+- **Grape Jelly** (grape / grape-light / grape-dark): the HUD bar, focus rings, text selection, the "next" node on the path, the inline-edit ring, and the level-up disc behind the words. Grape is the chrome of the game.
+- **Apple Jelly** (apple / apple-light / apple-dark): the primary action only, the "Ekle!" button, plus apple task tiles and the legend frame.
 
 ### Secondary
-- **Coin Gold** (gold), with **Gold Light** (gold-light), **Gold Deep** (gold-deep), and **Gold Ink** (gold-ink): only the filled coins in the bank stack and the flying coin. Gold Deep draws the coin rim and lower edge; Gold Ink tints the flying coin's drop shadow.
+- **Cherry Jelly** (cherry / cherry-light / cherry-dark): the entry frame, the active filter pill, Kumbara-chan's pedestal and ear lining, full hearts, and the candy-cane stripes on the day path.
+- **Blueberry Jelly** (blueberry / blueberry-light / blueberry-dark): the "Bugünün yolu" frame and the secondary "Örnek görevleri ekle" button.
+- **Orange Jelly** (orange / orange-light / orange-dark): the archive frame, the lower stop of every callout gradient and of the star bar, and the hot speed chip.
+- **Lemon Jelly** (lemon / lemon-light / lemon-dark): the star-bar fill, the hover-tray ring, the entry focus outline, and the middle stop of callout gradients. Text on lemon is always plum ink.
+
+### Tertiary
+- **Coin Gold** (gold-light / gold / gold-deep): coins, lit stars, the level star badge, and the rim of the bank's slot.
 
 ### Neutral
-- **Porcelain Ground** (ground): page background behind the list.
-- **Paper White** (paper): the entry slot, active filter, and checkbox fill.
-- **Hairline** (line): task row dividers and the archive top rule.
-- **Wash** (wash): filter track and action-button hover.
-- **Blue-Black Ink** (ink): headings, task text, active states.
-- **Soft Ink** (ink-soft): counts, filter labels, action buttons, archived task text, empty states.
-- **Done Gray** (ink-done): finished task text and the checked checkbox fill.
-- **Placeholder** (placeholder): entry placeholder text only.
-- **Danger** (danger) on **Danger Wash** (danger-wash): the delete action's hover state only.
+- **Plum Ink** (ink): all body text, the heading "Görevler", the character outlines, and the outline under callouts.
+- **Soft Plum** (ink-soft): secondary text, task metadata, and inactive filters.
+- **Done Plum** (ink-done): finished task text and its metadata, struck through.
+- **Placeholder Plum** (placeholder): input placeholder only. It measures 4.1:1 on cream, below AA for text this size, so it is not a model for any other text.
+- **Cream Card** (cream-card): every recessed well: the task text well, the entry input, the path well, the archive and legend wells, and the floating task actions.
+- **Paper** (paper): the white rim on every candy surface, sticker-text fill, the speech bubble, and the inline editor.
+- **Wash** (wash): resting action pills and the calm speed chip.
+- **Sugar Sky** (sky-top → sky-mid → sky-low, hill-back, hill-front): the fixed page ground, a vertical gradient with two white radial glows and two SVG hills.
+- **Path neutrals** (track-casing, locked-node, star-unlit): the path's pale casing, locked nodes, and unlit stars in the HUD. Unlit stars on the path use a paler lilac (#d9c4e6).
+- **Character tones** (porcelain, blush, mouth, tear): the bodies, cheeks, open mouths, and teardrops of Kumbara-chan and the task creatures. Creature ears take their task's candy hue.
+- **Danger** (danger): the hover fill of the delete action only.
 
 ### Named Rules
-**The Earned Gold Rule.** Gold appears only on coins the user has earned: filled stack coins and the coin in flight. Never on buttons, checkmarks, badges, highlights, or text.
+**The Six Candies Rule.** Every jelly surface takes exactly one of the six hue triples (fill, light, dark). There is no seventh hue and no mix between two. A task's hue comes from a hash of its id, so it keeps that hue for life, and its creature's ears, path node, and burst shards match it.
 
-**The Drain to Gray Rule.** A finished task loses color: its checkbox fills Done Gray, its text goes Done Gray with a strikethrough. Completion is celebrated in the bank, not in the list.
+**The Plum Ink Rule.** Text on cream or white is always plum ink (ink, ink-soft, ink-done), never black or grey. White text sits only on a jelly fill, and only with a stroke or lip in that fill's dark tone. Lemon never carries white text.
+
+**The Earned Gold Rule.** Gold is only for things the user earned: coins, lit stars, and the level star badge. Unlit stars are lilac and buttons are never gold.
+
+**The Kept Hue Rule.** A finished tile keeps its candy hue. It turns paler (a 55% to 20% white veil) and flatter (a shallower lip and shadow), and never turns grey. Only the text changes, to Done Plum with a 2px strikethrough.
 
 ## Typography
 
-**Display Font:** Bricolage Grotesque (self-hosted variable, 200-800, OFL; falls back to Segoe UI Variable Display, Segoe UI, system-ui)
-**Body Font:** Segoe UI Variable Text (with Segoe UI, system-ui, -apple-system)
+**Display Font:** Candy Display = Baloo 2 ExtraBold (OFL, inlined; with Nunito, system-ui fallback)
+**Body Font:** Nunito variable (OFL, inlined; with Segoe UI, system-ui fallback)
 
-**Character:** A chunky, slightly quirky grotesque for coin numerals and headings against a plain system face for the tasks themselves, so the reward layer has a voice and the working text stays neutral.
+**Character:** A chunky, soft-cornered display face that looks like it was squeezed out of a piping bag, paired with a rounded, heavy-set UI face (base weight 600, emphasis 800) so even the metadata feels friendly. Candy Display is one ExtraBold file mapped across the whole weight range, so any declared weight renders ExtraBold. It was chosen over Lilita One, which the brief named, because Lilita lacks ğ, ş, and İ.
 
 ### Hierarchy
-One ramp, exposed as `--text-*` custom properties in style.css; every font-size uses a step, never a literal.
-
-| Step | Size | Use |
-|---|---|---|
-| `--text-display` | clamp(4rem, 6.5vw, 5.75rem) | Display (700, 0.95): the coin total only |
-| `--text-display-compact` | 3.25rem | the coin total in the mobile band |
-| `--text-3xl` | 1.85rem | Headline (700, 1.15): the page h1 "Görevler" |
-| `--text-2xl` | 1.5rem | Title (650, 1.2): the bank level name; the h1 on mobile |
-| `--text-xl` | 1.25rem | Message (600, 1.3, balanced wrap): the encouraging line; the "altın" unit (500) |
-| `--text-lg` | 1.125rem | entry input; archive summary (display, 650); level name and message in the mobile band |
-| `--text-body` | 1.0625rem | Body (400, 1.5): task text and the inline edit field |
-| `--text-base` | 1rem | page base; primary button label (display, 650); today/streak record; the unit on mobile |
-| `--text-sm` | 0.9375rem | Label: filters, counts, next-level line, the record on mobile. Active filter goes 600 |
-| `--text-xs` | 0.875rem | row actions; next-level line on mobile |
+- **Callout** (clamp(2.6rem, 9vw, 4.25rem), 1.25, 0.02em): the centered combo words ("Tatlı!", "Leziz!", "Nefis!", "Enfes!", and the speed words "Şimşek!", "Muhteşem!", "Hızlı!") and the level-up title.
+- **Headline** (1.85rem, 1.5rem under 640px, 1.1): "Görevler" in plum ink with an 8px white sticker stroke and a grape lip.
+- **Score** (1.85rem, 1.5rem under 640px, 1): the HUD coin total and "Teşekkürler!". Tabular.
+- **Reward** (1.5rem): the "+N" and "Hop!" pow words by Kumbara-chan and the "Yeni seviye" line.
+- **Title** (1.25rem, 1rem in the bubble under 640px): frame headings, the "Ekle!" button, and Kumbara-chan's bubble.
+- **Title small** (1.125rem): the level name, the badge number, fold summaries, and path node numbers.
+- **Input** (Nunito 700, 1.125rem): the entry field.
+- **Task** (Nunito 800, 1.0625rem): task text and the inline editor.
+- **Body** (Nunito 600, 1rem, 1.45): the base, empty states.
+- **Label** (Nunito 800, 0.9375rem): filters, path stats, fold counts, legend names, secondary button.
+- **Meta** (Nunito 700–800, 0.875rem): task times, earned coins, speed chips, action pills, "next level" line.
 
 ### Named Rules
-**The Readout Rule.** Every count (coin total, next level, today, streak, task counters) uses tabular numerals.
+**The Two Voices Rule.** Candy Display is for the game's voice: headings, HUD and path numbers, rewards, buttons, and Kumbara-chan's lines. Nunito is for anything the user typed and all metadata. User task text never appears in the display face.
 
-**The Two Voices Rule.** Display face for numbers, headings, and reward copy; system face for anything the user typed.
+**The Sticker Text Rule.** Display text on a candy fill or on the sky is white (or plum ink) with a thick stroke painted beneath the fill (`paint-order: stroke fill`). On a frame the stroke is the frame's dark tone, on the sky it is paper, and on callouts it is ink. Stroke width grows with size: 5–6px on titles, 7px on reward words, 8px on the headline, 9px on "Teşekkürler!", 12px on callouts.
+
+**The Readout Rule.** Every count uses tabular numerals: the score, the next-level line, path stats, fold counts, task times, earned coins, and speed chips.
+
+**The Turkish Glyph Rule.** A display face ships only after ğ, ş, İ, ı, ç, ö, and ü have been checked in it. Missing Turkish glyphs are why Lilita One was replaced.
 
 ## Layout
 
-Desktop is a two-column grid: the bank panel is a sticky, full-height left column (minmax(300px, 380px)); the board fills the rest with a centered column capped at 760px and padding 56px clamp(20px, 5vw, 72px) 80px. Order in the board: entry slot, then heading row (h1 with count left, segmented filters right, wrapping), then the open list, then the collapsible archive 48px below.
+A single centered column, 700px max, with 16px top, 20px side, and 72px bottom padding (10 / 12 / 56px under 640px). From top to bottom: a sticky HUD (10px from the top), Kumbara-chan's stage (a 132px character on a pedestal, with the speech bubble beside her taking the rest of the row), the day-path frame, the entry frame, the board head ("Görevler" plus the filter pills, wrapping), the tile list, then the archive and legend folds. Sections are spaced 18–30px apart (stage 18, path and board 22, folds 26, board head 30 above). Tiles are stacked 12px apart. Frames have 12px padding and 3px rims.
 
-At 820px and below the grid collapses to one column. The bank becomes a compact cobalt band above the entry: total spanning two rows on the left, level and next-level beside it, record and message full width beneath. The coin slot and coin stack are hidden on mobile. Filters stretch to full width with equal segments; task actions wrap to their own line under the task text (always visible on touch, shown on hover or focus otherwise). The grid column is `minmax(0, 1fr)` so nothing can widen the page past the viewport.
-
-Rhythm is loose around the bank (28px between groups) and tighter in the list (rows min 60px, 14px internal gap, 1px hairline dividers).
+The HUD is a three-column grid (level | score and star bar | hearts and sound). Under 640px it becomes two columns and the score row moves to a full-width second line. Under 640px the mascot shrinks to 96px, filter pills stretch to full width, creatures shrink to 42px, and task actions wrap to a full-width row indented past the check and creature. The legend is an auto-fill grid of 200px minimum columns. The day path scrolls horizontally when it overflows, with a mask fading both edges.
 
 ## Elevation & Depth
 
-Depth is material, not layered UI chrome. The bank panel gets its depth from glaze: a cobalt gradient, pooled radial highlights on the upper shoulder, and a darkening at the foot. The coin slot is carved in with inset shadow and a lighter rim. Coins carry small physical shadows. On the porcelain side, the entry slot floats at rest; everything else is flat and separated by hairlines until the pointer or keyboard focus rests on a row, which lifts onto a Paper tray.
+Depth is candy: layered gradients and inset lips, not ambient grey shadow. Every raised surface uses the jelly recipe. Every piece of content sits in a recessed cream well cut into that surface. Drop shadows are vertical only (x offset 0), blurred, pulled in with a negative spread, and tinted with the surface's own dark tone. Hard 0-blur shadows appear only as the jelly's bottom lip (an inset) and as short vertical text lips under sticker text.
 
 ### Shadow Vocabulary
-- **Entry float** (`box-shadow: 0 8px 22px -12px rgb(17 28 58 / 0.35)`): the entry slot at rest.
-- **Entry focus** (`box-shadow: 0 0 0 3px rgb(30 58 166 / 0.16), 0 8px 22px -12px rgb(17 28 58 / 0.35)`): with a cobalt border when the input is focused.
-- **Active segment** (`box-shadow: 0 1px 3px rgb(17 28 58 / 0.18)`): the selected filter lifted off its wash track.
-- **Slot recess** (`box-shadow: inset 0 5px 7px rgb(0 0 0 / 0.7), 0 0 0 3px rgb(96 128 240 / 0.55), 0 3px 2px 3px rgb(200 214 255 / 0.28)`): the bank's coin mouth.
-- **Coin in flight** (`box-shadow: inset 0 0 0 2px rgb(168 116 12 / 0.7), 0 6px 12px rgb(90 61 0 / 0.35)`).
-- **Row tray** (`box-shadow: 0 14px 28px -16px rgb(17 28 58 / 0.45), 0 3px 8px -3px rgb(17 28 58 / 0.14)`): the Paper tray under the hovered or focused task row.
+- **Jelly** (`inset 0 -4px 0 rgb(0 0 0 / 0.14), inset 0 2px 0 rgb(255 255 255 / 0.6), 0 8px 16px -8px <dark>`): buttons and path nodes. Frames and tiles use a deeper 5px lip and a 10–12px tinted drop.
+- **Frame** (`inset 0 -5px 0 rgb(0 0 0 / 0.16), inset 0 2px 0 rgb(255 255 255 / 0.55), 0 12px 22px -12px <frame-dark>`): the four candy frames.
+- **Cream well** (`inset 0 3px 6px rgb(58 20 80 / 0.16)`): every recessed well and the entry input.
+- **Hover tray** (`0 0 0 4px lemon-light, 0 18px 30px -14px rgb(116 36 196 / 0.55)`): the white tray that glides under the hovered or focused tile.
+- **Bubble** (`0 8px 18px -10px rgb(58 20 80 / 0.5)`): Kumbara-chan's speech bubble.
 
 ### Named Rules
-**The Glaze Not Texture Rule.** The bank's ceramic look comes from gradients and pooled light only: no noise, grain, or image texture.
+**The Jelly Rule.** A raised candy surface always has all five layers: a white top gloss (45% fading to 0 by 34–48%), a fill gradient (light → fill → dark), a dark inset bottom lip, a white inset top hairline, and a drop shadow tinted in its dark tone. Never a neutral black drop shadow.
 
-**The One Floating Thing Rule.** On the porcelain side at most one thing floats at a time besides the entry slot: the row under the pointer or keyboard focus, on its tray. Resting rows stay flat on hairlines. (Changed 2026-09-24 at the user's request: rows should come forward when hovered.)
+**The Cream Well Rule.** Readable content lives in a cream well (cream-card, 18px radius, inset plum shadow) inside its frame or tile. The only text that sits directly on a fill is sticker-stroked display text and small white pills.
 
 ## Shapes
 
-Soft rectangles for controls (8px for small buttons and filter segments, 10px for the primary button and filter track, 14px for the entry slot), full circles for checkboxes and coins, and a pill for the coin slot. Stack coins are flattened ellipses (46 x 11px) seen edge-on; empty slots show a dashed pale-cobalt outline. The bank panel itself is a square-cornered full-height field.
+Everything is round, and every candy edge has a 3px white rim. Frames take 28px corners, tiles 26px, the HUD, bubble, and empty state 22px, wells, inputs, and the primary button 18px, and the inline editor 10px. Filters, chips, stats, actions, the star bar, and the secondary button are full pills. Path nodes, the checkbox, coins, and the sound toggle are circles. Stars, hearts, the badge, the bolt, and the sparkle are inline SVG with white strokes and rounded joins. The speech bubble has a triangular tail on its left, drawn as two stacked border triangles (ink outline, paper fill). The day path's track is a thick pale casing with a dashed cherry-light center stroke (candy cane), bending up and down between nodes. The empty state is the only dashed box (3px white dashes on a translucent white fill).
 
 ## Components
 
 ### Buttons
-- **Shape:** gently rounded (10px primary, 8px secondary).
-- **Primary ("Kumbaraya at"):** cobalt fill, porcelain text, display face 650, padding 0 22px (0 14px on mobile), sits inside the entry slot. Hover darkens to Deep Glaze Cobalt.
-- **Action (Düzenle, Arşivle / Geri al, Sil):** transparent, Soft Ink, 0.875rem; hover fills Wash and goes Ink. Delete hovers to Danger on Danger Wash. Actions are hidden until row hover or focus, always visible on touch.
-- **Focus:** 2px cobalt outline, 2px offset, everywhere.
+Squishy and loud, they grow on hover and squash on press.
+- **Shape:** 18px corners on the primary, full pill on the secondary, both with a 3px white rim.
+- **Primary ("Ekle!"):** apple jelly, white Candy Display at 1.25rem with a 6px apple-dark sticker stroke, 26px side padding (16px under 640px). Hover scales to 1.05 and press to 0.95 over 150ms.
+- **Secondary ("Örnek görevleri ekle"):** blueberry jelly pill, white Nunito 800 at 0.9375rem with a blueberry-dark lip, and a 1.04 scale on hover.
+- **Sound toggle:** a 40px circle with a 70% white ring and a 20% white fill on the HUD, with a stroked SVG speaker. It shows waves when on and an x when off, uses `aria-pressed`, and saves its state under `localStorage "sound"`.
 
-### Chips (segmented filters)
-- **Style:** Wash track (3px padding, 10px radius) holding transparent segments in Soft Ink.
-- **State:** the active segment turns Paper with Ink text, 600 weight, and the Active segment shadow.
+### Chips
+- **Filter pills:** sit in a white 60% track with a 3px white rim. Inactive pills are soft plum text on transparent. The active pill is cherry jelly with white text and a cherry-dark lip.
+- **Speed chip:** a wash pill with a grape-dark bolt and "+N hız bonusu · time left". The first-hour tier goes hot: a lemon-to-orange-light jelly, ink text and bolt, and a 1.4s glow ring pulse.
+- **Stats pills:** 92% white pills with plum text on the path frame and archive summary.
+- **Action pills ("Düzenle", "Arşivle", "Sil"):** wash pills in soft plum that fill grape on hover. Delete fills danger. With a pointer they are hidden until hover or focus and float in a cream capsule over the right end of the well, feathered with a cream shadow. On touch they are always visible.
+
+### Cards / Containers
+- **Candy frames:** every panel is a jelly frame (28px corners, 12px padding) around a cream well. Hues are fixed: the path is blueberry, the entry is cherry, the archive is orange, the legend is apple. A frame's heading or summary is Candy Display with the Sticker Text Rule in the frame's dark tone. The folds use a white chevron that rotates from −45° to 45° when opened.
+- **HUD:** a grape jelly bar (22px corners, 3px rim), sticky. On the left, a gold star badge with the level number and the level name, plus the next-level line. In the middle, a gold coin with the score, and a star bar (a sunken plum track, a lemon-to-orange fill scaling over 600ms, and three stars that light gold with a jelly pop). On the right, five hearts for the streak (full hearts are cherry with a staggered heartbeat) and the sound toggle.
 
 ### Inputs / Fields
-- **Entry slot:** Paper container, 14px radius, 8px padding, Entry float shadow, transparent border; input text 1.125rem, no inner outline.
-- **Focus:** the container takes a cobalt border and a soft cobalt ring.
+- **Entry slot:** a cream well inside the cherry frame, with plum 700 text at 1.125rem, a placeholder "Ne yapacaksın?", and a cherry caret. Focus moves to the frame as a 4px lemon-light outline; the input itself shows no ring.
+- **Inline edit:** double-click or "Düzenle" swaps the task text for a white field in the same type, with a 3px grape ring. The action pills hide while editing.
+- **Focus (global):** 3px grape outline, 3px offset.
 
-### Task Row
-- Flex row: round checkbox, text, actions; min-height 60px, hairline bottom divider. New rows slide in from 10px above over 420ms ease-out.
-- **Checkbox:** 26px circle, 2px cobalt ring on Paper; hover tints to on-cobalt; checked fills Done Gray with a white SVG tick.
-- **Archived rows:** text in Soft Ink inside a collapsible "Arşiv" section with a rotating chevron drawn from two borders.
-- **Editing:** double-click on the text or the Düzenle action swaps the text for an inline Paper field with a 2px cobalt ring, same size as the task text, actions hidden. Enter or blur saves, Escape cancels, an empty value keeps the old text. Editing earns no coins.
-- **Lifted row:** one Paper tray per list (14px radius, bleeding 14px past the row on both sides, Row tray shadow) glides to the row under the pointer or keyboard focus: transform and height over 340ms on cubic-bezier(0.16, 1, 0.3, 1). It fades in over 160ms where it first appears, never slides in from off-row. The lifted row scales to 1.018 from its left third, and its own and its upper neighbour's hairlines go transparent. The tray follows re-renders so a click never drops it. Touch-only devices get no tray; reduced motion keeps the tray but moves it instantly and drops the scale.
+### Task Tile (signature)
+Each task is a jelly tile in its hue (minimum 76px tall, 26px corners, 3px rim). From left to right: a 36px round check (a cream socket ringed in the hue-light; when checked it fills with the hue and shows a white SVG tick), the 50px creature, and a cream text well with the task text and a meta line (times, earned coins with a small gold coin, speed chip). New tiles drop in (520ms). A finished tile squash-pops (600ms), its creature does a joy flip, and it follows the Kept Hue Rule. Archived creatures sit at 80% opacity.
 
-### Bank Panel (signature)
-Glazed cobalt column: recessed slot, display-scale total with "altın" unit, level name, coin stack, next-level line, today and streak (always shown), and one balanced encouraging line (aria-live). The coin stack is flipped so coins fill bottom-up, one slot per coin unit, arranged in whole columns.
+### Hover Tray
+With a pointer, one white tray (90% white, a 4px lemon-light ring, a grape-tinted shadow) glides under the hovered or focused tile (340ms, ease-glide), and the tile scales to 1.02. The tray appears in place rather than sliding in from where it last hid. One tray per list.
 
-### Kumbara-chan (the bank as a character)
-An anime-style ceramic coin bank drawn as inline SVG at the top of the bank panel (124px wide on desktop, 84px in the mobile band): Porcelain body and cat ears with a 3.5px Cobalt Well manga outline, Cobalt Glaze ear insides and glaze dip at the foot, two paws, Blush cheeks, and the coin slot (`#bank-slot`) on her head, which is where every coin lands.
-- **Moods** (`data-mood`): *idle* (big eyes with two white shines, cat mouth, blinks every ~5s), *happy* (`^ ^` eyes, open Mouth), *excited* (four-point star eyes, open mouth), *sleepy* (closed arcs plus floating z's in On Cobalt). Resting mood is sleepy until a task is finished today, idle after.
-- **Reactions:** finishing a task → happy for 1.8s, squash-and-stretch hop, white sparkles around her, and a manga sound word ("Tık!", "Süper!", "Oley!", "Harika!", "Bitti!"). Adding a task → happy for 1s, a nod, "Hop!" or "Tamam!". Level up → excited for 2.6s, hop, speed lines radiating from behind her, ten sparkles, and a big "Seviye atladın!".
-- **Speech bubble:** the encouraging line sits in a Paper manga bubble beside her (3px Cobalt Well outline, 18px radius, tail pointing at her, display face 650 at `--text-lg`, `--text-base` on mobile) and pops in whenever the line changes.
-- **Sound words:** display face 800, Paper fill with a 6px Cobalt Well stroke painted under the fill, tilted, placed just below her; `--text-2xl`, `--text-3xl` for level up.
-- **Sparkles:** four-point stars as SVG, white with a soft cobalt glow around her, Cobalt on the porcelain side where a checkbox is ticked.
-- Reduced motion keeps the mood changes and drops hop, nod, breathing, blink, sparkles, and sound words.
+### Day Path ("Bugünün yolu")
+A horizontal winding row of 46px numbered nodes in a cream well, joined by the candy-cane track. Each node finished today is a jelly in that task's hue with white stroked numbers (plum ink on lemon), and 1–3 gold stars beneath it (3 for a finish within the first hour). The next node is white with a grape ring and pulses. Locked nodes are flat lilac. The row shows at least 6 nodes and scrolls when it runs longer.
 
-### Task Sprites
-Every task row carries a small anime creature (46px, 38px on mobile) between the checkbox and the text: a Porcelain round body with a 2px Cobalt Well outline and cat, bunny, or bear ears in one of five tints (cobalt, rose, mint, lilac, sky), both picked from a hash of the task id so a task keeps its creature. Its face shows the task's state:
-- **sparkle** (added within 1 hour): big shining eyes, blush, open mouth, a twinkling star.
-- **normal** (1 hour to 1 day): dot eyes, small smile.
-- **worried** (1 to 3 days): slanted brows, wavy mouth, a Tear-blue sweat drop that drips.
-- **sad** (older than 3 days): downturned eyes and mouth, a falling tear.
-- **proud** (done): `^ ^` eyes and blush; the sprite desaturates with the row.
-- **sleep** (archived): closed eyes and a floating z.
-Sprites bob gently (3s, staggered per task), cheer with a small squash-and-stretch hop when their row lifts onto the tray, and jump with a tilt when their task is finished. A "Karakterler ne anlatıyor?" disclosure under the archive shows all six with their meaning and can add or remove six sample tasks (`demo: true`, one per state) that never earn or refund coins. The empty state shows a larger sprite beside its text.
+### Characters
+- **Kumbara-chan:** a porcelain cat-shaped coin bank drawn in SVG with 4px plum outlines, cherry ear lining and glaze, a gloss stroke, a gold-rimmed coin slot, and blush. Moods are idle, happy, sleepy, and excited (star eyes). She breathes (3.6s), blinks (5.2s), and glances at the board while the user types. She hops when a task is finished, nods when one is added, and gets a lemon ray burst on level up. Her speech bubble (white, 3px ink border, Candy Display) pops on each new line.
+- **Task creatures:** 50px gummy critters in porcelain with 2.2px ink outlines and ears in the task's hue. Their faces show the task's age and state (new, today, waiting with sweat, forgotten and crying, done and proud, archived and sleeping). They bob on staggered delays. The legend fold explains each face.
 
-### Task Meta and Speed Bonus
-Under each task text: creation time ("Bugün 20:41", "Dün 09:15", "22 Eyl 14:00"), "· bitti HH:MM" when done, and "+N altın" earned, in `--text-xs` Soft Ink with tabular numerals. Finishing sooner pays more: +3 within 1 hour, +2 within 1 day, +1 within 3 days on top of the base 3. Open tasks show a speed chip ("+3 hız bonusu · 38 dk") with a drawn bolt: On Cobalt pill with Cobalt text, or a Cobalt pill with a slow glow in the first hour. Bonus coins trail the main coin as extra small coins, and Kumbara-chan's sound word names the tier ("Şimşek! +6"). Undo refunds exactly what was earned. Ages, chips, and moods refresh every 30 seconds.
+### Rewards and Effects
+- **Coin flight:** a gold coin flies from the tile to the bank's slot (680ms, 520ms for the small add coin, ease-glide), with extra speed-bonus coins trailing behind. The score then settles.
+- **Shards and sparkles:** 16 candy shards per finished tile (round drops and 5px-radius wrapped squares with a white rim) in the tile's hue, plus lemon, cherry, and blueberry. White four-point sparkles burst from Kumbara-chan.
+- **Pow words:** white Candy Display at 1.5rem with a 7px ink stroke that pops up tilted beside Kumbara-chan ("+N", "Hop!", "Tamam!").
+- **Callouts:** one centered word per finish that slams in tilted −4° and floats away (1300ms). It is built from two layers: the element carries a 12px ink outline and a plum drop, and a `::after` holding `data-text` carries the lemon-to-orange gradient fill with no stroke.
 
-### Coin Flight (signature motion)
-A 28px gold coin (16px for the small "add" coin) travels a quadratic arc from the checkbox or add button into the coin slot on Kumbara-chan's head (the total if the slot is not rendered), shrinking to 55%, over 680ms (520ms small) on cubic-bezier(0.16, 1, 0.3, 1). The total then settles from scale 1.08 to 1 over 380ms and Kumbara-chan reacts. Reduced-motion users get the state change without flight or transitions.
+### Level-Up Overlay
+A full-screen, opaque candy burst (a radial gradient from lemon-light through lemon, orange, cherry, and grape to grape-dark) with white conic rays turning every 6s. A grape-dark elliptical disc (44% × 22%) sits behind the words so they always read against the burst. The title "Fikret Hocam, emeğinize sağlık!" is callout-size, two-layer, and fills lemon to cherry. It slams in and rests at −3°. Below it are "Teşekkürler!" in white with a 9px ink stroke, then "Yeni seviye: <name>". It fires with two shard bursts, sparkles, and the level chime, closes on its own after 2.2s, and closes on click. This copy is user-requested and fixed.
+
+### Sound and Reduced Motion
+Sounds are Web Audio tones synthesized on the spot: a two-note add blip, a four-note rising done arpeggio with a sparkle, a six-note level fanfare, and a falling undo. They are on by default, play only in response to user actions, and are behind the HUD toggle. Under `prefers-reduced-motion: reduce`, CSS switches off every animation and transition except the tray's opacity fade, and the script skips coin flight, shards, sparkles, pow words, and callouts. State still changes: the score updates immediately, nodes and stars light, and the level-up overlay still appears, without motion.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** keep gold on earned coins only (stack coins and the flying coin).
-- **Do** fill checked checkboxes and finished text with Done Gray (ink-done), never cobalt or gold.
+- **Do** build every raised candy surface from the full Jelly Rule recipe in one hue triple, with a 3px white rim.
+- **Do** put readable content in cream wells (cream-card, 18px, inset plum shadow) inside candy frames and tiles.
+- **Do** keep the frame hues fixed: path blueberry, entry cherry, archive orange, legend apple, HUD grape; apple is the primary action.
+- **Do** keep a finished tile in its hue, paler and flatter, with Done Plum struck-through text.
+- **Do** paint sticker strokes under the fill (`paint-order: stroke fill`) in the surface's dark tone.
+- **Do** build gradient callouts as two layers: the ink outline on the element, the gradient fill in a `::after` reading `data-text`.
 - **Do** use tabular numerals on every count.
-- **Do** build ceramic depth from gradients and pooled radial light, darkening toward the foot.
-- **Do** keep interface motion to the coin flight, total settle, and the gliding row tray: exponential ease-out, no bounce, under 700ms. Character motion belongs to Kumbara-chan alone.
-- **Do** collapse the bank into a compact cobalt band above the entry at 820px and below.
+- **Do** keep state changes under reduced motion and drop only flights, bursts, callouts, and loops.
+- **Do** synthesize sounds with Web Audio, play them only on user actions, and keep the visible HUD toggle.
+- **Do** check ğ, ş, İ, ı, ç, ö, ü in any display face before shipping it.
 
 ### Don't:
-- **Don't** use gold for buttons, badges, checkmarks, or highlights.
-- **Don't** add confetti, or bouncing and ambient animation anywhere except the characters: Kumbara-chan (breathing, blink, z's, hop, bubble pop), the task sprites (bob, cheer, joy, twinkle, sweat, tear, z), and the first-hour speed chip glow.
-- **Don't** add grain, noise, or image textures to the bank glaze.
-- **Don't** set user-typed task text in the display face.
-- **Don't** place persistent reward elements over task text; only the coin in flight may cross the list.
+- **Don't** use Candy Crush's name, logo, candy art, characters, or sounds; it is a style reference only.
+- **Don't** turn a finished task grey or strip its hue.
+- **Don't** set user-typed task text in Candy Display.
+- **Don't** put white text on lemon, or white text on any fill without a dark-tone stroke or lip.
+- **Don't** use neutral black or diagonal drop shadows under candy; tint them in the dark tone and keep them vertical.
+- **Don't** use gold for anything the user has not earned.
+- **Don't** add a seventh candy hue or blend two hues on one surface.
+- **Don't** put a text stroke on the same layer as clipped gradient text; the stroke covers the fill.
+- **Don't** load fonts, images, or sounds from the network.
+
+### Sanctioned detector exceptions
+These are recorded in `.impeccable/config.json`:
+- **gradient-text** (style.css, index.html): outlined, gradient-filled callout words are native to the pinned candy-puzzle world, limited to the `.fx-callout` and `.celebrate-title` `::after` fill layers.
+- **repeating-stripes-gradient** (index.html): the day path's candy-cane track is a functional path, not decoration.
+- **ai-color-palette** (index.html): plum ink (#3a1450) is the world's text color, chosen for contrast on candy fills.
+- **bounce-easing** `cubic-bezier(0.3, 1.4, 0.5, 1)` and `cubic-bezier(0.3, 1.5, 0.5, 1)` (style.css): squash-and-stretch overshoot. The recorded reasons scope these to Kumbara-chan's hop and the bubble pop. In the build the first curve is `--ease-jelly` and also drives tile drop and pop, creature cheer and joy, node pop, star lighting, and the level-up title slam. Those reasons need re-scoping to the candy world.
+- **side-tab** (style.css, index.html): recorded for the previous world's `.stack-coin` rim, which no longer exists. This exception is stale.

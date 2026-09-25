@@ -1,558 +1,985 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-24T17:55:30.665Z",
+  "generatedAt": "2026-09-25T11:39:49.601Z",
   "title": "Design System: Kumbara",
   "extensions": {
     "colorMeta": {
-      "cobalt": {
-        "role": "primary",
-        "displayName": "Kumbara Cobalt",
-        "canonical": "#1e3aa6",
-        "oklch": "oklch(40.5% 0.176 266.6)",
+      "cherry": {
+        "role": "secondary",
+        "displayName": "Cherry Jelly",
+        "canonical": "#ff3d7a",
         "tonalRamp": [
-          "oklch(15% 0.176 266.6)",
-          "oklch(25% 0.176 266.6)",
-          "oklch(35% 0.176 266.6)",
-          "oklch(45% 0.176 266.6)",
-          "oklch(55% 0.176 266.6)",
-          "oklch(65% 0.176 266.6)",
-          "oklch(80% 0.176 266.6)",
-          "oklch(95% 0.176 266.6)"
+          "oklch(15% 0.2 7.8)",
+          "oklch(26% 0.2 7.8)",
+          "oklch(38% 0.2 7.8)",
+          "oklch(50% 0.2 7.8)",
+          "oklch(62% 0.2 7.8)",
+          "oklch(74% 0.2 7.8)",
+          "oklch(85% 0.2 7.8)",
+          "oklch(95% 0.2 7.8)"
         ]
       },
-      "cobalt-deep": {
-        "role": "primary",
-        "displayName": "Deep Glaze Cobalt",
-        "canonical": "#142a7c",
-        "oklch": "oklch(32.9% 0.141 266.5)",
+      "cherry-light": {
+        "role": "secondary",
+        "displayName": "Cherry Jelly Light Top",
+        "canonical": "#ff8fb4",
         "tonalRamp": [
-          "oklch(15% 0.141 266.5)",
-          "oklch(25% 0.141 266.5)",
-          "oklch(35% 0.141 266.5)",
-          "oklch(45% 0.141 266.5)",
-          "oklch(55% 0.141 266.5)",
-          "oklch(65% 0.141 266.5)",
-          "oklch(80% 0.141 266.5)",
-          "oklch(95% 0.141 266.5)"
+          "oklch(15% 0.14 359.7)",
+          "oklch(26% 0.14 359.7)",
+          "oklch(38% 0.14 359.7)",
+          "oklch(50% 0.14 359.7)",
+          "oklch(62% 0.14 359.7)",
+          "oklch(74% 0.14 359.7)",
+          "oklch(85% 0.14 359.7)",
+          "oklch(95% 0.14 359.7)"
         ]
       },
-      "cobalt-glaze": {
-        "role": "primary",
-        "displayName": "Glaze Highlight",
-        "canonical": "#3053d4",
-        "oklch": "oklch(50.0% 0.202 266.9)",
+      "cherry-dark": {
+        "role": "secondary",
+        "displayName": "Cherry Jelly Dark Lip",
+        "canonical": "#c8134f",
         "tonalRamp": [
-          "oklch(15% 0.200 266.9)",
-          "oklch(25% 0.200 266.9)",
-          "oklch(35% 0.200 266.9)",
-          "oklch(45% 0.200 266.9)",
-          "oklch(55% 0.200 266.9)",
-          "oklch(65% 0.200 266.9)",
-          "oklch(80% 0.200 266.9)",
-          "oklch(95% 0.200 266.9)"
+          "oklch(15% 0.2 11.2)",
+          "oklch(26% 0.2 11.2)",
+          "oklch(38% 0.2 11.2)",
+          "oklch(50% 0.2 11.2)",
+          "oklch(62% 0.2 11.2)",
+          "oklch(74% 0.2 11.2)",
+          "oklch(85% 0.2 11.2)",
+          "oklch(95% 0.2 11.2)"
         ]
       },
-      "cobalt-well": {
-        "role": "primary",
-        "displayName": "Slot Well",
-        "canonical": "#0b1a52",
-        "oklch": "oklch(24.9% 0.104 266.7)",
+      "orange": {
+        "role": "secondary",
+        "displayName": "Orange Jelly",
+        "canonical": "#ff8a1f",
         "tonalRamp": [
-          "oklch(15% 0.104 266.7)",
-          "oklch(25% 0.104 266.7)",
-          "oklch(35% 0.104 266.7)",
-          "oklch(45% 0.104 266.7)",
-          "oklch(55% 0.104 266.7)",
-          "oklch(65% 0.104 266.7)",
-          "oklch(80% 0.104 266.7)",
-          "oklch(95% 0.104 266.7)"
+          "oklch(15% 0.176 55.4)",
+          "oklch(26% 0.176 55.4)",
+          "oklch(38% 0.176 55.4)",
+          "oklch(50% 0.176 55.4)",
+          "oklch(62% 0.176 55.4)",
+          "oklch(74% 0.176 55.4)",
+          "oklch(85% 0.176 55.4)",
+          "oklch(95% 0.176 55.4)"
         ]
       },
-      "on-cobalt": {
-        "role": "primary",
-        "displayName": "Porcelain on Cobalt",
-        "canonical": "#eef2ff",
-        "oklch": "oklch(96.2% 0.018 272.3)",
+      "orange-light": {
+        "role": "secondary",
+        "displayName": "Orange Jelly Light Top",
+        "canonical": "#ffb866",
         "tonalRamp": [
-          "oklch(15% 0.018 272.3)",
-          "oklch(25% 0.018 272.3)",
-          "oklch(35% 0.018 272.3)",
-          "oklch(45% 0.018 272.3)",
-          "oklch(55% 0.018 272.3)",
-          "oklch(65% 0.018 272.3)",
-          "oklch(80% 0.018 272.3)",
-          "oklch(95% 0.018 272.3)"
+          "oklch(15% 0.129 68.4)",
+          "oklch(26% 0.129 68.4)",
+          "oklch(38% 0.129 68.4)",
+          "oklch(50% 0.129 68.4)",
+          "oklch(62% 0.129 68.4)",
+          "oklch(74% 0.129 68.4)",
+          "oklch(85% 0.129 68.4)",
+          "oklch(95% 0.129 68.4)"
         ]
       },
-      "on-cobalt-soft": {
-        "role": "primary",
-        "displayName": "Pale Cobalt Text",
-        "canonical": "#bccaff",
-        "oklch": "oklch(84.6% 0.076 273.2)",
+      "orange-dark": {
+        "role": "secondary",
+        "displayName": "Orange Jelly Dark Lip",
+        "canonical": "#b34c00",
         "tonalRamp": [
-          "oklch(15% 0.076 273.2)",
-          "oklch(25% 0.076 273.2)",
-          "oklch(35% 0.076 273.2)",
-          "oklch(45% 0.076 273.2)",
-          "oklch(55% 0.076 273.2)",
-          "oklch(65% 0.076 273.2)",
-          "oklch(80% 0.076 273.2)",
-          "oklch(95% 0.076 273.2)"
+          "oklch(15% 0.151 46.6)",
+          "oklch(26% 0.151 46.6)",
+          "oklch(38% 0.151 46.6)",
+          "oklch(50% 0.151 46.6)",
+          "oklch(62% 0.151 46.6)",
+          "oklch(74% 0.151 46.6)",
+          "oklch(85% 0.151 46.6)",
+          "oklch(95% 0.151 46.6)"
+        ]
+      },
+      "lemon": {
+        "role": "secondary",
+        "displayName": "Lemon Jelly",
+        "canonical": "#ffcf1f",
+        "tonalRamp": [
+          "oklch(15% 0.173 91.1)",
+          "oklch(26% 0.173 91.1)",
+          "oklch(38% 0.173 91.1)",
+          "oklch(50% 0.173 91.1)",
+          "oklch(62% 0.173 91.1)",
+          "oklch(74% 0.173 91.1)",
+          "oklch(85% 0.173 91.1)",
+          "oklch(95% 0.173 91.1)"
+        ]
+      },
+      "lemon-light": {
+        "role": "secondary",
+        "displayName": "Lemon Jelly Light Top",
+        "canonical": "#ffe680",
+        "tonalRamp": [
+          "oklch(15% 0.125 95.9)",
+          "oklch(26% 0.125 95.9)",
+          "oklch(38% 0.125 95.9)",
+          "oklch(50% 0.125 95.9)",
+          "oklch(62% 0.125 95.9)",
+          "oklch(74% 0.125 95.9)",
+          "oklch(85% 0.125 95.9)",
+          "oklch(95% 0.125 95.9)"
+        ]
+      },
+      "lemon-dark": {
+        "role": "secondary",
+        "displayName": "Lemon Jelly Dark Lip",
+        "canonical": "#c99a00",
+        "tonalRamp": [
+          "oklch(15% 0.145 86.6)",
+          "oklch(26% 0.145 86.6)",
+          "oklch(38% 0.145 86.6)",
+          "oklch(50% 0.145 86.6)",
+          "oklch(62% 0.145 86.6)",
+          "oklch(74% 0.145 86.6)",
+          "oklch(85% 0.145 86.6)",
+          "oklch(95% 0.145 86.6)"
+        ]
+      },
+      "apple": {
+        "role": "primary",
+        "displayName": "Apple Jelly",
+        "canonical": "#34c759",
+        "tonalRamp": [
+          "oklch(15% 0.194 147.4)",
+          "oklch(26% 0.194 147.4)",
+          "oklch(38% 0.194 147.4)",
+          "oklch(50% 0.194 147.4)",
+          "oklch(62% 0.194 147.4)",
+          "oklch(74% 0.194 147.4)",
+          "oklch(85% 0.194 147.4)",
+          "oklch(95% 0.194 147.4)"
+        ]
+      },
+      "apple-light": {
+        "role": "primary",
+        "displayName": "Apple Jelly Light Top",
+        "canonical": "#7fe39a",
+        "tonalRamp": [
+          "oklch(15% 0.14 151.1)",
+          "oklch(26% 0.14 151.1)",
+          "oklch(38% 0.14 151.1)",
+          "oklch(50% 0.14 151.1)",
+          "oklch(62% 0.14 151.1)",
+          "oklch(74% 0.14 151.1)",
+          "oklch(85% 0.14 151.1)",
+          "oklch(95% 0.14 151.1)"
+        ]
+      },
+      "apple-dark": {
+        "role": "primary",
+        "displayName": "Apple Jelly Dark Lip",
+        "canonical": "#17823a",
+        "tonalRamp": [
+          "oklch(15% 0.142 148.8)",
+          "oklch(26% 0.142 148.8)",
+          "oklch(38% 0.142 148.8)",
+          "oklch(50% 0.142 148.8)",
+          "oklch(62% 0.142 148.8)",
+          "oklch(74% 0.142 148.8)",
+          "oklch(85% 0.142 148.8)",
+          "oklch(95% 0.142 148.8)"
+        ]
+      },
+      "blueberry": {
+        "role": "secondary",
+        "displayName": "Blueberry Jelly",
+        "canonical": "#2f8cff",
+        "tonalRamp": [
+          "oklch(15% 0.191 256.2)",
+          "oklch(26% 0.191 256.2)",
+          "oklch(38% 0.191 256.2)",
+          "oklch(50% 0.191 256.2)",
+          "oklch(62% 0.191 256.2)",
+          "oklch(74% 0.191 256.2)",
+          "oklch(85% 0.191 256.2)",
+          "oklch(95% 0.191 256.2)"
+        ]
+      },
+      "blueberry-light": {
+        "role": "secondary",
+        "displayName": "Blueberry Jelly Light Top",
+        "canonical": "#82bbff",
+        "tonalRamp": [
+          "oklch(15% 0.115 253.5)",
+          "oklch(26% 0.115 253.5)",
+          "oklch(38% 0.115 253.5)",
+          "oklch(50% 0.115 253.5)",
+          "oklch(62% 0.115 253.5)",
+          "oklch(74% 0.115 253.5)",
+          "oklch(85% 0.115 253.5)",
+          "oklch(95% 0.115 253.5)"
+        ]
+      },
+      "blueberry-dark": {
+        "role": "secondary",
+        "displayName": "Blueberry Jelly Dark Lip",
+        "canonical": "#1a5fcc",
+        "tonalRamp": [
+          "oklch(15% 0.182 259.9)",
+          "oklch(26% 0.182 259.9)",
+          "oklch(38% 0.182 259.9)",
+          "oklch(50% 0.182 259.9)",
+          "oklch(62% 0.182 259.9)",
+          "oklch(74% 0.182 259.9)",
+          "oklch(85% 0.182 259.9)",
+          "oklch(95% 0.182 259.9)"
+        ]
+      },
+      "grape": {
+        "role": "primary",
+        "displayName": "Grape Jelly",
+        "canonical": "#a14cf0",
+        "tonalRamp": [
+          "oklch(15% 0.2 303.8)",
+          "oklch(26% 0.2 303.8)",
+          "oklch(38% 0.2 303.8)",
+          "oklch(50% 0.2 303.8)",
+          "oklch(62% 0.2 303.8)",
+          "oklch(74% 0.2 303.8)",
+          "oklch(85% 0.2 303.8)",
+          "oklch(95% 0.2 303.8)"
+        ]
+      },
+      "grape-light": {
+        "role": "primary",
+        "displayName": "Grape Jelly Light Top",
+        "canonical": "#cf9bff",
+        "tonalRamp": [
+          "oklch(15% 0.148 307.2)",
+          "oklch(26% 0.148 307.2)",
+          "oklch(38% 0.148 307.2)",
+          "oklch(50% 0.148 307.2)",
+          "oklch(62% 0.148 307.2)",
+          "oklch(74% 0.148 307.2)",
+          "oklch(85% 0.148 307.2)",
+          "oklch(95% 0.148 307.2)"
+        ]
+      },
+      "grape-dark": {
+        "role": "primary",
+        "displayName": "Grape Jelly Dark Lip",
+        "canonical": "#7424c4",
+        "tonalRamp": [
+          "oklch(15% 0.2 300.1)",
+          "oklch(26% 0.2 300.1)",
+          "oklch(38% 0.2 300.1)",
+          "oklch(50% 0.2 300.1)",
+          "oklch(62% 0.2 300.1)",
+          "oklch(74% 0.2 300.1)",
+          "oklch(85% 0.2 300.1)",
+          "oklch(95% 0.2 300.1)"
         ]
       },
       "gold-light": {
-        "role": "secondary",
-        "displayName": "Gold Light",
-        "canonical": "#ffe08a",
-        "oklch": "oklch(91.4% 0.111 90.3)",
+        "role": "tertiary",
+        "displayName": "Coin Gold Light",
+        "canonical": "#fff0a0",
         "tonalRamp": [
-          "oklch(15% 0.111 90.3)",
-          "oklch(25% 0.111 90.3)",
-          "oklch(35% 0.111 90.3)",
-          "oklch(45% 0.111 90.3)",
-          "oklch(55% 0.111 90.3)",
-          "oklch(65% 0.111 90.3)",
-          "oklch(80% 0.111 90.3)",
-          "oklch(95% 0.111 90.3)"
+          "oklch(15% 0.101 98.9)",
+          "oklch(26% 0.101 98.9)",
+          "oklch(38% 0.101 98.9)",
+          "oklch(50% 0.101 98.9)",
+          "oklch(62% 0.101 98.9)",
+          "oklch(74% 0.101 98.9)",
+          "oklch(85% 0.101 98.9)",
+          "oklch(95% 0.101 98.9)"
         ]
       },
       "gold": {
-        "role": "secondary",
+        "role": "tertiary",
         "displayName": "Coin Gold",
-        "canonical": "#f4b92c",
-        "oklch": "oklch(81.8% 0.157 83.5)",
+        "canonical": "#ffc21f",
         "tonalRamp": [
-          "oklch(15% 0.157 83.5)",
-          "oklch(25% 0.157 83.5)",
-          "oklch(35% 0.157 83.5)",
-          "oklch(45% 0.157 83.5)",
-          "oklch(55% 0.157 83.5)",
-          "oklch(65% 0.157 83.5)",
-          "oklch(80% 0.157 83.5)",
-          "oklch(95% 0.157 83.5)"
+          "oklch(15% 0.168 84.7)",
+          "oklch(26% 0.168 84.7)",
+          "oklch(38% 0.168 84.7)",
+          "oklch(50% 0.168 84.7)",
+          "oklch(62% 0.168 84.7)",
+          "oklch(74% 0.168 84.7)",
+          "oklch(85% 0.168 84.7)",
+          "oklch(95% 0.168 84.7)"
         ]
       },
       "gold-deep": {
-        "role": "secondary",
-        "displayName": "Gold Deep",
-        "canonical": "#a8740c",
-        "oklch": "oklch(59.8% 0.122 76.7)",
+        "role": "tertiary",
+        "displayName": "Coin Gold Deep",
+        "canonical": "#d18a00",
         "tonalRamp": [
-          "oklch(15% 0.122 76.7)",
-          "oklch(25% 0.122 76.7)",
-          "oklch(35% 0.122 76.7)",
-          "oklch(45% 0.122 76.7)",
-          "oklch(55% 0.122 76.7)",
-          "oklch(65% 0.122 76.7)",
-          "oklch(80% 0.122 76.7)",
-          "oklch(95% 0.122 76.7)"
+          "oklch(15% 0.147 72.9)",
+          "oklch(26% 0.147 72.9)",
+          "oklch(38% 0.147 72.9)",
+          "oklch(50% 0.147 72.9)",
+          "oklch(62% 0.147 72.9)",
+          "oklch(74% 0.147 72.9)",
+          "oklch(85% 0.147 72.9)",
+          "oklch(95% 0.147 72.9)"
         ]
       },
-      "gold-ink": {
-        "role": "secondary",
-        "displayName": "Gold Ink",
-        "canonical": "#5a3d00",
-        "oklch": "oklch(38.3% 0.080 78.5)",
-        "tonalRamp": [
-          "oklch(15% 0.080 78.5)",
-          "oklch(25% 0.080 78.5)",
-          "oklch(35% 0.080 78.5)",
-          "oklch(45% 0.080 78.5)",
-          "oklch(55% 0.080 78.5)",
-          "oklch(65% 0.080 78.5)",
-          "oklch(80% 0.080 78.5)",
-          "oklch(95% 0.080 78.5)"
-        ]
-      },
-      "ground": {
+      "sky-top": {
         "role": "neutral",
-        "displayName": "Porcelain Ground",
-        "canonical": "#f2f5fa",
-        "oklch": "oklch(96.9% 0.007 260.7)",
+        "displayName": "Sugar Sky Top",
+        "canonical": "#ffd6ea",
         "tonalRamp": [
-          "oklch(15% 0.007 260.7)",
-          "oklch(25% 0.007 260.7)",
-          "oklch(35% 0.007 260.7)",
-          "oklch(45% 0.007 260.7)",
-          "oklch(55% 0.007 260.7)",
-          "oklch(65% 0.007 260.7)",
-          "oklch(80% 0.007 260.7)",
-          "oklch(95% 0.007 260.7)"
+          "oklch(15% 0.052 347.2)",
+          "oklch(26% 0.052 347.2)",
+          "oklch(38% 0.052 347.2)",
+          "oklch(50% 0.052 347.2)",
+          "oklch(62% 0.052 347.2)",
+          "oklch(74% 0.052 347.2)",
+          "oklch(85% 0.052 347.2)",
+          "oklch(95% 0.052 347.2)"
         ]
       },
-      "paper": {
+      "sky-mid": {
         "role": "neutral",
-        "displayName": "Paper White",
-        "canonical": "#ffffff",
-        "oklch": "oklch(100.0% 0.000 89.9)",
+        "displayName": "Sugar Sky",
+        "canonical": "#f1d9ff",
         "tonalRamp": [
-          "oklch(15% 0.000 89.9)",
-          "oklch(25% 0.000 89.9)",
-          "oklch(35% 0.000 89.9)",
-          "oklch(45% 0.000 89.9)",
-          "oklch(55% 0.000 89.9)",
-          "oklch(65% 0.000 89.9)",
-          "oklch(80% 0.000 89.9)",
-          "oklch(95% 0.000 89.9)"
+          "oklch(15% 0.057 313.2)",
+          "oklch(26% 0.057 313.2)",
+          "oklch(38% 0.057 313.2)",
+          "oklch(50% 0.057 313.2)",
+          "oklch(62% 0.057 313.2)",
+          "oklch(74% 0.057 313.2)",
+          "oklch(85% 0.057 313.2)",
+          "oklch(95% 0.057 313.2)"
         ]
       },
-      "line": {
+      "sky-low": {
         "role": "neutral",
-        "displayName": "Hairline",
-        "canonical": "#dde3ee",
-        "oklch": "oklch(91.4% 0.016 262.8)",
+        "displayName": "Sugar Sky Low",
+        "canonical": "#d6c6ff",
         "tonalRamp": [
-          "oklch(15% 0.016 262.8)",
-          "oklch(25% 0.016 262.8)",
-          "oklch(35% 0.016 262.8)",
-          "oklch(45% 0.016 262.8)",
-          "oklch(55% 0.016 262.8)",
-          "oklch(65% 0.016 262.8)",
-          "oklch(80% 0.016 262.8)",
-          "oklch(95% 0.016 262.8)"
+          "oklch(15% 0.08 297.6)",
+          "oklch(26% 0.08 297.6)",
+          "oklch(38% 0.08 297.6)",
+          "oklch(50% 0.08 297.6)",
+          "oklch(62% 0.08 297.6)",
+          "oklch(74% 0.08 297.6)",
+          "oklch(85% 0.08 297.6)",
+          "oklch(95% 0.08 297.6)"
         ]
       },
-      "wash": {
+      "hill-back": {
         "role": "neutral",
-        "displayName": "Wash",
-        "canonical": "#e6ebf4",
-        "oklch": "oklch(93.9% 0.013 262.4)",
+        "displayName": "Strawberry Hill",
+        "canonical": "#ffb8d6",
         "tonalRamp": [
-          "oklch(15% 0.013 262.4)",
-          "oklch(25% 0.013 262.4)",
-          "oklch(35% 0.013 262.4)",
-          "oklch(45% 0.013 262.4)",
-          "oklch(55% 0.013 262.4)",
-          "oklch(65% 0.013 262.4)",
-          "oklch(80% 0.013 262.4)",
-          "oklch(95% 0.013 262.4)"
+          "oklch(15% 0.09 352.1)",
+          "oklch(26% 0.09 352.1)",
+          "oklch(38% 0.09 352.1)",
+          "oklch(50% 0.09 352.1)",
+          "oklch(62% 0.09 352.1)",
+          "oklch(74% 0.09 352.1)",
+          "oklch(85% 0.09 352.1)",
+          "oklch(95% 0.09 352.1)"
+        ]
+      },
+      "hill-front": {
+        "role": "neutral",
+        "displayName": "Mint Hill",
+        "canonical": "#b8efd6",
+        "tonalRamp": [
+          "oklch(15% 0.066 165.4)",
+          "oklch(26% 0.066 165.4)",
+          "oklch(38% 0.066 165.4)",
+          "oklch(50% 0.066 165.4)",
+          "oklch(62% 0.066 165.4)",
+          "oklch(74% 0.066 165.4)",
+          "oklch(85% 0.066 165.4)",
+          "oklch(95% 0.066 165.4)"
         ]
       },
       "ink": {
         "role": "neutral",
-        "displayName": "Blue-Black Ink",
-        "canonical": "#111c3a",
-        "oklch": "oklch(23.5% 0.060 266.7)",
+        "displayName": "Plum Ink",
+        "canonical": "#3a1450",
         "tonalRamp": [
-          "oklch(15% 0.060 266.7)",
-          "oklch(25% 0.060 266.7)",
-          "oklch(35% 0.060 266.7)",
-          "oklch(45% 0.060 266.7)",
-          "oklch(55% 0.060 266.7)",
-          "oklch(65% 0.060 266.7)",
-          "oklch(80% 0.060 266.7)",
-          "oklch(95% 0.060 266.7)"
+          "oklch(15% 0.107 310.3)",
+          "oklch(26% 0.107 310.3)",
+          "oklch(38% 0.107 310.3)",
+          "oklch(50% 0.107 310.3)",
+          "oklch(62% 0.107 310.3)",
+          "oklch(74% 0.107 310.3)",
+          "oklch(85% 0.107 310.3)",
+          "oklch(95% 0.107 310.3)"
         ]
       },
       "ink-soft": {
         "role": "neutral",
-        "displayName": "Soft Ink",
-        "canonical": "#4b5878",
-        "oklch": "oklch(46.3% 0.055 267.2)",
+        "displayName": "Soft Plum",
+        "canonical": "#6a4585",
         "tonalRamp": [
-          "oklch(15% 0.055 267.2)",
-          "oklch(25% 0.055 267.2)",
-          "oklch(35% 0.055 267.2)",
-          "oklch(45% 0.055 267.2)",
-          "oklch(55% 0.055 267.2)",
-          "oklch(65% 0.055 267.2)",
-          "oklch(80% 0.055 267.2)",
-          "oklch(95% 0.055 267.2)"
+          "oklch(15% 0.108 309.4)",
+          "oklch(26% 0.108 309.4)",
+          "oklch(38% 0.108 309.4)",
+          "oklch(50% 0.108 309.4)",
+          "oklch(62% 0.108 309.4)",
+          "oklch(74% 0.108 309.4)",
+          "oklch(85% 0.108 309.4)",
+          "oklch(95% 0.108 309.4)"
         ]
       },
       "ink-done": {
         "role": "neutral",
-        "displayName": "Done Gray",
-        "canonical": "#5d667c",
-        "oklch": "oklch(51.1% 0.037 267.6)",
+        "displayName": "Done Plum",
+        "canonical": "#7a6a8c",
         "tonalRamp": [
-          "oklch(15% 0.037 267.6)",
-          "oklch(25% 0.037 267.6)",
-          "oklch(35% 0.037 267.6)",
-          "oklch(45% 0.037 267.6)",
-          "oklch(55% 0.037 267.6)",
-          "oklch(65% 0.037 267.6)",
-          "oklch(80% 0.037 267.6)",
-          "oklch(95% 0.037 267.6)"
+          "oklch(15% 0.055 306.1)",
+          "oklch(26% 0.055 306.1)",
+          "oklch(38% 0.055 306.1)",
+          "oklch(50% 0.055 306.1)",
+          "oklch(62% 0.055 306.1)",
+          "oklch(74% 0.055 306.1)",
+          "oklch(85% 0.055 306.1)",
+          "oklch(95% 0.055 306.1)"
         ]
       },
       "placeholder": {
         "role": "neutral",
-        "displayName": "Placeholder",
-        "canonical": "#66708a",
-        "oklch": "oklch(54.6% 0.042 268.5)",
+        "displayName": "Placeholder Plum",
+        "canonical": "#8a6fa0",
         "tonalRamp": [
-          "oklch(15% 0.042 268.5)",
-          "oklch(25% 0.042 268.5)",
-          "oklch(35% 0.042 268.5)",
-          "oklch(45% 0.042 268.5)",
-          "oklch(55% 0.042 268.5)",
-          "oklch(65% 0.042 268.5)",
-          "oklch(80% 0.042 268.5)",
-          "oklch(95% 0.042 268.5)"
+          "oklch(15% 0.079 309.2)",
+          "oklch(26% 0.079 309.2)",
+          "oklch(38% 0.079 309.2)",
+          "oklch(50% 0.079 309.2)",
+          "oklch(62% 0.079 309.2)",
+          "oklch(74% 0.079 309.2)",
+          "oklch(85% 0.079 309.2)",
+          "oklch(95% 0.079 309.2)"
+        ],
+        "note": "4.1:1 on cream-card; placeholder only, below AA for body text."
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0 89.9)",
+          "oklch(26% 0 89.9)",
+          "oklch(38% 0 89.9)",
+          "oklch(50% 0 89.9)",
+          "oklch(62% 0 89.9)",
+          "oklch(74% 0 89.9)",
+          "oklch(85% 0 89.9)",
+          "oklch(95% 0 89.9)"
+        ]
+      },
+      "cream-card": {
+        "role": "neutral",
+        "displayName": "Cream Card",
+        "canonical": "#fff7fd",
+        "tonalRamp": [
+          "oklch(15% 0.012 334.1)",
+          "oklch(26% 0.012 334.1)",
+          "oklch(38% 0.012 334.1)",
+          "oklch(50% 0.012 334.1)",
+          "oklch(62% 0.012 334.1)",
+          "oklch(74% 0.012 334.1)",
+          "oklch(85% 0.012 334.1)",
+          "oklch(95% 0.012 334.1)"
+        ]
+      },
+      "wash": {
+        "role": "neutral",
+        "displayName": "Lilac Wash",
+        "canonical": "#f6ecfb",
+        "tonalRamp": [
+          "oklch(15% 0.023 314.7)",
+          "oklch(26% 0.023 314.7)",
+          "oklch(38% 0.023 314.7)",
+          "oklch(50% 0.023 314.7)",
+          "oklch(62% 0.023 314.7)",
+          "oklch(74% 0.023 314.7)",
+          "oklch(85% 0.023 314.7)",
+          "oklch(95% 0.023 314.7)"
+        ]
+      },
+      "track-casing": {
+        "role": "neutral",
+        "displayName": "Path Casing",
+        "canonical": "#f3e2f7",
+        "tonalRamp": [
+          "oklch(15% 0.033 319.8)",
+          "oklch(26% 0.033 319.8)",
+          "oklch(38% 0.033 319.8)",
+          "oklch(50% 0.033 319.8)",
+          "oklch(62% 0.033 319.8)",
+          "oklch(74% 0.033 319.8)",
+          "oklch(85% 0.033 319.8)",
+          "oklch(95% 0.033 319.8)"
+        ]
+      },
+      "locked-node": {
+        "role": "neutral",
+        "displayName": "Locked Node",
+        "canonical": "#eadcf3",
+        "tonalRamp": [
+          "oklch(15% 0.034 312.4)",
+          "oklch(26% 0.034 312.4)",
+          "oklch(38% 0.034 312.4)",
+          "oklch(50% 0.034 312.4)",
+          "oklch(62% 0.034 312.4)",
+          "oklch(74% 0.034 312.4)",
+          "oklch(85% 0.034 312.4)",
+          "oklch(95% 0.034 312.4)"
+        ]
+      },
+      "star-unlit": {
+        "role": "neutral",
+        "displayName": "Unlit Star",
+        "canonical": "#b89acb",
+        "tonalRamp": [
+          "oklch(15% 0.077 312.1)",
+          "oklch(26% 0.077 312.1)",
+          "oklch(38% 0.077 312.1)",
+          "oklch(50% 0.077 312.1)",
+          "oklch(62% 0.077 312.1)",
+          "oklch(74% 0.077 312.1)",
+          "oklch(85% 0.077 312.1)",
+          "oklch(95% 0.077 312.1)"
         ]
       },
       "danger": {
         "role": "neutral",
         "displayName": "Danger",
-        "canonical": "#b42318",
-        "oklch": "oklch(50.0% 0.182 29.5)",
+        "canonical": "#c8134f",
         "tonalRamp": [
-          "oklch(15% 0.182 29.5)",
-          "oklch(25% 0.182 29.5)",
-          "oklch(35% 0.182 29.5)",
-          "oklch(45% 0.182 29.5)",
-          "oklch(55% 0.182 29.5)",
-          "oklch(65% 0.182 29.5)",
-          "oklch(80% 0.182 29.5)",
-          "oklch(95% 0.182 29.5)"
+          "oklch(15% 0.2 11.2)",
+          "oklch(26% 0.2 11.2)",
+          "oklch(38% 0.2 11.2)",
+          "oklch(50% 0.2 11.2)",
+          "oklch(62% 0.2 11.2)",
+          "oklch(74% 0.2 11.2)",
+          "oklch(85% 0.2 11.2)",
+          "oklch(95% 0.2 11.2)"
         ]
       },
-      "danger-wash": {
+      "porcelain": {
         "role": "neutral",
-        "displayName": "Danger Wash",
-        "canonical": "#fdecea",
-        "oklch": "oklch(95.6% 0.019 25.6)",
+        "displayName": "Porcelain",
+        "canonical": "#fffafd",
         "tonalRamp": [
-          "oklch(15% 0.019 25.6)",
-          "oklch(25% 0.019 25.6)",
-          "oklch(35% 0.019 25.6)",
-          "oklch(45% 0.019 25.6)",
-          "oklch(55% 0.019 25.6)",
-          "oklch(65% 0.019 25.6)",
-          "oklch(80% 0.019 25.6)",
-          "oklch(95% 0.019 25.6)"
+          "oklch(15% 0.007 340.4)",
+          "oklch(26% 0.007 340.4)",
+          "oklch(38% 0.007 340.4)",
+          "oklch(50% 0.007 340.4)",
+          "oklch(62% 0.007 340.4)",
+          "oklch(74% 0.007 340.4)",
+          "oklch(85% 0.007 340.4)",
+          "oklch(95% 0.007 340.4)"
+        ]
+      },
+      "blush": {
+        "role": "neutral",
+        "displayName": "Blush",
+        "canonical": "#ff8fb4",
+        "tonalRamp": [
+          "oklch(15% 0.14 359.7)",
+          "oklch(26% 0.14 359.7)",
+          "oklch(38% 0.14 359.7)",
+          "oklch(50% 0.14 359.7)",
+          "oklch(62% 0.14 359.7)",
+          "oklch(74% 0.14 359.7)",
+          "oklch(85% 0.14 359.7)",
+          "oklch(95% 0.14 359.7)"
+        ]
+      },
+      "mouth": {
+        "role": "neutral",
+        "displayName": "Mouth",
+        "canonical": "#ff3d7a",
+        "tonalRamp": [
+          "oklch(15% 0.2 7.8)",
+          "oklch(26% 0.2 7.8)",
+          "oklch(38% 0.2 7.8)",
+          "oklch(50% 0.2 7.8)",
+          "oklch(62% 0.2 7.8)",
+          "oklch(74% 0.2 7.8)",
+          "oklch(85% 0.2 7.8)",
+          "oklch(95% 0.2 7.8)"
+        ]
+      },
+      "tear": {
+        "role": "neutral",
+        "displayName": "Tear",
+        "canonical": "#7cc4ff",
+        "tonalRamp": [
+          "oklch(15% 0.111 244.6)",
+          "oklch(26% 0.111 244.6)",
+          "oklch(38% 0.111 244.6)",
+          "oklch(50% 0.111 244.6)",
+          "oklch(62% 0.111 244.6)",
+          "oklch(74% 0.111 244.6)",
+          "oklch(85% 0.111 244.6)",
+          "oklch(95% 0.111 244.6)"
         ]
       }
     },
     "typographyMeta": {
-      "display": {
-        "displayName": "Coin Total",
-        "purpose": "The bank's coin total only; tabular numerals; 3.25rem on mobile."
+      "callout": {
+        "displayName": "Callout",
+        "purpose": "Centered combo and speed words and the level-up title; two-layer outline plus gradient fill."
       },
       "headline": {
-        "displayName": "Page Heading",
-        "purpose": "The h1 'Görevler'; 1.5rem on mobile."
+        "displayName": "Headline",
+        "purpose": "'Görevler' board heading; plum ink with 8px white sticker stroke. 1.5rem under 640px."
+      },
+      "score": {
+        "displayName": "Score",
+        "purpose": "HUD coin total and 'Teşekkürler!'; tabular. 1.5rem under 640px."
+      },
+      "reward": {
+        "displayName": "Reward",
+        "purpose": "Pow words beside Kumbara-chan and the level-up 'Yeni seviye' line; 7px ink stroke."
       },
       "title": {
-        "displayName": "Level Name",
-        "purpose": "Bank level name; the archive summary uses the display face at 1.125rem (--text-lg)/650."
+        "displayName": "Title",
+        "purpose": "Frame headings, the Ekle! button, Kumbara-chan's bubble."
       },
-      "message": {
-        "displayName": "Encouraging Line",
-        "purpose": "The single balanced reward line in the bank."
+      "title-sm": {
+        "displayName": "Title Small",
+        "purpose": "Level name, badge number, fold summaries, path node numbers."
+      },
+      "input": {
+        "displayName": "Input",
+        "purpose": "Entry field text."
+      },
+      "task": {
+        "displayName": "Task",
+        "purpose": "User-typed task text and the inline editor. Never the display face."
       },
       "body": {
-        "displayName": "Task Text",
-        "purpose": "User-typed task text in the system face; entry input at 1.125rem."
+        "displayName": "Body",
+        "purpose": "Base text, empty states."
       },
       "label": {
         "displayName": "Label",
-        "purpose": "Filters, counts, next-level and record lines at 0.9375rem (--text-sm); row actions at 0.875rem (--text-xs)."
+        "purpose": "Filters, path stats, fold counts, legend names, secondary button."
       },
-      "display-compact": {
-        "displayName": "Coin Total (compact)",
-        "purpose": "The coin total in the mobile bank band (--text-display-compact)."
-      },
-      "subtitle": {
-        "displayName": "Subtitle",
-        "purpose": "Archive summary; level name and message in the mobile band (--text-lg, display face)."
-      },
-      "entry": {
-        "displayName": "Entry Input",
-        "purpose": "The task entry input (--text-lg, system face)."
-      },
-      "ui": {
-        "displayName": "UI Base",
-        "purpose": "Page base, primary button label, today/streak record (--text-base)."
-      },
-      "label-small": {
-        "displayName": "Small Label",
-        "purpose": "Row actions; next-level line on mobile (--text-xs)."
+      "meta": {
+        "displayName": "Meta",
+        "purpose": "Task times, earned coins, speed chips, action pills, next-level line."
       }
     },
+    "fonts": [
+      {
+        "family": "Candy Display",
+        "source": "Baloo 2 ExtraBold (@fontsource/baloo-2 5.3.0), OFL-1.1, inlined as data URI in fonts/fonts.css; license fonts/OFL-baloo-2.txt",
+        "note": "Single ExtraBold file mapped to weight 100-1000; replaced Lilita One, which lacks ğ, ş, İ."
+      },
+      {
+        "family": "Nunito",
+        "source": "Nunito variable (@fontsource-variable/nunito 5.3.0), OFL-1.1, inlined as data URI; license fonts/OFL-nunito.txt"
+      }
+    ],
     "shadows": [
       {
-        "name": "entry-float",
-        "value": "0 8px 22px -12px rgb(17 28 58 / 0.35)",
-        "purpose": "The entry slot at rest; the only element floating on the porcelain side while no row is lifted."
+        "name": "jelly",
+        "value": "inset 0 -4px 0 rgb(0 0 0 / 0.14), inset 0 2px 0 rgb(255 255 255 / 0.6), 0 8px 16px -8px var(--fill-dark)",
+        "purpose": "Buttons and path nodes: dark bottom lip, white top hairline, drop tinted in the fill's dark tone."
       },
       {
-        "name": "entry-focus",
-        "value": "0 0 0 3px rgb(30 58 166 / 0.16), 0 8px 22px -12px rgb(17 28 58 / 0.35)",
-        "purpose": "Entry slot while its input is focused, with a cobalt border."
+        "name": "frame",
+        "value": "inset 0 -5px 0 rgb(0 0 0 / 0.16), inset 0 2px 0 rgb(255 255 255 / 0.55), 0 12px 22px -12px var(--frame-dark)",
+        "purpose": "Candy frames (path, entry, archive, legend)."
       },
       {
-        "name": "active-segment",
-        "value": "0 1px 3px rgb(17 28 58 / 0.18)",
-        "purpose": "Selected filter segment on its wash track."
+        "name": "tile",
+        "value": "inset 0 -5px 0 rgb(0 0 0 / 0.16), inset 0 2px 0 rgb(255 255 255 / 0.55), 0 10px 18px -10px var(--hue-dark)",
+        "purpose": "Task tiles at rest."
       },
       {
-        "name": "slot-recess",
-        "value": "inset 0 5px 7px rgb(0 0 0 / 0.7), 0 0 0 3px rgb(96 128 240 / 0.55), 0 3px 2px 3px rgb(200 214 255 / 0.28)",
-        "purpose": "The bank's recessed coin mouth with a lighter rim."
+        "name": "tile-done",
+        "value": "inset 0 -3px 0 rgb(0 0 0 / 0.1), 0 6px 12px -10px var(--hue-dark)",
+        "purpose": "Finished tiles: flatter lip, keeps hue."
       },
       {
-        "name": "stack-coin",
-        "value": "inset 0 3px 0 #a8740c, inset 0 -1px 0 rgb(255 255 255 / 0.55), 0 -2px 3px rgb(5 12 40 / 0.35)",
-        "purpose": "Filled coin in the vertically flipped stack (the top inset renders as the lower edge)."
+        "name": "hud",
+        "value": "inset 0 -4px 0 rgb(0 0 0 / 0.15), 0 12px 24px -12px var(--grape-dark)",
+        "purpose": "The sticky HUD bar."
       },
       {
-        "name": "coin-flight",
-        "value": "inset 0 0 0 2px rgb(168 116 12 / 0.7), 0 6px 12px rgb(90 61 0 / 0.35)",
-        "purpose": "The coin in flight."
+        "name": "cream-well",
+        "value": "inset 0 3px 6px rgb(58 20 80 / 0.16)",
+        "purpose": "Every recessed cream well and the entry input."
       },
       {
-        "name": "row-tray",
-        "value": "0 14px 28px -16px rgb(17 28 58 / 0.45), 0 3px 8px -3px rgb(17 28 58 / 0.14)",
-        "purpose": "The Paper tray under the hovered or focused task row."
+        "name": "hover-tray",
+        "value": "0 0 0 4px var(--lemon-light), 0 18px 30px -14px rgb(116 36 196 / 0.55)",
+        "purpose": "The gliding tray under the hovered or focused tile."
+      },
+      {
+        "name": "bubble",
+        "value": "0 8px 18px -10px rgb(58 20 80 / 0.5)",
+        "purpose": "Kumbara-chan's speech bubble."
+      },
+      {
+        "name": "gloss",
+        "value": "linear-gradient(180deg, rgb(255 255 255 / 0.45) 0%, rgb(255 255 255 / 0) 48%)",
+        "purpose": "White top gloss layered over every jelly fill (34% stop on frames and tiles)."
       }
     ],
     "motion": [
       {
         "name": "ease-out",
         "value": "cubic-bezier(0.22, 1, 0.36, 1)",
-        "purpose": "CSS transitions: new task slide-in (420ms), archive chevron (200ms)."
+        "purpose": "Button and check scale, fold chevron, mascot nod, overlay fade-in."
       },
       {
-        "name": "ease-coin",
+        "name": "ease-glide",
         "value": "cubic-bezier(0.16, 1, 0.3, 1)",
-        "purpose": "Coin flight (680ms, 520ms for the small add coin) and total settle (380ms, scale 1.08 to 1)."
+        "purpose": "Hover tray (340ms), tile lift, star-bar fill (600ms), coin flight (680ms, 520ms small), mascot ray burst."
       },
       {
-        "name": "state-fast",
-        "value": "150ms",
-        "purpose": "Hover and focus color, border, and opacity transitions."
+        "name": "ease-jelly",
+        "value": "cubic-bezier(0.3, 1.4, 0.5, 1)",
+        "purpose": "Squash-and-stretch overshoot: tile drop (520ms) and pop (600ms), creature cheer and joy, node pop, star lighting, mascot hop, level-up title slam (700ms)."
+      },
+      {
+        "name": "bubble-pop",
+        "value": "cubic-bezier(0.3, 1.5, 0.5, 1)",
+        "purpose": "Speech bubble pop (320ms) on each new line."
+      },
+      {
+        "name": "callout",
+        "value": "1300ms ease-out keyframes",
+        "purpose": "Center callout slams in at -4deg and floats away."
+      },
+      {
+        "name": "celebrate",
+        "value": "2200ms auto-dismiss",
+        "purpose": "Level-up overlay; click dismisses; rays rotate every 6s."
       },
       {
         "name": "reduced-motion",
         "value": "prefers-reduced-motion: reduce",
-        "purpose": "No flight, no slide-in, no transitions; state changes still apply."
+        "purpose": "All CSS animations and transitions off except the tray opacity fade; JS skips coin flight, shards, sparkles, pow words, callouts. State still updates and the level-up overlay still shows, static."
+      }
+    ],
+    "sound": [
+      {
+        "name": "add",
+        "value": "660Hz + 990Hz triangle blips",
+        "purpose": "Task added; also confirms the toggle."
+      },
+      {
+        "name": "done",
+        "value": "523-659-784-1047Hz sine arpeggio + 1568Hz triangle sparkle",
+        "purpose": "Task finished."
+      },
+      {
+        "name": "level",
+        "value": "six-note triangle fanfare + sine chord",
+        "purpose": "Level up."
+      },
+      {
+        "name": "undo",
+        "value": "440Hz then 330Hz sine",
+        "purpose": "Finished task undone."
+      },
+      {
+        "name": "policy",
+        "value": "Web Audio synthesized, on by default, localStorage 'sound', HUD toggle with aria-pressed",
+        "purpose": "Offline; plays only on user actions."
       }
     ],
     "breakpoints": [
       {
         "name": "compact",
-        "value": "820px",
-        "purpose": "Bank collapses to a cobalt band above the entry; slot and coin stack hidden."
+        "value": "max-width: 640px",
+        "purpose": "HUD score row wraps below, mascot 96px, full-width filters, creatures 42px, actions on their own row."
+      },
+      {
+        "name": "pointer",
+        "value": "(hover: hover) and (min-width: 641px)",
+        "purpose": "Task actions float over the well and appear on hover or focus."
+      },
+      {
+        "name": "touch",
+        "value": "hover: none",
+        "purpose": "Task actions always visible."
       }
+    ],
+    "detectorExceptions": [
+      "**gradient-text** (style.css, index.html): outlined, gradient-filled callout words are native to the pinned candy-puzzle world, limited to the `.fx-callout` and `.celebrate-title` `::after` fill layers.",
+      "**repeating-stripes-gradient** (index.html): the day path's candy-cane track is a functional path, not decoration.",
+      "**ai-color-palette** (index.html): plum ink (#3a1450) is the world's text color, chosen for contrast on candy fills.",
+      "**bounce-easing** `cubic-bezier(0.3, 1.4, 0.5, 1)` and `cubic-bezier(0.3, 1.5, 0.5, 1)` (style.css): squash-and-stretch overshoot. The recorded reasons scope these to Kumbara-chan's hop and the bubble pop. In the build the first curve is `--ease-jelly` and also drives tile drop and pop, creature cheer and joy, node pop, star lighting, and the level-up title slam. Those reasons need re-scoping to the candy world.",
+      "**side-tab** (style.css, index.html): recorded for the previous world's `.stack-coin` rim, which no longer exists. This exception is stale."
     ]
   },
   "components": [
     {
-      "name": "Primary Button",
+      "name": "Primary Button (Ekle!)",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "The 'Kumbaraya at' submit inside the entry slot; the one cobalt action.",
-      "html": "<button class=\"ds-btn-primary\">Kumbaraya at</button>",
-      "css": ":host{--ground:#f2f5fa;--paper:#ffffff;--line:#dde3ee;--wash:#e6ebf4;--ink:#111c3a;--ink-soft:#4b5878;--ink-done:#5d667c;--placeholder:#66708a;--cobalt:#1e3aa6;--cobalt-deep:#142a7c;--cobalt-glaze:#3053d4;--on-cobalt:#eef2ff;--on-cobalt-soft:#bccaff;--gold-light:#ffe08a;--gold:#f4b92c;--gold-deep:#a8740c;--danger:#b42318;--danger-wash:#fdecea;--font-display:\"Bricolage Grotesque\",\"Segoe UI Variable Display\",\"Segoe UI\",system-ui,sans-serif;--font-ui:\"Segoe UI Variable Text\",\"Segoe UI\",system-ui,-apple-system,sans-serif;}.ds-btn-primary{height:48px;padding:0 22px;border:0;border-radius:10px;background:var(--cobalt);color:var(--on-cobalt);font-family:var(--font-display);font-size:1rem;font-weight:650;cursor:pointer;transition:background-color .15s}.ds-btn-primary:hover{background:var(--cobalt-deep)}.ds-btn-primary:focus-visible{outline:2px solid var(--cobalt);outline-offset:2px}"
+      "description": "The one apple jelly action: adds a task. Sticker-stroked display text, grows on hover, squashes on press.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">Ekle!</button>",
+      "css": ".ds-btn-primary { padding: 12px 26px; border: 3px solid var(--paper); border-radius: 18px; background: linear-gradient(180deg, rgb(255 255 255 / 0.45) 0%, rgb(255 255 255 / 0) 48%), linear-gradient(180deg, var(--apple-light) 0%, var(--apple) 55%, var(--apple-dark) 100%); background-color: var(--apple-dark); box-shadow: inset 0 -4px 0 rgb(0 0 0 / 0.14), 0 8px 16px -8px var(--apple-dark); color: var(--paper); font-family: var(--font-display); font-size: var(--text-xl); letter-spacing: 0.02em; -webkit-text-stroke: 6px var(--apple-dark); paint-order: stroke fill; cursor: pointer; transition: transform 0.15s var(--ease-out); } .ds-btn-primary:hover { transform: scale(1.05); } .ds-btn-primary:active { transform: scale(0.95); } .ds-btn-primary:focus-visible { outline: 3px solid var(--grape); outline-offset: 3px; }"
     },
     {
-      "name": "Row Action",
+      "name": "Secondary Button",
       "kind": "button",
-      "refersTo": "button-action",
-      "description": "Quiet text actions on a task row; delete hovers to danger.",
-      "html": "<div class=\"ds-actions\"><button class=\"ds-action\">Düzenle</button><button class=\"ds-action\">Arşivle</button><button class=\"ds-action ds-danger\">Sil</button></div>",
-      "css": ":host{--ground:#f2f5fa;--paper:#ffffff;--line:#dde3ee;--wash:#e6ebf4;--ink:#111c3a;--ink-soft:#4b5878;--ink-done:#5d667c;--placeholder:#66708a;--cobalt:#1e3aa6;--cobalt-deep:#142a7c;--cobalt-glaze:#3053d4;--on-cobalt:#eef2ff;--on-cobalt-soft:#bccaff;--gold-light:#ffe08a;--gold:#f4b92c;--gold-deep:#a8740c;--danger:#b42318;--danger-wash:#fdecea;--font-display:\"Bricolage Grotesque\",\"Segoe UI Variable Display\",\"Segoe UI\",system-ui,sans-serif;--font-ui:\"Segoe UI Variable Text\",\"Segoe UI\",system-ui,-apple-system,sans-serif;}.ds-actions{display:flex;gap:2px;font-family:var(--font-ui)}.ds-action{padding:6px 10px;border:0;border-radius:8px;background:transparent;color:var(--ink-soft);font:inherit;font-size:.875rem;cursor:pointer}.ds-action:hover{background:var(--wash);color:var(--ink)}.ds-action.ds-danger:hover{background:var(--danger-wash);color:var(--danger)}.ds-action:focus-visible{outline:2px solid var(--cobalt);outline-offset:2px}"
+      "refersTo": "button-secondary",
+      "description": "Blueberry jelly pill for secondary actions (sample tasks).",
+      "html": "<button class=\"ds-btn-secondary\" type=\"button\">Örnek görevleri ekle</button>",
+      "css": ".ds-btn-secondary { padding: 10px 18px; border: 3px solid var(--paper); border-radius: 999px; background: linear-gradient(180deg, rgb(255 255 255 / 0.4) 0%, transparent 50%), linear-gradient(180deg, var(--blueberry) 0%, var(--blueberry-dark) 100%); background-color: var(--blueberry-dark); box-shadow: inset 0 -3px 0 rgb(0 0 0 / 0.14); color: var(--paper); font-family: var(--font-ui); font-size: var(--text-sm); font-weight: 800; text-shadow: 0 1px 0 var(--blueberry-dark); cursor: pointer; } .ds-btn-secondary:hover { transform: scale(1.04); } .ds-btn-secondary:focus-visible { outline: 3px solid var(--grape); outline-offset: 3px; }"
     },
     {
       "name": "Entry Slot",
       "kind": "input",
-      "refersTo": "input-entry",
-      "description": "Floating paper slot holding the task input and the primary button.",
-      "html": "<form class=\"ds-entry\" onsubmit=\"return false\"><input class=\"ds-entry-input\" placeholder=\"Ne yapacaksın?\" aria-label=\"Yeni görev\"><button class=\"ds-entry-btn\">Kumbaraya at</button></form>",
-      "css": ":host{--ground:#f2f5fa;--paper:#ffffff;--line:#dde3ee;--wash:#e6ebf4;--ink:#111c3a;--ink-soft:#4b5878;--ink-done:#5d667c;--placeholder:#66708a;--cobalt:#1e3aa6;--cobalt-deep:#142a7c;--cobalt-glaze:#3053d4;--on-cobalt:#eef2ff;--on-cobalt-soft:#bccaff;--gold-light:#ffe08a;--gold:#f4b92c;--gold-deep:#a8740c;--danger:#b42318;--danger-wash:#fdecea;--font-display:\"Bricolage Grotesque\",\"Segoe UI Variable Display\",\"Segoe UI\",system-ui,sans-serif;--font-ui:\"Segoe UI Variable Text\",\"Segoe UI\",system-ui,-apple-system,sans-serif;}.ds-entry{display:flex;gap:8px;padding:8px;background:var(--paper);border:1px solid transparent;border-radius:14px;box-shadow:0 8px 22px -12px rgb(17 28 58 / .35);transition:border-color .15s,box-shadow .15s;font-family:var(--font-ui)}.ds-entry:focus-within{border-color:var(--cobalt);box-shadow:0 0 0 3px rgb(30 58 166 / .16),0 8px 22px -12px rgb(17 28 58 / .35)}.ds-entry-input{flex:1;min-width:0;padding:12px;border:0;background:transparent;color:var(--ink);font:inherit;font-size:1.125rem}.ds-entry-input::placeholder{color:var(--placeholder)}.ds-entry-input:focus{outline:none}.ds-entry-btn{padding:0 22px;border:0;border-radius:10px;background:var(--cobalt);color:var(--on-cobalt);font-family:var(--font-display);font-size:1rem;font-weight:650;cursor:pointer;transition:background-color .15s}.ds-entry-btn:hover{background:var(--cobalt-deep)}.ds-entry-btn:focus-visible{outline:2px solid var(--cobalt);outline-offset:2px}"
+      "refersTo": "entry-input",
+      "description": "Cherry candy frame around a cream input well plus the primary button; focus lights the frame with a lemon outline.",
+      "html": "<form class=\"ds-entry\" onsubmit=\"return false\"><input class=\"ds-entry-input\" placeholder=\"Ne yapacaksın?\"><button class=\"ds-entry-btn\" type=\"submit\">Ekle!</button></form>",
+      "css": ".ds-entry { display: flex; gap: 10px; padding: 10px; border: 3px solid var(--paper); border-radius: 28px; background: linear-gradient(180deg, rgb(255 255 255 / 0.42) 0%, rgb(255 255 255 / 0) 34%), linear-gradient(180deg, var(--cherry-light) 0%, var(--cherry) 45%, var(--cherry-dark) 100%); background-color: var(--cherry-dark); box-shadow: inset 0 -5px 0 rgb(0 0 0 / 0.16), inset 0 2px 0 rgb(255 255 255 / 0.55), 0 12px 22px -12px var(--cherry-dark); } .ds-entry:focus-within { outline: 4px solid var(--lemon-light); outline-offset: 2px; } .ds-entry-input { flex: 1; min-width: 0; padding: 12px 16px; border: 0; border-radius: 18px; background: var(--cream-card); box-shadow: inset 0 3px 6px rgb(58 20 80 / 0.16); color: var(--ink); caret-color: var(--cherry); font-family: var(--font-ui); font-size: var(--text-lg); font-weight: 700; } .ds-entry-input::placeholder { color: var(--placeholder); } .ds-entry-input:focus { outline: none; } .ds-entry-btn { padding: 0 26px; border: 3px solid var(--paper); border-radius: 18px; background: linear-gradient(180deg, rgb(255 255 255 / 0.45) 0%, rgb(255 255 255 / 0) 48%), linear-gradient(180deg, var(--apple-light) 0%, var(--apple) 55%, var(--apple-dark) 100%); background-color: var(--apple-dark); box-shadow: inset 0 -4px 0 rgb(0 0 0 / 0.14), 0 8px 16px -8px var(--apple-dark); color: var(--paper); font-family: var(--font-display); font-size: var(--text-xl); -webkit-text-stroke: 6px var(--apple-dark); paint-order: stroke fill; cursor: pointer; transition: transform 0.15s var(--ease-out); } .ds-entry-btn:hover { transform: scale(1.05); } .ds-entry-btn:active { transform: scale(0.95); }"
     },
     {
-      "name": "Segmented Filters",
-      "kind": "chip",
-      "refersTo": "chip-filter",
-      "description": "Wash track with a paper-lifted active segment.",
-      "html": "<div class=\"ds-filters\" role=\"group\" aria-label=\"Filtre\"><button class=\"ds-seg ds-active\">Hepsi</button><button class=\"ds-seg\">Yapılacaklar</button><button class=\"ds-seg\">Tamamlananlar</button></div>",
-      "css": ":host{--ground:#f2f5fa;--paper:#ffffff;--line:#dde3ee;--wash:#e6ebf4;--ink:#111c3a;--ink-soft:#4b5878;--ink-done:#5d667c;--placeholder:#66708a;--cobalt:#1e3aa6;--cobalt-deep:#142a7c;--cobalt-glaze:#3053d4;--on-cobalt:#eef2ff;--on-cobalt-soft:#bccaff;--gold-light:#ffe08a;--gold:#f4b92c;--gold-deep:#a8740c;--danger:#b42318;--danger-wash:#fdecea;--font-display:\"Bricolage Grotesque\",\"Segoe UI Variable Display\",\"Segoe UI\",system-ui,sans-serif;--font-ui:\"Segoe UI Variable Text\",\"Segoe UI\",system-ui,-apple-system,sans-serif;}.ds-filters{display:inline-flex;gap:2px;padding:3px;border-radius:10px;background:var(--wash);font-family:var(--font-ui)}.ds-seg{padding:6px 12px;border:0;border-radius:8px;background:transparent;color:var(--ink-soft);font:inherit;font-size:.9375rem;cursor:pointer}.ds-seg:hover{color:var(--ink)}.ds-seg.ds-active{background:var(--paper);color:var(--ink);font-weight:600;box-shadow:0 1px 3px rgb(17 28 58 / .18)}.ds-seg:focus-visible{outline:2px solid var(--cobalt);outline-offset:2px}"
+      "name": "Filter Pills",
+      "kind": "nav",
+      "refersTo": "filter-pill",
+      "description": "Segmented pill filters in a white track; the active one is cherry jelly.",
+      "html": "<div class=\"ds-filters\" role=\"group\"><button class=\"ds-filter is-active\" type=\"button\">Hepsi</button><button class=\"ds-filter\" type=\"button\">Yapılacaklar</button><button class=\"ds-filter\" type=\"button\">Tamamlananlar</button></div>",
+      "css": ".ds-filters { display: inline-flex; gap: 4px; padding: 4px; border: 3px solid var(--paper); border-radius: 999px; background: rgb(255 255 255 / 0.6); } .ds-filter { padding: 7px 14px; border: 0; border-radius: 999px; background: transparent; color: var(--ink-soft); font-family: var(--font-ui); font-size: var(--text-sm); font-weight: 800; cursor: pointer; } .ds-filter:hover { color: var(--ink); } .ds-filter:focus-visible { outline: 3px solid var(--grape); outline-offset: 3px; } .ds-filter.is-active { background: linear-gradient(180deg, rgb(255 255 255 / 0.4) 0%, transparent 50%), linear-gradient(180deg, var(--cherry) 0%, var(--cherry-dark) 100%); background-color: var(--cherry-dark); color: var(--paper); text-shadow: 0 1px 0 var(--cherry-dark); box-shadow: inset 0 -3px 0 rgb(0 0 0 / 0.14); }"
     },
     {
-      "name": "Task Row",
-      "kind": "custom",
-      "refersTo": "checkbox",
-      "description": "Open and finished rows: round cobalt checkbox; done drains to gray.",
-      "html": "<ul class=\"ds-tasks\"><li class=\"ds-task\"><input type=\"checkbox\" class=\"ds-check\" aria-label=\"Bitir\"><span class=\"ds-text\">Faturayı öde</span></li><li class=\"ds-task ds-done\"><input type=\"checkbox\" class=\"ds-check\" checked aria-label=\"Geri al\"><span class=\"ds-text\">Markete git</span></li></ul>",
-      "css": ":host{--ground:#f2f5fa;--paper:#ffffff;--line:#dde3ee;--wash:#e6ebf4;--ink:#111c3a;--ink-soft:#4b5878;--ink-done:#5d667c;--placeholder:#66708a;--cobalt:#1e3aa6;--cobalt-deep:#142a7c;--cobalt-glaze:#3053d4;--on-cobalt:#eef2ff;--on-cobalt-soft:#bccaff;--gold-light:#ffe08a;--gold:#f4b92c;--gold-deep:#a8740c;--danger:#b42318;--danger-wash:#fdecea;--font-display:\"Bricolage Grotesque\",\"Segoe UI Variable Display\",\"Segoe UI\",system-ui,sans-serif;--font-ui:\"Segoe UI Variable Text\",\"Segoe UI\",system-ui,-apple-system,sans-serif;}.ds-tasks{margin:0;padding:0;list-style:none;background:var(--ground);font-family:var(--font-ui)}.ds-task{display:flex;align-items:center;gap:14px;min-height:60px;padding:10px 4px;border-bottom:1px solid var(--line)}.ds-text{flex:1;font-size:1.0625rem;color:var(--ink)}.ds-done .ds-text{color:var(--ink-done);text-decoration:line-through;text-decoration-thickness:1.5px}.ds-check{appearance:none;display:grid;place-content:center;width:26px;height:26px;margin:0;border:2px solid var(--cobalt);border-radius:50%;background:var(--paper);cursor:pointer;transition:background-color .2s,border-color .2s}.ds-check:hover{background:var(--on-cobalt)}.ds-check:focus-visible{outline:2px solid var(--cobalt);outline-offset:2px}.ds-check:checked{border-color:var(--ink-done);background:var(--ink-done)}.ds-check:checked::after{content:\"\";width:13px;height:13px;background:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.4 6.3l2.3 2.3 4.9-5' fill='none' stroke='white' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\") center/contain no-repeat}"
-    },
-    {
-      "name": "Bank Panel",
+      "name": "Task Tile",
       "kind": "card",
-      "refersTo": "bank-panel",
-      "description": "Signature glazed cobalt kumbara: recessed slot, display total, level, gold coin stack, readouts, message.",
-      "html": "<aside class=\"ds-bank\"><div class=\"ds-slot\"></div><p class=\"ds-total\"><span class=\"ds-num\">42</span><span class=\"ds-unit\">altın</span></p><p class=\"ds-level\">Çırak</p><div class=\"ds-stack\"><i class=\"ds-coin ds-filled\"></i><i class=\"ds-coin ds-filled\"></i><i class=\"ds-coin ds-filled\"></i><i class=\"ds-coin ds-filled\"></i><i class=\"ds-coin ds-filled\"></i><i class=\"ds-coin\"></i><i class=\"ds-coin\"></i><i class=\"ds-coin\"></i></div><p class=\"ds-next\">Sonraki seviyeye 8 altın</p><p class=\"ds-msg\">Harika gidiyorsun!</p></aside>",
-      "css": ":host{--ground:#f2f5fa;--paper:#ffffff;--line:#dde3ee;--wash:#e6ebf4;--ink:#111c3a;--ink-soft:#4b5878;--ink-done:#5d667c;--placeholder:#66708a;--cobalt:#1e3aa6;--cobalt-deep:#142a7c;--cobalt-glaze:#3053d4;--on-cobalt:#eef2ff;--on-cobalt-soft:#bccaff;--gold-light:#ffe08a;--gold:#f4b92c;--gold-deep:#a8740c;--danger:#b42318;--danger-wash:#fdecea;--font-display:\"Bricolage Grotesque\",\"Segoe UI Variable Display\",\"Segoe UI\",system-ui,sans-serif;--font-ui:\"Segoe UI Variable Text\",\"Segoe UI\",system-ui,-apple-system,sans-serif;}.ds-bank{position:relative;isolation:isolate;overflow:hidden;width:300px;padding:44px 36px 40px;color:var(--on-cobalt);font-family:var(--font-ui);background:radial-gradient(130% 60% at 18% 0%,var(--cobalt-glaze) 0%,transparent 60%),linear-gradient(180deg,var(--cobalt) 0%,var(--cobalt-deep) 100%)}.ds-bank::before{content:\"\";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(55% 22% at 30% 9%,rgb(255 255 255 / .2) 0%,rgb(255 255 255 / .06) 55%,transparent 100%),radial-gradient(40% 14% at 78% 30%,rgb(255 255 255 / .07) 0%,transparent 100%),radial-gradient(120% 28% at 50% 104%,rgb(6 14 52 / .55) 0%,transparent 100%)}.ds-slot{width:120px;height:20px;margin-bottom:36px;border-radius:999px;background:linear-gradient(180deg,#030a2b 0%,#0a1850 100%);box-shadow:inset 0 5px 7px rgb(0 0 0 / .7),0 0 0 3px rgb(96 128 240 / .55),0 3px 2px 3px rgb(200 214 255 / .28)}.ds-total{display:flex;align-items:baseline;gap:10px;margin:0}.ds-num{font-family:var(--font-display);font-size:5rem;font-weight:700;line-height:.95;letter-spacing:-.035em;font-variant-numeric:tabular-nums}.ds-unit{font-family:var(--font-display);font-size:1.25rem;font-weight:500;color:var(--on-cobalt-soft)}.ds-level{margin:28px 0 14px;font-family:var(--font-display);font-size:1.5rem;font-weight:650;line-height:1.2}.ds-stack{display:grid;grid-template-columns:repeat(2,46px);grid-template-rows:repeat(4,11px);grid-auto-flow:column;gap:4px 10px;transform:scaleY(-1);width:max-content}.ds-coin{border-radius:50%;border:1.5px dashed rgb(188 202 255 / .35)}.ds-coin.ds-filled{border:0;background:linear-gradient(0deg,var(--gold-light) 0%,var(--gold) 55%,var(--gold) 100%);box-shadow:inset 0 3px 0 var(--gold-deep),inset 0 -1px 0 rgb(255 255 255 / .55),0 -2px 3px rgb(5 12 40 / .35)}.ds-next{margin:14px 0 0;font-size:.9375rem;color:var(--on-cobalt-soft);font-variant-numeric:tabular-nums}.ds-msg{margin:12px 0 0;font-family:var(--font-display);font-size:1.25rem;font-weight:600;line-height:1.3;text-wrap:balance}"
+      "refersTo": "task-tile",
+      "description": "Signature: a jelly tile in the task's hue with a round check and a cream text well; the finished variant keeps its hue, paler and flatter.",
+      "html": "<ul class=\"ds-tasks\"><li class=\"ds-task\"><span class=\"ds-check\" role=\"checkbox\" aria-checked=\"false\" tabindex=\"0\"></span><div class=\"ds-well\"><span class=\"ds-text\">Annemi ara</span><span class=\"ds-meta\">Bugün 14:11 <span class=\"ds-chip\">+3 hız bonusu · 40 dk</span></span></div></li><li class=\"ds-task is-done\"><span class=\"ds-check is-on\" role=\"checkbox\" aria-checked=\"true\" tabindex=\"0\"></span><div class=\"ds-well\"><span class=\"ds-text\">Faturayı öde</span><span class=\"ds-meta\">Bugün 13:51 · bitti 14:21</span></div></li></ul>",
+      "css": ".ds-tasks { display: flex; flex-direction: column; gap: 12px; margin: 0; padding: 0; list-style: none; } .ds-task { --hue: var(--lemon); --hue-light: var(--lemon-light); --hue-dark: var(--lemon-dark); display: flex; align-items: center; gap: 12px; min-height: 76px; padding: 8px 10px 10px; border: 3px solid var(--paper); border-radius: 26px; background: linear-gradient(180deg, rgb(255 255 255 / 0.45) 0%, rgb(255 255 255 / 0) 34%), linear-gradient(180deg, var(--hue-light) 0%, var(--hue) 50%, var(--hue-dark) 100%); background-color: var(--hue-dark); box-shadow: inset 0 -5px 0 rgb(0 0 0 / 0.16), inset 0 2px 0 rgb(255 255 255 / 0.55), 0 10px 18px -10px var(--hue-dark); transition: transform 300ms var(--ease-glide); } .ds-task:hover { transform: scale(1.02); } .ds-task.is-done { --hue: var(--orange); --hue-light: var(--orange-light); --hue-dark: var(--orange-dark); background: linear-gradient(180deg, rgb(255 255 255 / 0.55) 0%, rgb(255 255 255 / 0.2) 100%), linear-gradient(180deg, var(--hue-light) 0%, var(--hue) 100%); background-color: var(--hue); box-shadow: inset 0 -3px 0 rgb(0 0 0 / 0.1), 0 6px 12px -10px var(--hue-dark); } .ds-check { flex: none; width: 36px; height: 36px; margin-left: 4px; border: 3px solid var(--paper); border-radius: 50%; background: var(--cream-card); box-shadow: inset 0 0 0 3px var(--hue-light), inset 0 3px 5px rgb(58 20 80 / 0.2); cursor: pointer; transition: transform 0.15s var(--ease-out); } .ds-check:hover { transform: scale(1.1); } .ds-check:focus-visible { outline: 3px solid var(--grape); outline-offset: 3px; } .ds-check.is-on { background: linear-gradient(180deg, rgb(255 255 255 / 0.4) 0%, transparent 50%), linear-gradient(180deg, var(--hue) 0%, var(--hue-dark) 100%); box-shadow: 0 2px 0 rgb(0 0 0 / 0.15); } .ds-well { display: flex; flex: 1; flex-direction: column; gap: 4px; min-width: 0; padding: 9px 14px; border-radius: 18px; background: var(--cream-card); box-shadow: inset 0 3px 6px rgb(58 20 80 / 0.16); } .ds-text { color: var(--ink); font-family: var(--font-ui); font-size: var(--text-body); font-weight: 800; } .ds-task.is-done .ds-text { color: var(--ink-done); text-decoration: line-through 2px rgb(122 106 140 / 0.7); } .ds-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; color: var(--ink-soft); font-family: var(--font-ui); font-size: var(--text-xs); font-weight: 700; font-variant-numeric: tabular-nums; } .ds-task.is-done .ds-meta { color: var(--ink-done); } .ds-chip { padding: 2px 10px; border-radius: 999px; background: linear-gradient(180deg, rgb(255 255 255 / 0.5) 0%, transparent 60%), linear-gradient(180deg, var(--lemon-light), var(--orange-light)); color: var(--ink); font-weight: 800; }"
     },
     {
-      "name": "Flying Coin",
+      "name": "Candy Frame with Cream Well",
+      "kind": "card",
+      "refersTo": "candy-frame",
+      "description": "Every panel: a jelly rim in its fixed hue (path blueberry, entry cherry, archive orange, legend apple) around a recessed cream well, with a sticker-stroked heading.",
+      "html": "<section class=\"ds-frame\"><div class=\"ds-frame-head\"><h2 class=\"ds-frame-title\">Bugünün yolu</h2><span class=\"ds-stat\">Bugün 2 görev</span></div><div class=\"ds-frame-well\">Cream well content</div></section>",
+      "css": ".ds-frame { --frame: var(--blueberry); --frame-light: var(--blueberry-light); --frame-dark: var(--blueberry-dark); padding: 12px; border: 3px solid var(--paper); border-radius: 28px; background: linear-gradient(180deg, rgb(255 255 255 / 0.42) 0%, rgb(255 255 255 / 0) 34%), linear-gradient(180deg, var(--frame-light) 0%, var(--frame) 45%, var(--frame-dark) 100%); background-color: var(--frame-dark); box-shadow: inset 0 -5px 0 rgb(0 0 0 / 0.16), inset 0 2px 0 rgb(255 255 255 / 0.55), 0 12px 22px -12px var(--frame-dark); } .ds-frame-head { display: flex; align-items: center; justify-content: space-between; gap: 6px 16px; padding: 2px 6px 10px; } .ds-frame-title { margin: 0; color: var(--paper); font-family: var(--font-display); font-size: var(--text-xl); font-weight: 400; letter-spacing: 0.01em; -webkit-text-stroke: 6px var(--frame-dark); paint-order: stroke fill; text-shadow: 0 3px 0 rgb(0 0 0 / 0.18); } .ds-stat { padding: 2px 10px; border-radius: 999px; background: rgb(255 255 255 / 0.92); color: var(--ink); font-family: var(--font-ui); font-size: var(--text-sm); font-weight: 800; font-variant-numeric: tabular-nums; } .ds-frame-well { padding: 28px 18px; border-radius: 18px; background: var(--cream-card); box-shadow: inset 0 3px 6px rgb(58 20 80 / 0.16); color: var(--ink-soft); font-family: var(--font-ui); font-weight: 700; }"
+    },
+    {
+      "name": "HUD Bar",
       "kind": "custom",
-      "refersTo": "flying-coin",
-      "description": "The earned gold coin that arcs into the bank total.",
-      "html": "<span class=\"ds-fly\"></span>",
-      "css": ".ds-fly{display:inline-block;width:28px;height:28px;border-radius:50%;background:radial-gradient(circle,transparent 54%,rgb(168 116 12 / .6) 57%,transparent 62%),radial-gradient(circle at 35% 30%,#ffe08a 0%,#f4b92c 55%,#a8740c 100%);box-shadow:inset 0 0 0 2px rgb(168 116 12 / .7),0 6px 12px rgb(90 61 0 / .35)}"
+      "refersTo": "hud",
+      "description": "Sticky grape jelly bar: level, score with gold coin, sound toggle (star bar and hearts omitted in this snippet).",
+      "html": "<header class=\"ds-hud\"><span class=\"ds-hud-level\">Cep parası</span><span class=\"ds-hud-score\"><span class=\"ds-coin\"></span>44</span><button class=\"ds-sound\" type=\"button\" aria-pressed=\"true\" aria-label=\"Ses efektleri\"><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 9.5h3.2L12 5.5v13l-4.8-4H4z\" fill=\"currentColor\"/><path d=\"M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11\"/></svg></button></header>",
+      "css": ".ds-hud { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 14px; padding: 10px 14px; border: 3px solid var(--paper); border-radius: 22px; background: linear-gradient(180deg, rgb(255 255 255 / 0.28) 0%, transparent 40%), linear-gradient(180deg, var(--grape) 0%, var(--grape-dark) 100%); background-color: var(--grape-dark); box-shadow: inset 0 -4px 0 rgb(0 0 0 / 0.15), 0 12px 24px -12px var(--grape-dark); color: var(--paper); text-shadow: 0 1px 0 rgb(58 20 80 / 0.45); } .ds-hud-level { font-family: var(--font-display); font-size: var(--text-lg); } .ds-hud-score { display: flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--font-display); font-size: var(--text-3xl); line-height: 1; font-variant-numeric: tabular-nums; text-shadow: 0 2px 0 var(--grape-dark); } .ds-coin { width: 26px; height: 26px; border-radius: 50%; background: radial-gradient(circle, transparent 50%, rgb(209 138 0 / 0.7) 54%, transparent 60%), radial-gradient(circle at 35% 30%, var(--gold-light) 0%, var(--gold) 55%, var(--gold-deep) 100%); box-shadow: 0 2px 0 rgb(0 0 0 / 0.15); } .ds-sound { display: grid; place-items: center; width: 40px; height: 40px; padding: 0; border: 2px solid rgb(255 255 255 / 0.7); border-radius: 50%; background: rgb(255 255 255 / 0.2); color: var(--paper); cursor: pointer; } .ds-sound:hover { background: rgb(255 255 255 / 0.32); } .ds-sound:focus-visible { outline: 3px solid var(--grape); outline-offset: 3px; }"
+    },
+    {
+      "name": "Action Pills",
+      "kind": "chip",
+      "refersTo": "action-pill",
+      "description": "Small wash pills on a task (Düzenle, Arşivle, Sil) in a cream capsule; grape on hover, danger on delete hover.",
+      "html": "<div class=\"ds-actions\"><button class=\"ds-action\" type=\"button\">Düzenle</button><button class=\"ds-action\" type=\"button\">Arşivle</button><button class=\"ds-action is-danger\" type=\"button\">Sil</button></div>",
+      "css": ".ds-actions { display: inline-flex; gap: 4px; padding: 4px; border-radius: 999px; background: var(--cream-card); box-shadow: 0 4px 10px -6px rgb(58 20 80 / 0.4); } .ds-action { padding: 6px 12px; border: 0; border-radius: 999px; background: var(--wash); color: var(--ink-soft); font-family: var(--font-ui); font-size: var(--text-xs); font-weight: 800; cursor: pointer; } .ds-action:hover { background: var(--grape); color: var(--paper); } .ds-action.is-danger:hover { background: var(--danger); color: var(--paper); } .ds-action:focus-visible { outline: 3px solid var(--grape); outline-offset: 3px; }"
+    },
+    {
+      "name": "Speech Bubble",
+      "kind": "custom",
+      "refersTo": "speech-bubble",
+      "description": "Kumbara-chan's white bubble: 3px ink border, left tail, Candy Display lines.",
+      "html": "<p class=\"ds-bubble\">Görev eklemek 1, bitirmek 3 altın.</p>",
+      "css": ".ds-bubble { position: relative; margin: 0 0 0 18px; padding: 12px 16px; border: 3px solid var(--ink); border-radius: 22px; background: var(--paper); color: var(--ink); font-family: var(--font-display); font-size: var(--text-xl); line-height: 1.2; letter-spacing: 0.01em; box-shadow: 0 8px 18px -10px rgb(58 20 80 / 0.5); } .ds-bubble::before, .ds-bubble::after { content: \"\"; position: absolute; top: 50%; border-style: solid; border-color: transparent; } .ds-bubble::before { left: -17px; margin-top: -10px; border-width: 10px 16px 10px 0; border-right-color: var(--ink); } .ds-bubble::after { left: -11px; margin-top: -7px; border-width: 7px 11px 7px 0; border-right-color: var(--paper); }"
+    },
+    {
+      "name": "Callout Word",
+      "kind": "custom",
+      "refersTo": "callout",
+      "description": "The centered combo word after a finish: ink outline on the element, lemon-to-orange gradient fill on a ::after layer reading data-text.",
+      "html": "<span class=\"ds-callout\" data-text=\"Leziz!\">Leziz!</span>",
+      "css": ".ds-callout { position: relative; display: inline-block; padding: 0.06em 0.14em 0.24em; font-family: var(--font-display); font-size: var(--text-callout); line-height: 1.25; letter-spacing: 0.02em; color: var(--ink); -webkit-text-stroke: 12px var(--ink); filter: drop-shadow(0 6px 0 rgb(58 20 80 / 0.3)); transform: rotate(-4deg); } .ds-callout::after { content: attr(data-text); position: absolute; inset: 0; padding: inherit; -webkit-text-stroke: 0; background: linear-gradient(180deg, #fffbd1 0%, var(--lemon) 45%, var(--orange) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }"
     }
   ],
   "narrative": {
-    "northStar": "The Glazed Kumbara",
-    "overview": "The whole screen is a Turkish ceramic coin bank and the desk it sits on. A tall panel of glazed cobalt holds the savings: a recessed coin slot, the coin total at display scale, the current level, a stack of coin slots toward the next level, today's count and streak, and one short encouraging line. Beside it, a cool porcelain ground carries the working list in blue-black ink. The bank is the only rich surface; the list stays quiet so task text is always the clearest thing on the page.\n\nReward is physical and small. Finishing a task launches one gold coin on an arc into the bank total, which settles with a slight scale; adding a task drops a smaller coin. Nothing else moves on its own. Gold means earned money and nothing else, so its appearance always carries meaning.\n\nThe system rejects the category default of a white card list with a purple accent and checkbox confetti.",
+    "northStar": "The Sugar-Sky Puzzle Board",
+    "overview": "Kumbara is a personal todo list played as a casual candy puzzle game. The page is a single centered game column under a pink-to-lilac sugar sky with two rolling candy hills. Everything the user touches is jelly: a saturated candy fill with a white gloss on top, a darker lip underneath, a 3px white rim, and a soft drop shadow tinted in its own dark tone. Every task is a candy tile in one of six hues. Finishing one squashes and pops it, sprays candy shards in its hue, flies coins to the score, lights a node on today's winding path, and drops a big outlined callout in the middle of the screen. The feedback is the product (PRODUCT.md principle 3), so it is loud on purpose.\n\nThe world is dense and bright but never at the expense of reading. Content sits in recessed cream wells set inside the candy frames, set in plum ink, so task text on any tile reads the same whatever the hue (PRODUCT.md principle 4). Two anime characters carry the personality: Kumbara-chan, the porcelain coin-bank cat on a cherry pedestal who talks in a speech bubble, and one small gummy creature per task whose face shows the task's age and state. They stay from the previous world. The candy-puzzle look is a style reference pinned by the user (\"candy crush gibi olmalı\"); the product never uses that game's name, logo, candy art, characters, or sounds.\n\nThe app runs fully offline. Both faces are inlined as data URIs, sounds are synthesized with Web Audio, and every ornament (stars, hearts, badge, checkmark, bolt, sparkles) is inline SVG or CSS. The level-up screen is fixed, user-requested copy: \"Fikret Hocam, emeğinize sağlık!\" / \"Teşekkürler!\".",
     "keyCharacteristics": [
-      "Two-field composition: glazed cobalt bank panel plus porcelain work surface.",
-      "Gold reserved exclusively for earned coins.",
-      "One display face (Bricolage Grotesque) for numerals and headings; system UI face for task text.",
-      "Tabular numerals everywhere a count appears.",
-      "Finished work drains to gray; open, done, and archived read as three distinct states.",
-      "One signature motion (coin flight), exponential ease-out, no bounce, under 700ms. One supporting motion: the porcelain tray that glides under the hovered or focused row."
+      "Six candy hues, each a fill / light / dark triple; plum ink for every word on cream or white.",
+      "Jelly material on every raised surface, and a 3px white rim on every candy edge.",
+      "Candy frames in fixed hues around cream wells: path blueberry, entry cherry, archive orange, legend apple, HUD grape.",
+      "Chunky rounded display face with sticker strokes for headings, numbers, and rewards; rounded Nunito for everything the user typed.",
+      "Squash-and-stretch motion with overshoot, synthesized chimes, and a quiet static version under reduced motion."
     ],
     "rules": [
       {
+        "name": "The Six Candies Rule",
+        "body": "Every jelly surface takes exactly one of the six hue triples (fill, light, dark). There is no seventh hue and no mix between two. A task's hue comes from a hash of its id, so it keeps that hue for life, and its creature's ears, path node, and burst shards match it.",
+        "section": "colors"
+      },
+      {
+        "name": "The Plum Ink Rule",
+        "body": "Text on cream or white is always plum ink (ink, ink-soft, ink-done), never black or grey. White text sits only on a jelly fill, and only with a stroke or lip in that fill's dark tone. Lemon never carries white text.",
+        "section": "colors"
+      },
+      {
         "name": "The Earned Gold Rule",
-        "body": "Gold appears only on coins the user has earned: filled stack coins and the coin in flight. Never on buttons, checkmarks, badges, highlights, or text.",
+        "body": "Gold is only for things the user earned: coins, lit stars, and the level star badge. Unlit stars are lilac and buttons are never gold.",
         "section": "colors"
       },
       {
-        "name": "The Drain to Gray Rule",
-        "body": "A finished task loses color: its checkbox fills Done Gray, its text goes Done Gray with a strikethrough. Completion is celebrated in the bank, not in the list.",
+        "name": "The Kept Hue Rule",
+        "body": "A finished tile keeps its candy hue. It turns paler (a 55% to 20% white veil) and flatter (a shallower lip and shadow), and never turns grey. Only the text changes, to Done Plum with a 2px strikethrough.",
         "section": "colors"
-      },
-      {
-        "name": "The Readout Rule",
-        "body": "Every count (coin total, next level, today, streak, task counters) uses tabular numerals.",
-        "section": "typography"
       },
       {
         "name": "The Two Voices Rule",
-        "body": "Display face for numbers, headings, and reward copy; system face for anything the user typed.",
+        "body": "Candy Display is for the game's voice: headings, HUD and path numbers, rewards, buttons, and Kumbara-chan's lines. Nunito is for anything the user typed and all metadata. User task text never appears in the display face.",
         "section": "typography"
       },
       {
-        "name": "The Glaze Not Texture Rule",
-        "body": "The bank's ceramic look comes from gradients and pooled light only: no noise, grain, or image texture.",
+        "name": "The Sticker Text Rule",
+        "body": "Display text on a candy fill or on the sky is white (or plum ink) with a thick stroke painted beneath the fill (`paint-order: stroke fill`). On a frame the stroke is the frame's dark tone, on the sky it is paper, and on callouts it is ink. Stroke width grows with size: 5–6px on titles, 7px on reward words, 8px on the headline, 9px on \"Teşekkürler!\", 12px on callouts.",
+        "section": "typography"
+      },
+      {
+        "name": "The Readout Rule",
+        "body": "Every count uses tabular numerals: the score, the next-level line, path stats, fold counts, task times, earned coins, and speed chips.",
+        "section": "typography"
+      },
+      {
+        "name": "The Turkish Glyph Rule",
+        "body": "A display face ships only after ğ, ş, İ, ı, ç, ö, and ü have been checked in it. Missing Turkish glyphs are why Lilita One was replaced.",
+        "section": "typography"
+      },
+      {
+        "name": "The Jelly Rule",
+        "body": "A raised candy surface always has all five layers: a white top gloss (45% fading to 0 by 34–48%), a fill gradient (light → fill → dark), a dark inset bottom lip, a white inset top hairline, and a drop shadow tinted in its dark tone. Never a neutral black drop shadow.",
         "section": "elevation"
       },
       {
-        "name": "The One Floating Thing Rule",
-        "body": "On the porcelain side at most one thing floats at a time besides the entry slot: the row under the pointer or keyboard focus, on its tray. Resting rows stay flat on hairlines. (Changed 2026-09-24 at the user's request: rows should come forward when hovered.)",
+        "name": "The Cream Well Rule",
+        "body": "Readable content lives in a cream well (cream-card, 18px radius, inset plum shadow) inside its frame or tile. The only text that sits directly on a fill is sticker-stroked display text and small white pills.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "Do keep gold on earned coins only (stack coins and the flying coin).",
-      "Do fill checked checkboxes and finished text with Done Gray (ink-done), never cobalt or gold.",
-      "Do use tabular numerals on every count.",
-      "Do build ceramic depth from gradients and pooled radial light, darkening toward the foot.",
-      "Do keep motion to the coin flight, total settle, and the gliding row tray: exponential ease-out, no bounce, under 700ms.",
-      "Do collapse the bank into a compact cobalt band above the entry at 820px and below."
+      "**Do** build every raised candy surface from the full Jelly Rule recipe in one hue triple, with a 3px white rim.",
+      "**Do** put readable content in cream wells (cream-card, 18px, inset plum shadow) inside candy frames and tiles.",
+      "**Do** keep the frame hues fixed: path blueberry, entry cherry, archive orange, legend apple, HUD grape; apple is the primary action.",
+      "**Do** keep a finished tile in its hue, paler and flatter, with Done Plum struck-through text.",
+      "**Do** paint sticker strokes under the fill (`paint-order: stroke fill`) in the surface's dark tone.",
+      "**Do** build gradient callouts as two layers: the ink outline on the element, the gradient fill in a `::after` reading `data-text`.",
+      "**Do** use tabular numerals on every count.",
+      "**Do** keep state changes under reduced motion and drop only flights, bursts, callouts, and loops.",
+      "**Do** synthesize sounds with Web Audio, play them only on user actions, and keep the visible HUD toggle.",
+      "**Do** check ğ, ş, İ, ı, ç, ö, ü in any display face before shipping it."
     ],
     "donts": [
-      "Don't use gold for buttons, badges, checkmarks, or highlights.",
-      "Don't add confetti, bouncing, or ambient animation.",
-      "Don't add grain, noise, or image textures to the bank glaze.",
-      "Don't set user-typed task text in the display face.",
-      "Don't place persistent reward elements over task text; only the coin in flight may cross the list."
+      "**Don't** use Candy Crush's name, logo, candy art, characters, or sounds; it is a style reference only.",
+      "**Don't** turn a finished task grey or strip its hue.",
+      "**Don't** set user-typed task text in Candy Display.",
+      "**Don't** put white text on lemon, or white text on any fill without a dark-tone stroke or lip.",
+      "**Don't** use neutral black or diagonal drop shadows under candy; tint them in the dark tone and keep them vertical.",
+      "**Don't** use gold for anything the user has not earned.",
+      "**Don't** add a seventh candy hue or blend two hues on one surface.",
+      "**Don't** put a text stroke on the same layer as clipped gradient text; the stroke covers the fill.",
+      "**Don't** load fonts, images, or sounds from the network."
     ]
   }
 }

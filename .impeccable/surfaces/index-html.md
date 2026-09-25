@@ -23,7 +23,7 @@ Fully offline at runtime: fonts self-hosted and inlined, sounds synthesized with
 
 THESIS: A glossy candy puzzle game where every task is a candy tile: finishing one pops it with a burst, a big centered callout, and stars. Refuses the flat productivity list and its pastel "cute app" cousin with timid feedback.
 
-OWN-WORLD: Sugar-sky ground (pink to lilac gradient with rolling candy hills), jelly surfaces everywhere: saturated candy fills with a white top gloss, a darker bottom lip, and a soft colored drop shadow. Six candy hues (cherry, orange, lemon, apple, blueberry, grape) plus plum ink for text. Chunky rounded display face (Lilita One) with white outline for headings and callouts; rounded UI face (Nunito) for tasks.
+OWN-WORLD: Sugar-sky ground (pink to lilac gradient with rolling candy hills), jelly surfaces everywhere: saturated candy fills with a white top gloss, a darker bottom lip, and a soft colored drop shadow. Six candy hues (cherry, orange, lemon, apple, blueberry, grape) plus plum ink for text. Chunky rounded display face (Baloo 2 ExtraBold as "Candy Display"; chosen over Lilita One on 2026-09-25 because Lilita lacks ğ Ğ İ ş Ş) with outlines for headings and callouts; rounded UI face (Nunito) for tasks.
 
 STORY: The user sees their level, score, stars, and hearts at a glance, types a task into the big candy slot, taps it done, and gets a pop, a "Leziz!" callout, flying coins, and a lit node on today's path.
 

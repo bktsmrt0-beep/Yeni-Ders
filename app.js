@@ -282,7 +282,7 @@ function sparkle(x, y, count, spread, ink) {
         { transform: at(x + dx * 0.7, y + dy * 0.7, size, 45), offset: 0.45 },
         { transform: at(x + dx, y + dy, 0, 90) },
       ],
-      { duration: 700 + Math.random() * 200, easing: "cubic-bezier(0.16, 1, 0.3, 1)" },
+      { duration: 700 + Math.random() * 200, easing: "cubic-bezier(0.16, 1, 0.3, 1)", fill: "forwards" },
     ).onfinish = () => spark.remove();
   }
 }
@@ -308,7 +308,7 @@ function pow(text, big) {
       { transform: at(y - 6, 1), opacity: 1, offset: 0.65 },
       { transform: at(y - 26, 1), opacity: 0 },
     ],
-    { duration: big ? 1900 : 1400, easing: "ease-out" },
+    { duration: big ? 1900 : 1400, easing: "ease-out", fill: "forwards" },
   ).onfinish = () => word.remove();
 }
 
@@ -334,7 +334,7 @@ function burst(x, y, hue, count) {
         { transform: at(x + dx * 0.75, y + dy * 0.75, 1.1, spin * 0.6), opacity: 1, offset: 0.5 },
         { transform: at(x + dx, y + dy + 50, 0.6, spin), opacity: 0 },
       ],
-      { duration: 800 + Math.random() * 300, easing: "cubic-bezier(0.16, 1, 0.3, 1)" },
+      { duration: 800 + Math.random() * 300, easing: "cubic-bezier(0.16, 1, 0.3, 1)", fill: "forwards" },
     ).onfinish = () => shard.remove();
   }
 }
@@ -356,7 +356,7 @@ function callout(text) {
       { transform: at(1, -4, 8), opacity: 1, offset: 0.75 },
       { transform: at(1.1, -4, 40), opacity: 0 },
     ],
-    { duration: 1300, easing: "ease-out" },
+    { duration: 1300, easing: "ease-out", fill: "forwards" },
   ).onfinish = () => word.remove();
 }
 
